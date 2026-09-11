@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your Nexora Home account and take control of your smart home from anywhere.">
+  <title>Login | Nexora Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+  <button class="theme-toggle" style="position:fixed;top:20px;right:20px;z-index:100;" aria-label="Toggle theme">
+    <i class="bi bi-moon-fill"></i>
+  </button>
+
+  <div class="dir-toggle" role="group" aria-label="Text direction" style="position:fixed;top:20px;right:70px;z-index:100;">
+    <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true">LTR</button>
+    <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false">RTL</button>
+  </div>
+
+  <div class="auth-layout">
+    <div class="auth-visual">
+      <img class="auth-visual-bg" src="../assets/images/rooms/home-office-1.jpg" alt="Welcome to your smart workspace" loading="lazy">
+      <div class="auth-visual-content">
+        <i class="bi bi-house-heart"></i>
+        <h3>Welcome Back</h3>
+        <p>Your smart home has missed you. Log in to manage every connected device, scene and schedule.</p>
+      </div>
+    </div>
+
+    <div class="auth-form-side">
+      <div class="auth-form-container">
+        <h2>Sign in to Nexora</h2>
+        <p>Enter your credentials to access your smart home dashboard.</p>
+
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" class="form-control" id="login-email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" class="form-control" id="login-password" name="password" placeholder="Enter your password" required>
+          </div>
+
+          <div class="form-group" style="display:flex;justify-content:space-between;align-items:center;">
+            <label style="margin:0;font-weight:500;display:flex;align-items:center;gap:8px;cursor:pointer;">
+              <input type="checkbox" name="remember">
+              Remember Me
+            </label>
+            <a href="forgot-password.html" style="font-size:0.85rem;color:var(--electric-cyan);font-weight:600;">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            <i class="bi bi-box-arrow-in-right"></i> Login
+          </button>
+        </form>
+
+        <div class="auth-form-divider">or</div>
+
+        <button type="button" class="auth-social-btn">
+          <i class="bi bi-google"></i> Continue with Google
+        </button>
+
+        <div class="auth-form-links">
+          Don't have an account? <a href="register.html">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/forms.js"></script>
+</body>
+</html>

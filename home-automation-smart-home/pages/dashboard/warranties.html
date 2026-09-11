@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warranty Management | Nexora Home</title>
+  <meta name="description" content="View and register product warranties for all your Nexora smart home devices."><link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-layout">
+
+  <div class="sidebar-overlay" onclick="toggleDashboardSidebar()"></div>
+
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-brand">
+      <a href="../../index.html">
+        <svg class="sidebar-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="10" fill="var(--primary, #6C5CE7)"/>
+          <path d="M12 28V18L20 12L28 18V28H22V22H18V28H12Z" fill="#fff"/>
+          <circle cx="20" cy="19" r="2.5" fill="#fff" opacity="0.8"/>
+        </svg>
+        <span>NEXORA</span>
+      </a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html" class="sidebar-link">
+        <i class="bi bi-grid-1x2"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="devices.html" class="sidebar-link">
+        <i class="bi bi-cpu"></i>
+        <span>My Devices</span>
+      </a>
+      <a href="service-requests.html" class="sidebar-link">
+        <i class="bi bi-tools"></i>
+        <span>Service Requests</span>
+      </a>
+      <a href="installation-tracking.html" class="sidebar-link">
+        <i class="bi bi-diagram-3"></i>
+        <span>Installation Tracking</span>
+      </a>
+      <a href="service-tickets.html" class="sidebar-link">
+        <i class="bi bi-ticket-detailed"></i>
+        <span>Service Tickets</span>
+      </a>
+      <a href="warranties.html" class="sidebar-link active">
+        <i class="bi bi-shield-check"></i>
+        <span>Warranties</span>
+      </a>
+      <a href="invoices.html" class="sidebar-link">
+        <i class="bi bi-receipt"></i>
+        <span>Invoices</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-divider"></div>
+
+    <nav class="sidebar-nav">
+      <a href="profile.html" class="sidebar-link">
+        <i class="bi bi-person"></i>
+        <span>Profile</span>
+      </a>
+      <a href="settings.html" class="sidebar-link">
+        <i class="bi bi-gear"></i>
+        <span>Settings</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-divider"></div>
+
+    <nav class="sidebar-nav">
+      <a href="../../index.html" class="sidebar-link sidebar-logout">
+        <i class="bi bi-box-arrow-left"></i>
+        <span>Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div class="dashboard-header-left">
+        <button class="mobile-sidebar-toggle" onclick="toggleDashboardSidebar()">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="dashboard-header-greeting">
+          <h2>Warranty Management</h2>
+          <p>Track coverage and registration for your Nexora products.</p>
+        </div>
+      </div>
+              <div class="dashboard-home-switcher">
+          <button class="home-switch-btn" onclick="toggleHomeMenu(event)" aria-haspopup="true" aria-expanded="false">
+            <i class="bi bi-house-fill"></i>
+            <span>Home 1</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="home-switch-menu">
+            <a href="index.html" class="home-switch-item active"><i class="bi bi-house-door-fill"></i> Home 1</a>
+            <a href="home2.html" class="home-switch-item"><i class="bi bi-house-door"></i> Home 2</a>
+          </div>
+        </div>
+<div class="dashboard-header-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="notification-bell" aria-label="Notifications">
+          <i class="bi bi-bell-fill"></i>
+          <span class="notification-badge">3</span>
+        </button>
+        <div class="user-avatar-menu">
+          <div class="user-avatar">A</div>
+          <span class="user-avatar-name">Alex</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-content">
+      <section class="stats-cards">
+        <div class="stat-card">
+          <div class="stat-card-header">
+            <span class="stat-card-label">Total Products</span>
+            <div class="stat-card-icon stat-card-icon--cyan">
+              <i class="bi bi-box-seam"></i>
+            </div>
+          </div>
+          <div class="stat-card-value">6</div>
+          <span class="stat-card-change stat-card-change--neutral">
+            <i class="bi bi-arrow-right-short"></i>All registered products
+          </span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-header">
+            <span class="stat-card-label">Active Warranties</span>
+            <div class="stat-card-icon stat-card-icon--blue">
+              <i class="bi bi-shield-check"></i>
+            </div>
+          </div>
+          <div class="stat-card-value">5</div>
+          <span class="stat-card-change stat-card-change--positive">
+            <i class="bi bi-arrow-up-short"></i>Fully covered
+          </span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-header">
+            <span class="stat-card-label">Expiring Soon</span>
+            <div class="stat-card-icon stat-card-icon--amber">
+              <i class="bi bi-hourglass-split"></i>
+            </div>
+          </div>
+          <div class="stat-card-value">1</div>
+          <span class="stat-card-change stat-card-change--negative">
+            <i class="bi bi-exclamation-triangle"></i>Renewal recommended
+          </span>
+        </div>
+      </section>
+
+      <div class="device-filter-bar">
+        <div>
+          <h3 style="margin-bottom: 0;">Registered Products</h3>
+        </div>
+        <button class="btn" onclick="openModal('warranty-modal')">
+          <i class="bi bi-plus-circle"></i> Register New Product
+        </button>
+      </div>
+
+      <div class="warranty-list">
+        <div class="warranty-card">
+          <div class="warranty-icon">
+            <i class="bi bi-cpu"></i>
+          </div>
+          <div class="warranty-info">
+            <h4>Nexora Hub X1</h4>
+            <p>SN: NXH-2026-00124</p>
+            <div class="warranty-meta">
+              <span><i class="bi bi-calendar-check"></i> Purchased: Jan 15, 2026</span>
+              <span><i class="bi bi-clock-history"></i> Warranty: 3 Years</span>
+            </div>
+          </div>
+          <div class="warranty-expiry">
+            <div class="expiry-label">Expires</div>
+            <div class="expiry-date">Jan 15, 2029</div>
+            <span class="badge-success">Active</span>
+          </div>
+        </div>
+
+        <div class="warranty-card">
+          <div class="warranty-icon">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <div class="warranty-info">
+            <h4>Nexora Light Panel Pro</h4>
+            <p>SN: NXL-2026-00891</p>
+            <div class="warranty-meta">
+              <span><i class="bi bi-calendar-check"></i> Purchased: Feb 2, 2026</span>
+              <span><i class="bi bi-clock-history"></i> Warranty: 2 Years</span>
+            </div>
+          </div>
+          <div class="warranty-expiry">
+            <div class="expiry-label">Expires</div>
+            <div class="expiry-date">Feb 2, 2028</div>
+            <span class="badge-success">Active</span>
+          </div>
+        </div>
+
+        <div class="warranty-card">
+          <div class="warranty-icon">
+            <i class="bi bi-lock"></i>
+          </div>
+          <div class="warranty-info">
+            <h4>Nexora Lock X</h4>
+            <p>SN: NXK-2026-00256</p>
+            <div class="warranty-meta">
+              <span><i class="bi bi-calendar-check"></i> Purchased: Jan 20, 2026</span>
+              <span><i class="bi bi-clock-history"></i> Warranty: 3 Years</span>
+            </div>
+          </div>
+          <div class="warranty-expiry">
+            <div class="expiry-label">Expires</div>
+            <div class="expiry-date">Jan 20, 2029</div>
+            <span class="badge-success">Active</span>
+          </div>
+        </div>
+
+        <div class="warranty-card">
+          <div class="warranty-icon">
+            <i class="bi bi-thermometer-half"></i>
+          </div>
+          <div class="warranty-info">
+            <h4>Nexora Climate One</h4>
+            <p>SN: NXC-2026-00178</p>
+            <div class="warranty-meta">
+              <span><i class="bi bi-calendar-check"></i> Purchased: Mar 10, 2026</span>
+              <span><i class="bi bi-clock-history"></i> Warranty: 2 Years</span>
+            </div>
+          </div>
+          <div class="warranty-expiry">
+            <div class="expiry-label">Expires</div>
+            <div class="expiry-date">Mar 10, 2028</div>
+            <span class="badge-success">Active</span>
+          </div>
+        </div>
+
+        <div class="warranty-card">
+          <div class="warranty-icon">
+            <i class="bi bi-camera-video"></i>
+          </div>
+          <div class="warranty-info">
+            <h4>Nexora SecureCam 360</h4>
+            <p>SN: NXS-2026-00432</p>
+            <div class="warranty-meta">
+              <span><i class="bi bi-calendar-check"></i> Purchased: Apr 5, 2026</span>
+              <span><i class="bi bi-clock-history"></i> Warranty: 2 Years</span>
+            </div>
+          </div>
+          <div class="warranty-expiry">
+            <div class="expiry-label">Expires</div>
+            <div class="expiry-date">Apr 5, 2028</div>
+            <span class="badge-warning">Expiring Soon</span>
+          </div>
+        </div>
+
+        <div class="warranty-card">
+          <div class="warranty-icon">
+            <i class="bi bi-border-all"></i>
+          </div>
+          <div class="warranty-info">
+            <h4>Nexora Curtain Motor</h4>
+            <p>SN: NXCM-2025-00089</p>
+            <div class="warranty-meta">
+              <span><i class="bi bi-calendar-check"></i> Purchased: Jun 15, 2025</span>
+              <span><i class="bi bi-clock-history"></i> Warranty: 1 Year</span>
+            </div>
+          </div>
+          <div class="warranty-expiry">
+            <div class="expiry-label">Expires</div>
+            <div class="expiry-date">Jun 15, 2026</div>
+            <span class="badge-danger">Expired</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="warranty-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Register New Product</h3>
+        <button class="modal-close" onclick="closeModal('warranty-modal')"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="warranty-form">
+          <div class="form-group">
+            <label for="warrantyProduct">Product Name</label>
+            <select id="warrantyProduct" class="form-control" required>
+              <option value="">Select product</option>
+              <option value="nexora-hub-x1">Nexora Hub X1</option>
+              <option value="nexora-light-panel-pro">Nexora Light Panel Pro</option>
+              <option value="nexora-lock-x">Nexora Lock X</option>
+              <option value="nexora-climate-one">Nexora Climate One</option>
+              <option value="nexora-securecam-360">Nexora SecureCam 360</option>
+              <option value="nexora-curtain-motor">Nexora Curtain Motor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="warrantySerial">Serial Number</label>
+            <input type="text" id="warrantySerial" class="form-control" placeholder="e.g. NXH-2026-00000" required>
+          </div>
+          <div class="form-group">
+            <label for="warrantyPurchaseDate">Purchase Date</label>
+            <input type="date" id="warrantyPurchaseDate" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="warrantyStore">Purchase Store</label>
+            <input type="text" id="warrantyStore" class="form-control" placeholder="e.g. Nexora Store, Downtown" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" onclick="closeModal('warranty-modal')">Cancel</button>
+        <button class="btn btn-primary" onclick="submitWarranty()">Submit Registration</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../assets/js/theme.js"></script>
+  <script src="../../assets/js/dashboard.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script>
+    function submitWarranty() {
+      var form = document.getElementById('warranty-form');
+      if (form.checkValidity()) {
+        showToast('Product Registered', 'Your product warranty has been registered successfully.', 'success');
+        closeModal('warranty-modal');
+        form.reset();
+      } else {
+        form.reportValidity();
+      }
+    }
+  </script>
+</body>
+</html>

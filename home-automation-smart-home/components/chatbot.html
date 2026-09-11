@@ -1,0 +1,158 @@
+<!-- Nexora Assistant Chatbot Component -->
+
+<button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat assistant">
+  <i class="bi bi-robot"></i>
+</button>
+
+<div class="chatbot-window" id="chatbotWindow">
+  <div class="chatbot-header">
+    <h4>
+      <i class="bi bi-robot"></i> Nexora Assistant
+      <span class="status-dot"></span>
+    </h4>
+    <button class="chatbot-close" id="chatbotClose" aria-label="Close chat">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
+  <div class="chatbot-messages" id="chatbotMessages">
+    <div class="chat-message bot">
+      <div class="avatar"><i class="bi bi-robot"></i></div>
+      <div class="bubble">
+        Hi there! I'm Nexora Assistant. How can I help you today? Feel free to ask about our smart home solutions.
+      </div>
+    </div>
+  </div>
+
+  <div class="chatbot-suggestions" id="chatbotSuggestions">
+    <button data-question="What can you automate?">What can you automate?</button>
+    <button data-question="How much does installation cost?">How much does installation cost?</button>
+    <button data-question="Which package is best?">Which package is best?</button>
+    <button data-question="Book a consultation">Book a consultation</button>
+  </div>
+
+  <div class="chatbot-input">
+    <input type="text" id="chatbotInput" placeholder="Type your message..." autocomplete="off" />
+    <button id="chatbotSend" aria-label="Send message">
+      <i class="bi bi-send-fill"></i>
+    </button>
+  </div>
+</div>
+
+<script>
+(function () {
+  var toggle = document.getElementById('chatbotToggle');
+  var win = document.getElementById('chatbotWindow');
+  var closeBtn = document.getElementById('chatbotClose');
+  var messages = document.getElementById('chatbotMessages');
+  var suggestions = document.getElementById('chatbotSuggestions');
+  var input = document.getElementById('chatbotInput');
+  var sendBtn = document.getElementById('chatbotSend');
+
+  var responses = {
+    "What can you automate?": "We automate lighting, climate control, security systems, motorized shades, audio/video distribution, irrigation, energy management, and home theatre — all controllable from a single app or voice assistant.",
+    "How much does installation cost?": "Our packages start from an initial consultation fee, with tailored pricing based on your home size and desired features. We offer the Essential, Premium, and Ultra tiers to fit different budgets.",
+    "Which package is best?": "For most homeowners, the Premium package strikes the perfect balance — it covers whole-home lighting, climate, security, and multi-room audio with professional installation. Need the full smart experience? Ultra has you covered.",
+    "Book a consultation": "Great choice! You can schedule a free 30-minute consultation at nexora-home.com/contact or by calling our team. We'll assess your home and recommend the perfect setup."
+  };
+
+  var defaultResponses = [
+    "Thanks for your message! Let me look into that for you. Is there anything specific you'd like to know about our smart home solutions?",
+    "That's a great question. I'd recommend checking our solutions page or booking a consultation for a personalized recommendation.",
+    "I appreciate your interest! For detailed information, feel free to reach out to our team or explore the sections on this site.",
+    "Interesting! I can help with questions about our automation packages, pricing, and consultations. What else would you like to know?"
+  ];
+
+  var defaultIndex = 0;
+
+  function toggleChat() {
+    var isOpen = win.classList.contains('open');
+    if (isOpen) {
+      win.classList.remove('open');
+      toggle.innerHTML = '<i class="bi bi-robot"></i>';
+    } else {
+      win.classList.add('open');
+      toggle.innerHTML = '<i class="bi bi-x-lg"></i>';
+      input.focus();
+    }
+  }
+
+  function addMessage(text, sender) {
+    var msg = document.createElement('div');
+    msg.className = 'chat-message ' + sender;
+
+    var avatar = document.createElement('div');
+    avatar.className = 'avatar';
+    avatar.innerHTML = sender === 'bot'
+      ? '<i class="bi bi-robot"></i>'
+      : '<i class="bi bi-person-fill"></i>';
+
+    var bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    bubble.textContent = text;
+
+    msg.appendChild(avatar);
+    msg.appendChild(bubble);
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function addBotResponse(text) {
+    addMessage(text, 'bot');
+    renderSuggestions([
+      'What can you automate?',
+      'How much does installation cost?',
+      'Which package is best?',
+      'Book a consultation'
+    ]);
+  }
+
+  function renderSuggestions(items) {
+    suggestions.innerHTML = '';
+    items.forEach(function (label) {
+      var btn = document.createElement('button');
+      btn.setAttribute('data-question', label);
+      btn.textContent = label;
+      suggestions.appendChild(btn);
+    });
+  }
+
+  function handleUserMessage(text) {
+    if (!text || !text.trim()) return;
+    addMessage(text.trim(), 'user');
+    input.value = '';
+
+    var response;
+    if (responses[text.trim()]) {
+      response = responses[text.trim()];
+    } else {
+      response = defaultResponses[defaultIndex % defaultResponses.length];
+      defaultIndex++;
+    }
+
+    setTimeout(function () {
+      addBotResponse(response);
+    }, 500);
+  }
+
+  toggle.addEventListener('click', toggleChat);
+  closeBtn.addEventListener('click', toggleChat);
+
+  sendBtn.addEventListener('click', function () {
+    handleUserMessage(input.value);
+  });
+
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      handleUserMessage(input.value);
+    }
+  });
+
+  suggestions.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-question]');
+    if (btn) {
+      handleUserMessage(btn.getAttribute('data-question'));
+    }
+  });
+})();
+</script>

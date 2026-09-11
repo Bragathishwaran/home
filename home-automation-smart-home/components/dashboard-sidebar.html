@@ -1,0 +1,70 @@
+<!-- Nexora Home Dashboard Sidebar Component
+     NOTE: This is a reusable partial. It provides the markup pattern for the
+     sidebars embedded in every page under pages/dashboard/. The relative links
+     resolve correctly when this markup is placed inside pages/dashboard/.
+     It is not meant to be opened/rendered standalone from components/. -->
+
+<aside class="dashboard-sidebar" id="dashboardSidebar">
+  <a href="../index.html" class="sidebar-brand">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="8" fill="currentColor" opacity="0.1"/>
+      <path d="M16 4L4 14h3v12h18V14h3L16 4z" fill="currentColor" opacity="0.85"/>
+      <rect x="12" y="18" width="8" height="8" rx="1.5" fill="var(--bg-card, #0f172a)"/>
+      <circle cx="16" cy="21" r="1.5" fill="currentColor"/>
+    </svg>
+    <span>NEXORA</span>
+  </a>
+
+  <nav class="sidebar-nav" id="sidebarNav">
+    <a href="index.html">
+      <i class="bi bi-grid-1x2"></i>
+      <span>Dashboard</span>
+    </a>
+    <a href="devices.html">
+      <i class="bi bi-cpu"></i>
+      <span>My Devices</span>
+    </a>
+    <a href="service-requests.html">
+      <i class="bi bi-tools"></i>
+      <span>Service Requests</span>
+    </a>
+    <a href="installation-tracking.html">
+      <i class="bi bi-diagram-3"></i>
+      <span>Installation Tracking</span>
+    </a>
+    <a href="service-tickets.html">
+      <i class="bi bi-ticket-detailed"></i>
+      <span>Service Tickets</span>
+    </a>
+    <a href="warranties.html">
+      <i class="bi bi-shield-check"></i>
+      <span>Warranties</span>
+    </a>
+    <a href="invoices.html">
+      <i class="bi bi-receipt"></i>
+      <span>Invoices</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-divider"></div>
+
+  <nav class="sidebar-nav">
+    <a href="profile.html">
+      <i class="bi bi-person"></i>
+      <span>Profile</span>
+    </a>
+    <a href="settings.html">
+      <i class="bi bi-gear"></i>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-divider"></div>
+
+  <nav class="sidebar-nav">
+    <a href="../index.html">
+      <i class="bi bi-box-arrow-left"></i>
+      <span>Logout</span>
+    </a>
+  </nav>
+</aside>

@@ -1,0 +1,78 @@
+<!-- Nexora Home Navbar Component
+     NOTE: This is a reusable partial providing the markup pattern for the
+     sticky navbar used across all public marketing pages. It is embedded
+     directly into each HTML page (paths adjusted per page depth).
+     Do not render standalone. -->
+
+<!-- Main Navbar (public pages) -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="8" fill="url(#logo-grad)"/>
+                <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+                <circle cx="18" cy="18" r="3" fill="url(#logo-grad)" opacity="0.9"/>
+                <defs>
+                    <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36">
+                        <stop stop-color="#B08D57"/>
+                        <stop offset="1" stop-color="#D9C6A3"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="brand-name">NEXORA</span>
+        </a>
+
+        <div class="navbar-nav">
+                    <div class="nav-dropdown">
+          <a href="index.html" class="active nav-dropdown-toggle">Home <i class="bi bi-chevron-down dropdown-caret"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html"><i class="bi bi-house-door-fill"></i> Home 1</a>
+            <a href="home2.html"><i class="bi bi-house-door"></i> Home 2</a>
+          </div>
+        </div>
+                    <a href="pages/solutions.html">Solutions</a>
+            <a href="pages/products.html">Products</a>
+            <a href="pages/pricing.html">Pricing</a>
+            <a href="pages/installation-process.html">Installation</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/contact.html">Contact</a>
+        </div>
+
+        <div class="navbar-actions">
+            <div class="dir-toggle" role="group" aria-label="Text direction">
+              <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true">LTR</button>
+              <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false">RTL</button>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="bi bi-moon-fill"></i>
+            </button>
+            <a href="pages/login.html" class="btn-login">Login</a>
+            <a href="pages/contact.html" class="btn btn-primary btn-get-started">Get Started</a>
+<div class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </div>
+            <button type="button" class="mobile-close" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <a href="index.html" class="active mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
+      <div class="mobile-menu-sub">
+        <a href="index.html">Home 1</a>
+        <a href="home2.html">Home 2</a>
+      </div>
+              <a href="pages/solutions.html">Solutions</a>
+        <a href="pages/products.html">Products</a>
+        <a href="pages/pricing.html">Pricing</a>
+        <a href="pages/installation-process.html">Installation</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/contact.html">Contact</a>
+        <div class="mobile-menu-actions">
+            <a href="pages/login.html" class="btn btn-secondary">Login</a>
+            <a href="pages/contact.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+</nav>

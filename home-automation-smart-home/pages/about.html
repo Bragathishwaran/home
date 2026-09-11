@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexora Home is a smart home automation company dedicated to making intelligent living accessible for every home. Learn about our mission, team, and commitment to quality.">
+  <meta property="og:title" content="About Us | Nexora Home">
+  <meta property="og:description" content="Meet the team behind intelligent living. Nexora Home designs, installs and supports complete smart home ecosystems.">
+  <meta property="og:type" content="website">
+  <title>About Us | Nexora Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <style>
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .team-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      transition: all var(--transition-base);
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(176, 141, 87, 0.3);
+      box-shadow: var(--shadow-lg);
+    }
+    .team-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--deep-midnight);
+      margin: 0 auto 20px;
+    }
+    .team-card h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .team-card .team-role { color: var(--electric-cyan); font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; }
+    .team-card p { font-size: 0.85rem; margin-bottom: 0; }
+    @media (max-width: 767px) { .team-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="url(#logo-grad)"/>
+          <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+          <circle cx="18" cy="18" r="3" fill="url(#logo-grad)" opacity="0.9"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36">
+              <stop stop-color="#B08D57"/>
+              <stop offset="1" stop-color="#D9C6A3"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-name">NEXORA</span>
+      </a>
+
+      <div class="navbar-nav" id="navbarNav">
+                <div class="nav-dropdown">
+          <a href="../index.html" class="nav-dropdown-toggle">Home <i class="bi bi-chevron-down dropdown-caret"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="../index.html"><i class="bi bi-house-door-fill"></i> Home 1</a>
+            <a href="../home2.html"><i class="bi bi-house-door"></i> Home 2</a>
+          </div>
+        </div>
+                <a href="solutions.html">Solutions</a>
+        <a href="products.html">Products</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="installation-process.html">Installation</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="navbar-actions">
+        <div class="dir-toggle" role="group" aria-label="Text direction">
+          <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true">LTR</button>
+          <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false">RTL</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="contact.html" class="btn btn-primary btn-get-started">Get Started</a>
+        <div class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <a href="../index.html" class="mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
+      <div class="mobile-menu-sub">
+        <a href="../index.html">Home 1</a>
+        <a href="../home2.html">Home 2</a>
+      </div>
+            <a href="solutions.html">Solutions</a>
+      <a href="products.html">Products</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="installation-process.html">Installation</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+      <div class="mobile-menu-actions">
+        <a href="login.html" class="btn btn-secondary">Login</a>
+        <a href="contact.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <span class="current">About</span>
+      </div>
+      <h1>Redefining How You Live</h1>
+      <p>Nexora Home is your trusted partner in smart home technology, delivering seamless automation that elevates comfort, security and efficiency for modern living.</p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="section">
+    <div class="container">
+      <div class="about-mission">
+        <div class="about-mission-content reveal">
+          <span class="section-label"><i class="bi bi-bullseye"></i> Our Mission</span>
+          <h2>Making Intelligent Living Accessible to Every Home</h2>
+          <p>We believe technology should serve people, not complicate their lives. Since 2021, our mission has been to design smart home systems that are reliable, elegant and genuinely useful.</p>
+          <p>Every Nexora installation is built on three principles: seamless integration, thoughtful design, and lasting quality. We measure our success by how effortlessly our systems become part of daily life.</p>
+          <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;">
+            <a href="solutions.html" class="btn btn-primary">Explore Solutions</a>
+            <a href="contact.html" class="btn btn-secondary">Talk to Us</a>
+          </div>
+        </div>
+        <div class="about-mission-visual reveal-right">
+          <img src="../assets/images/rooms/home-theatre-1.jpg" alt="Cinema-grade smart home theatre experience by Nexora" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="section" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label"><i class="bi bi-gem"></i> Smart Living Philosophy</span>
+        <h2 class="section-title">Why We Do What We Do</h2>
+        <p class="section-subtitle">Three principles guide every decision we make.</p>
+      </div>
+
+      <div class="features-grid stagger-children" style="grid-template-columns:repeat(3,1fr);">
+        <div class="feature-card reveal card-hover-glow">
+          <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+          <h3>Quality First</h3>
+          <p>We use only proven, enterprise-grade hardware and install it to exacting standards. Every cable, connection and configuration is verified.</p>
+        </div>
+        <div class="feature-card reveal card-hover-glow">
+          <div class="feature-icon"><i class="bi bi-people"></i></div>
+          <h3>Human-Centered</h3>
+          <p>Our designs start with how you live, not with technology. Automation should adapt to your routine, not the other way around.</p>
+        </div>
+        <div class="feature-card reveal card-hover-glow">
+          <div class="feature-icon"><i class="bi bi-infinity"></i></div>
+          <h3>Future Ready</h3>
+          <p>We build systems that grow with you. Adding new devices, scenes and rooms later should be simple, not a project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label"><i class="bi bi-shield-check"></i> Why Choose Us</span>
+        <h2 class="section-title">The Nexora Difference</h2>
+        <p class="section-subtitle">What sets our smart home installations apart.</p>
+      </div>
+
+      <div class="features-grid stagger-children">
+        <div class="feature-card reveal card-hover-glow">
+          <div class="feature-icon"><i class="bi bi-patch-check"></i></div>
+          <h3>Certified Installation</h3>
+          <p>All technicians are factory-certified in electrical safety and IoT integration, with strict code compliance on every job.</p>
+        </div>
+        <div class="feature-card reveal card-hover-glow">
+          <div class="feature-icon"><i class="bi bi-clipboard-check"></i></div>
+          <h3>Quality Assurance</h3>
+          <p>Every installation completes a 40-point inspection checklist before handover, backed by a written quality guarantee.</p>
+        </div>
+        <div class="feature-card reveal card-hover-glow">
+          <div class="feature-icon"><i class="bi bi-headset"></i></div>
+          <h3>Round-the-Clock Support</h3>
+          <p>Our support team is available 24/7 for all Signature and premium package customers, with remote diagnostics built in.</p>
+        </div>
+        <div class="feature-card reveal card-hover-glow">
+          <div class="feature-icon"><i class="bi bi-sliders"></i></div>
+          <h3>Truly Custom Designs</h3>
+          <p>No cookie-cutter setups. Each home receives a unique design tailored to its architecture, wiring and lifestyle.</p>
+        </div>
+        <div class="feature-card reveal card-hover-glow">
+          <div class="feature-icon"><i class="bi bi-graph-down-arrow"></i></div>
+          <h3>Proven Energy Savings</h3>
+          <p>Our clients see 20-30% reductions in energy bills through smart scheduling, monitoring and adaptive climate control.</p>
+        </div>
+        <div class="feature-card reveal card-hover-glow">
+          <div class="feature-icon"><i class="bi bi-arrow-up-circle"></i></div>
+          <h3>Always Upgradable</h3>
+          <p>Open architecture means future devices connect seamlessly. Expand room by room without replacing the core system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="500">0</div>
+          <div class="stat-label">Homes Automated</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="1200">0</div>
+          <div class="stat-label">Devices Installed</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="98">0</div>
+          <div class="stat-label">Customer Satisfaction %</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="24">0</div>
+          <div class="stat-label">/ 7 Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label"><i class="bi bi-people"></i> Leadership</span>
+        <h2 class="section-title">The People Behind Nexora</h2>
+        <p class="section-subtitle">A team of engineers, designers and home automation specialists.</p>
+      </div>
+
+      <div class="team-grid stagger-children">
+        <div class="team-card reveal card-hover-glow">
+          <div class="team-avatar">AM</div>
+          <h3>Alex Morgan</h3>
+          <p class="team-role">Founder &amp; CEO</p>
+          <p>Former IoT engineer with a vision to bring premium automation to modern homes.</p>
+        </div>
+        <div class="team-card reveal card-hover-glow">
+          <div class="team-avatar">SC</div>
+          <h3>Sarah Chen</h3>
+          <p class="team-role">Chief Technology Officer</p>
+          <p>Leads our ecosystem architecture and device integration strategy.</p>
+        </div>
+        <div class="team-card reveal card-hover-glow">
+          <div class="team-avatar">DP</div>
+          <h3>David Park</h3>
+          <p class="team-role">Head of Installation</p>
+          <p>Oversees our certified technician team and installation standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Experience the Nexora Difference</h2>
+      <p>Join 500+ happy homeowners who made the switch to intelligent living.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary btn-lg"><i class="bi bi-calendar-check"></i> Book a Consultation</a>
+        <a href="pricing.html" class="btn btn-outline btn-lg">View Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand" style="font-size:1.3rem;">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#flogo)"/>
+              <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+              <circle cx="18" cy="18" r="3" fill="url(#flogo)" opacity="0.9"/>
+              <defs><linearGradient id="flogo" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#B08D57"/><stop offset="1" stop-color="#D9C6A3"/></linearGradient></defs>
+            </svg>
+            <span class="brand-name">NEXORA</span>
+          </a>
+          <p>Intelligence for Every Space. Designing, installing and supporting intelligent home automation systems since 2021.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@nexorahome" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../home2.html">Home 2</a></li>
+            
+            
+          </ul>
+        </div>
+
+        <div>
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.html">Smart Lighting</a></li>
+            <li><a href="solutions.html">Security Systems</a></li>
+            <li><a href="solutions.html">Climate Control</a></li>
+            <li><a href="solutions.html">Entertainment</a></li>
+            <li><a href="solutions.html">Energy Management</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="installation-process.html">Installation Process</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Get smarter home insights delivered to your inbox.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nexora Home. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="legal.html#privacy">Privacy Policy</a>
+          <a href="legal.html#terms">Terms of Service</a>
+          <a href="legal.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat assistant">
+    <i class="bi bi-robot"></i>
+  </button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <h4><span class="status-dot"></span> Nexora Assistant</h4>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Close chat"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="chat-message bot">
+        <div class="avatar"><i class="bi bi-robot"></i></div>
+        <div class="bubble">Hi! I'm the Nexora Assistant. How can I help you today?</div>
+      </div>
+    </div>
+    <div class="chatbot-suggestions" id="chatSuggestions">
+      <button onclick="sendChatMessage('What can you automate?')">What can you automate?</button>
+      <button onclick="sendChatMessage('How much does installation cost?')">Installation cost?</button>
+      <button onclick="sendChatMessage('Which package is best?')">Best package?</button>
+      <button onclick="sendChatMessage('Book a consultation')">Book consultation</button>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="chatInput" placeholder="Type a message..." aria-label="Chat message">
+      <button id="chatSend" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+  <script>
+    (function() {
+      const toggle = document.getElementById('chatbotToggle');
+      const win = document.getElementById('chatbotWindow');
+      const close = document.getElementById('chatbotClose');
+      const input = document.getElementById('chatInput');
+      const sendBtn = document.getElementById('chatSend');
+      const messages = document.getElementById('chatMessages');
+
+      toggle.addEventListener('click', () => {
+        win.classList.toggle('open');
+        toggle.innerHTML = win.classList.contains('open') ? '<i class="bi bi-x-lg"></i>' : '<i class="bi bi-robot"></i>';
+      });
+      close.addEventListener('click', () => { win.classList.remove('open'); toggle.innerHTML = '<i class="bi bi-robot"></i>'; });
+      sendBtn.addEventListener('click', () => sendMessage());
+      input.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendMessage(); });
+
+      function sendMessage() {
+        const text = input.value.trim();
+        if (!text) return;
+        addMessage(text, 'user');
+        input.value = '';
+        setTimeout(() => addMessage(getBotResponse(text), 'bot'), 600);
+      }
+      window.sendChatMessage = function(text) {
+        addMessage(text, 'user');
+        setTimeout(() => addMessage(getBotResponse(text), 'bot'), 600);
+      };
+      function addMessage(text, type) {
+        const div = document.createElement('div');
+        div.className = 'chat-message ' + type;
+        div.innerHTML = '<div class="avatar">' + (type === 'bot' ? '<i class="bi bi-robot"></i>' : '<i class="bi bi-person-fill"></i>') + '</div><div class="bubble">' + text + '</div>';
+        messages.appendChild(div);
+        messages.scrollTop = messages.scrollHeight;
+      }
+      function getBotResponse(msg) {
+        const lower = msg.toLowerCase();
+        if (lower.includes('automate') || lower.includes('automation')) return 'We can automate lighting, security, climate, curtains, entertainment, access control, and energy management. Everything works together through a single app!';
+        if (lower.includes('cost') || lower.includes('price') || lower.includes('how much')) return 'Our packages start from &#8377;49,999 for Essential. Connect is &#8377;99,999 and Signature starts at &#8377;1,99,999. Would you like a custom quote?';
+        if (lower.includes('package') || lower.includes('best') || lower.includes('recommend')) return 'For most homes, we recommend the Connect package (&#8377;99,999). For whole-home automation, our Signature package is ideal.';
+        if (lower.includes('consult') || lower.includes('book') || lower.includes('schedule')) return 'Great choice! Book a free consultation at nexorahome.com/pages/contact.html or call +91 98765 43210.';
+        if (lower.includes('who') || lower.includes('about') || lower.includes('company')) return 'Nexora Home designs, installs and supports intelligent home automation systems. We\'ve automated 500+ homes with a 98% satisfaction rate!';
+        return 'Thanks for your question! For detailed assistance, please call us at +91 98765 43210 or use our contact form.';
+      }
+    })();
+  </script>
+</body>
+</html>

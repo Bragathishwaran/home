@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Devices | Nexora Home</title>
+  <meta name="description" content="Manage all your connected Nexora smart home devices - check status, rooms and control each device."><link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-layout">
+
+  <div class="sidebar-overlay" onclick="toggleDashboardSidebar()"></div>
+
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-brand">
+      <a href="../../index.html">
+        <svg class="sidebar-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="10" fill="var(--primary, #6C5CE7)"/>
+          <path d="M12 28V18L20 12L28 18V28H22V22H18V28H12Z" fill="#fff"/>
+          <circle cx="20" cy="19" r="2.5" fill="#fff" opacity="0.8"/>
+        </svg>
+        <span>NEXORA</span>
+      </a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html" class="sidebar-link">
+        <i class="bi bi-grid-1x2"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="devices.html" class="sidebar-link active">
+        <i class="bi bi-cpu"></i>
+        <span>My Devices</span>
+      </a>
+      <a href="service-requests.html" class="sidebar-link">
+        <i class="bi bi-tools"></i>
+        <span>Service Requests</span>
+      </a>
+      <a href="installation-tracking.html" class="sidebar-link">
+        <i class="bi bi-diagram-3"></i>
+        <span>Installation Tracking</span>
+      </a>
+      <a href="service-tickets.html" class="sidebar-link">
+        <i class="bi bi-ticket-detailed"></i>
+        <span>Service Tickets</span>
+      </a>
+      <a href="warranties.html" class="sidebar-link">
+        <i class="bi bi-shield-check"></i>
+        <span>Warranties</span>
+      </a>
+      <a href="invoices.html" class="sidebar-link">
+        <i class="bi bi-receipt"></i>
+        <span>Invoices</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-divider"></div>
+
+    <nav class="sidebar-nav">
+      <a href="profile.html" class="sidebar-link">
+        <i class="bi bi-person"></i>
+        <span>Profile</span>
+      </a>
+      <a href="settings.html" class="sidebar-link">
+        <i class="bi bi-gear"></i>
+        <span>Settings</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-divider"></div>
+
+    <nav class="sidebar-nav">
+      <a href="../../index.html" class="sidebar-link sidebar-logout">
+        <i class="bi bi-box-arrow-left"></i>
+        <span>Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div class="dashboard-header-left">
+        <button class="mobile-sidebar-toggle" onclick="toggleDashboardSidebar()">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="dashboard-header-greeting">
+          <h2>My Devices</h2>
+          <p>Manage your connected smart home devices.</p>
+        </div>
+      </div>
+              <div class="dashboard-home-switcher">
+          <button class="home-switch-btn" onclick="toggleHomeMenu(event)" aria-haspopup="true" aria-expanded="false">
+            <i class="bi bi-house-fill"></i>
+            <span>Home 1</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="home-switch-menu">
+            <a href="index.html" class="home-switch-item active"><i class="bi bi-house-door-fill"></i> Home 1</a>
+            <a href="home2.html" class="home-switch-item"><i class="bi bi-house-door"></i> Home 2</a>
+          </div>
+        </div>
+<div class="dashboard-header-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="notification-bell" aria-label="Notifications">
+          <i class="bi bi-bell-fill"></i>
+          <span class="notification-badge">3</span>
+        </button>
+        <div class="user-avatar-menu">
+          <div class="user-avatar">A</div>
+          <span class="user-avatar-name">Alex</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-content">
+      <div class="device-filter-bar">
+        <div class="form-group">
+          <label for="deviceFilter">Filter by type</label>
+          <select id="deviceFilter" class="form-control" onchange="filterDevices()">
+            <option value="all">All Devices</option>
+            <option value="light">Lights</option>
+            <option value="sensor">Sensors</option>
+            <option value="lock">Locks</option>
+            <option value="camera">Cameras</option>
+            <option value="thermostat">Thermostats</option>
+            <option value="curtain">Curtains</option>
+            <option value="entertainment">Entertainment</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="device-grid">
+        <div class="device-card" data-type="light">
+          <div class="device-card-header">
+            <div class="device-card-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <span class="device-status device-status--online">Online</span>
+          </div>
+          <h4>Living Room Lights</h4>
+          <small class="device-model">Light Panel</small>
+          <div class="device-meta">
+            <span class="device-room"><i class="bi bi-geo-alt"></i> Living Room</span>
+            <span class="device-active">Last active: 2 min ago</span>
+          </div>
+          <div class="device-card-footer">
+            <button class="device-toggle toggle-switch active" onclick="toggleDevice(this)" title="Toggle device">
+              <span class="toggle-slider"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="device-card" data-type="thermostat">
+          <div class="device-card-header">
+            <div class="device-card-icon">
+              <i class="bi bi-thermometer-half"></i>
+            </div>
+            <span class="device-status device-status--online">Online</span>
+          </div>
+          <h4>Smart Thermostat</h4>
+          <small class="device-model">Climate One</small>
+          <div class="device-meta">
+            <span class="device-room"><i class="bi bi-geo-alt"></i> Living Room</span>
+            <span class="device-active">Last active: 5 min ago</span>
+          </div>
+          <div class="device-card-footer">
+            <button class="device-toggle toggle-switch active" onclick="toggleDevice(this)" title="Toggle device">
+              <span class="toggle-slider"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="device-card" data-type="lock">
+          <div class="device-card-header">
+            <div class="device-card-icon">
+              <i class="bi bi-lock"></i>
+            </div>
+            <span class="device-status device-status--online">Online</span>
+          </div>
+          <h4>Front Door Lock</h4>
+          <small class="device-model">Lock X</small>
+          <div class="device-meta">
+            <span class="device-room"><i class="bi bi-geo-alt"></i> Entrance</span>
+            <span class="device-active">Last active: 12 min ago</span>
+          </div>
+          <div class="device-card-footer">
+            <button class="device-toggle toggle-switch active" onclick="toggleDevice(this)" title="Toggle device">
+              <span class="toggle-slider"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="device-card" data-type="camera">
+          <div class="device-card-header">
+            <div class="device-card-icon">
+              <i class="bi bi-camera-video"></i>
+            </div>
+            <span class="device-status device-status--online">Online</span>
+          </div>
+          <h4>Security Camera</h4>
+          <small class="device-model">SecureCam 360</small>
+          <div class="device-meta">
+            <span class="device-room"><i class="bi bi-geo-alt"></i> Entrance</span>
+            <span class="device-active">Last active: Live</span>
+          </div>
+          <div class="device-card-footer">
+            <button class="device-toggle toggle-switch active" onclick="toggleDevice(this)" title="Toggle device">
+              <span class="toggle-slider"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="device-card" data-type="curtain">
+          <div class="device-card-header">
+            <div class="device-card-icon">
+              <i class="bi bi-border-all"></i>
+            </div>
+            <span class="device-status device-status--online">Online</span>
+          </div>
+          <h4>Bedroom Curtains</h4>
+          <small class="device-model">Curtain Motor</small>
+          <div class="device-meta">
+            <span class="device-room"><i class="bi bi-geo-alt"></i> Bedroom</span>
+            <span class="device-active">Last active: 1 hr ago</span>
+          </div>
+          <div class="device-card-footer">
+            <button class="device-toggle toggle-switch active" onclick="toggleDevice(this)" title="Toggle device">
+              <span class="toggle-slider"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="device-card" data-type="sensor">
+          <div class="device-card-header">
+            <div class="device-card-icon">
+              <i class="bi bi-broadcast"></i>
+            </div>
+            <span class="device-status device-status--online">Online</span>
+          </div>
+          <h4>Motion Sensor</h4>
+          <small class="device-model">MotionSense</small>
+          <div class="device-meta">
+            <span class="device-room"><i class="bi bi-geo-alt"></i> Hallway</span>
+            <span class="device-active">Last active: 3 min ago</span>
+          </div>
+          <div class="device-card-footer">
+            <button class="device-toggle toggle-switch active" onclick="toggleDevice(this)" title="Toggle device">
+              <span class="toggle-slider"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="device-card" data-type="entertainment">
+          <div class="device-card-header">
+            <div class="device-card-icon">
+              <i class="bi bi-tv"></i>
+            </div>
+            <span class="device-status device-status--offline">Offline</span>
+          </div>
+          <h4>Smart TV</h4>
+          <small class="device-model">Entertainment Hub</small>
+          <div class="device-meta">
+            <span class="device-room"><i class="bi bi-geo-alt"></i> Living Room</span>
+            <span class="device-active">Last active: 3 hrs ago</span>
+          </div>
+          <div class="device-card-footer">
+            <button class="device-toggle toggle-switch" onclick="toggleDevice(this)" title="Toggle device">
+              <span class="toggle-slider"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="device-card" data-type="hub">
+          <div class="device-card-header">
+            <div class="device-card-icon">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <span class="device-status device-status--online">Online</span>
+          </div>
+          <h4>Smart Hub</h4>
+          <small class="device-model">Nexora Hub X1</small>
+          <div class="device-meta">
+            <span class="device-room"><i class="bi bi-geo-alt"></i> Server Room</span>
+            <span class="device-active">Last active: Live</span>
+          </div>
+          <div class="device-card-footer">
+            <button class="device-toggle toggle-switch active" onclick="toggleDevice(this)" title="Toggle device">
+              <span class="toggle-slider"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../assets/js/theme.js"></script>
+  <script src="../../assets/js/dashboard.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script>
+    function filterDevices() {
+      var filter = document.getElementById('deviceFilter').value;
+      var cards = document.querySelectorAll('.device-card');
+      cards.forEach(function(card) {
+        if (filter === 'all' || card.dataset.type === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleDevice(btn) {
+      btn.classList.toggle('active');
+      var card = btn.closest('.device-card');
+      var status = card.querySelector('.device-status');
+      if (btn.classList.contains('active')) {
+        status.textContent = 'Online';
+        status.className = 'device-status device-status--online';
+      } else {
+        status.textContent = 'Offline';
+        status.className = 'device-status device-status--offline';
+      }
+    }
+  </script>
+</body>
+</html>
+
