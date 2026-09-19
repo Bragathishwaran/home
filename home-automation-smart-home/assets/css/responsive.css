@@ -150,7 +150,11 @@
 /* Tablet (992px) */
 @media (max-width: 991px) {
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .pricing-grid {
@@ -173,9 +177,7 @@
   }
 
   .solutions-grid {
-    grid-template-columns: 1fr;
-    max-width: 480px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-grid {
@@ -237,6 +239,12 @@
 
 /* Mobile Large (768px) */
 @media (max-width: 767px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
   :root {
     --section-padding: 64px 0;
   }
@@ -258,6 +266,7 @@
   .hero-buttons .btn {
     width: 100%;
     max-width: 300px;
+    white-space: normal;
   }
 
   .section-title {
@@ -387,6 +396,14 @@
 @media (max-width: 575px) {
   .container {
     padding: 0 16px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
   }
 
   h1 { font-size: 1.7rem; }
@@ -529,6 +546,7 @@
   .dir-btn {
     padding: 5px 8px;
     font-size: 0.65rem;
+    min-width: 44px;
   }
 }
 
@@ -536,6 +554,7 @@
 @media (max-width: 400px) {
   .navbar .container {
     padding: 0 12px;
+    column-gap: 12px;
   }
 
   .navbar-brand {
@@ -559,6 +578,7 @@
   .dir-btn {
     padding: 4px 6px;
     font-size: 0.6rem;
+    min-width: 38px;
   }
 
   .theme-toggle {
@@ -596,6 +616,7 @@
   .dir-btn {
     padding: 3px 5px;
     font-size: 0.58rem;
+    min-width: 34px;
   }
 }
 

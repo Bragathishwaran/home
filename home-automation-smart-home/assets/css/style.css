@@ -313,6 +313,10 @@ p {
   margin-bottom: 48px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-center .section-subtitle {
   margin-left: auto;
   margin-right: auto;
@@ -823,14 +827,19 @@ p {
   border: 0;
   background: transparent;
   color: rgba(255, 255, 255, 0.55);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   padding: 5px 10px;
+  min-width: 48px;
+  white-space: nowrap;
   border-radius: 999px;
   cursor: pointer;
   font-family: inherit;
-  line-height: 1;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all var(--transition-fast);
 }
 
@@ -1623,6 +1632,102 @@ p {
   margin-bottom: 0;
 }
 
+/* --- Blog Section --- */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(var(--accent-rgb), 0.38);
+  box-shadow: var(--shadow-lg);
+}
+
+.blog-card-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.blog-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.blog-card:hover .blog-card-media img {
+  transform: scale(1.06);
+}
+
+.blog-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.blog-card-meta .tag {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.blog-card h3 {
+  font-size: 1.18rem;
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.blog-card .btn-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.blog-card .btn-read:hover {
+  gap: 8px;
+  color: var(--accent-light);
+}
+
 /* --- Solutions Preview Section --- */
 .solutions-grid {
   display: grid;
@@ -1640,6 +1745,7 @@ p {
   aspect-ratio: 3/4;
   display: flex;
   align-items: flex-end;
+  scroll-margin-top: 120px;
   background: linear-gradient(160deg, #2A2822 0%, #211F19 55%, #151310 100%);
 }
 
@@ -1782,7 +1888,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .pricing-card {
@@ -1792,6 +1898,8 @@ p {
   padding: 40px 32px;
   transition: all var(--transition-base);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .pricing-card.featured {
@@ -1860,6 +1968,7 @@ p {
   flex-direction: column;
   gap: 14px;
   margin-bottom: 36px;
+  flex: 1;
 }
 
 .pricing-features li {
@@ -1878,6 +1987,7 @@ p {
 
 .pricing-card .btn {
   width: 100%;
+  margin-top: auto;
 }
 
 /* --- Testimonials Section --- */
@@ -2246,9 +2356,10 @@ p {
 
 .parallax-bg {
   position: absolute;
-  inset: -18% 0;
+  inset: -25% 0;
   background-size: cover;
-  background-position: center 42%;
+  background-position: center 40%;
+  background-repeat: no-repeat;
   z-index: 0;
   will-change: transform;
 }

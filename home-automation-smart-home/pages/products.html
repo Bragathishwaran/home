@@ -103,11 +103,15 @@
       margin-top: auto;
     }
     .product-actions .btn { flex: 1; padding: 10px 16px; font-size: 0.85rem; }
-    .no-results {
+.no-results {
       display: none;
       text-align: center;
       padding: 60px 0;
       color: var(--text-muted);
+    }
+    .product-filter-row {
+      grid-template-columns: 1fr 1.5fr;
+      margin-bottom: 28px;
     }
     .no-results.show { display: block; }
     .no-results i { font-size: 3rem; color: var(--border-color); margin-bottom: 16px; }
@@ -183,6 +187,9 @@
     }
     @media (max-width: 575px) {
       .product-grid { grid-template-columns: minmax(0, 1fr); }
+      .product-filter-row { grid-template-columns: 1fr; }
+      .product-card { padding: 24px 20px; }
+      .product-actions { flex-direction: column; }
     }
     </style>
 </head>
@@ -214,22 +221,24 @@
                 <div class="nav-dropdown">
           <a href="../index.html" class="nav-dropdown-toggle">Home <i class="bi bi-chevron-down dropdown-caret"></i></a>
           <div class="nav-dropdown-menu">
-            <a href="../index.html"><i class="bi bi-house-door-fill"></i> Home 1</a>
-            <a href="../home2.html"><i class="bi bi-house-door"></i> Home 2</a>
+<a href="../index.html">Home 1</a>
+            <a href="../home2.html">Home 2</a>
           </div>
-        </div>
+</div>
+                <a href="about.html">About</a>
                 <a href="solutions.html">Solutions</a>
         <a href="products.html" class="active">Products</a>
         <a href="pricing.html">Pricing</a>
         <a href="installation-process.html">Installation</a>
-        <a href="about.html">About</a>
+
         <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
       </div>
 
       <div class="navbar-actions">
         <div class="dir-toggle" role="group" aria-label="Text direction">
-          <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true">LTR</button>
-          <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false">RTL</button>
+          <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true" aria-label="Left to right">LTR</button>
+          <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false" aria-label="Right to left">RTL</button>
         </div>
         <button class="theme-toggle" aria-label="Toggle theme">
           <i class="bi bi-moon-fill"></i>
@@ -248,13 +257,15 @@
       <div class="mobile-menu-sub">
         <a href="../index.html">Home 1</a>
         <a href="../home2.html">Home 2</a>
-      </div>
+</div>
+            <a href="about.html">About</a>
             <a href="solutions.html">Solutions</a>
       <a href="products.html" class="active">Products</a>
       <a href="pricing.html">Pricing</a>
       <a href="installation-process.html">Installation</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      
+<a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
       <div class="mobile-menu-actions">
         <a href="login.html" class="btn btn-secondary">Login</a>
         <a href="contact.html" class="btn btn-primary">Get Started</a>
@@ -265,22 +276,19 @@
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="../index.html">Home</a>
-        <span>/</span>
-        <span class="current">Products</span>
-      </div>
-      <h1>Premium Smart Home Products</h1>
+<h1>Premium Smart Home Products</h1>
       <p>Discover our curated catalog of intelligent devices, engineered to work seamlessly together in a single ecosystem.</p>
     </div>
   </section>
 
   <!-- Featured Hardware -->
-  <section class="section" style="padding-top:0;">
+  <section class="section">
     <div class="container">
-      <div class="text-center" style="margin-bottom:40px;">
-        <span class="section-label"><i class="bi bi-stars"></i> Featured Hardware</span>
-        <h2 class="section-title">Core Devices, Perfectly Aligned</h2>
+<div class="catalog-header" style="margin-bottom:40px;">
+        <div>
+          <span class="section-label"><i class="bi bi-stars"></i> Featured Hardware</span>
+          <h2 class="section-title">Core Devices, Perfectly Aligned</h2>
+        </div>
       </div>
       <div class="featured-products">
         <div class="featured-product card-hover-glow reveal">
@@ -328,7 +336,7 @@
         <span class="product-count" id="productCount">12 products available</span>
       </div>
 
-      <div class="form-row" style="margin-bottom:28px;grid-template-columns:1fr 1.5fr;">
+      <div class="form-row product-filter-row">
         <select class="form-control" id="categoryFilter">
           <option value="all">All Categories</option>
           <option value="lighting">Smart Lighting</option>
@@ -634,11 +642,11 @@
         <div>
           <h4>Solutions</h4>
           <ul class="footer-links">
-            <li><a href="solutions.html">Smart Lighting</a></li>
-            <li><a href="solutions.html">Security Systems</a></li>
-            <li><a href="solutions.html">Climate Control</a></li>
-            <li><a href="solutions.html">Entertainment</a></li>
-            <li><a href="solutions.html">Energy Management</a></li>
+<li><a href="solutions.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="solutions.html#s-security">Security Systems</a></li>
+            <li><a href="solutions.html#s-climate">Climate Control</a></li>
+            <li><a href="solutions.html#s-entertainment">Entertainment</a></li>
+            <li><a href="solutions.html#s-energy">Energy Management</a></li>
           </ul>
         </div>
 

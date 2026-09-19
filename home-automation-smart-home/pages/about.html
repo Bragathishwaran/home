@@ -35,7 +35,7 @@
       border-color: rgba(176, 141, 87, 0.3);
       box-shadow: var(--shadow-lg);
     }
-    .team-avatar {
+.team-avatar {
       width: 80px;
       height: 80px;
       border-radius: 50%;
@@ -43,15 +43,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--deep-midnight);
       margin: 0 auto 20px;
+      overflow: hidden;
+      border: 2px solid rgba(176, 141, 87, 0.4);
+    }
+    .team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .team-card h3 { font-size: 1.1rem; margin-bottom: 4px; }
     .team-card .team-role { color: var(--electric-cyan); font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; }
     .team-card p { font-size: 0.85rem; margin-bottom: 0; }
-    @media (max-width: 767px) { .team-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 991px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 575px) { .team-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -82,22 +88,24 @@
                 <div class="nav-dropdown">
           <a href="../index.html" class="nav-dropdown-toggle">Home <i class="bi bi-chevron-down dropdown-caret"></i></a>
           <div class="nav-dropdown-menu">
-            <a href="../index.html"><i class="bi bi-house-door-fill"></i> Home 1</a>
-            <a href="../home2.html"><i class="bi bi-house-door"></i> Home 2</a>
+<a href="../index.html">Home 1</a>
+            <a href="../home2.html">Home 2</a>
           </div>
-        </div>
+</div>
+                <a href="about.html" class="active">About</a>
                 <a href="solutions.html">Solutions</a>
         <a href="products.html">Products</a>
         <a href="pricing.html">Pricing</a>
         <a href="installation-process.html">Installation</a>
-        <a href="about.html" class="active">About</a>
-        <a href="contact.html">Contact</a>
+
+            <a href="contact.html">Contact</a>
+<a href="blog.html">Blog</a>
       </div>
 
       <div class="navbar-actions">
         <div class="dir-toggle" role="group" aria-label="Text direction">
-          <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true">LTR</button>
-          <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false">RTL</button>
+          <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true" aria-label="Left to right">LTR</button>
+          <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false" aria-label="Right to left">RTL</button>
         </div>
         <button class="theme-toggle" aria-label="Toggle theme">
           <i class="bi bi-moon-fill"></i>
@@ -116,14 +124,16 @@
       <div class="mobile-menu-sub">
         <a href="../index.html">Home 1</a>
         <a href="../home2.html">Home 2</a>
-      </div>
+</div>
+            <a href="about.html" class="active">About</a>
             <a href="solutions.html">Solutions</a>
       <a href="products.html">Products</a>
       <a href="pricing.html">Pricing</a>
       <a href="installation-process.html">Installation</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
-      <div class="mobile-menu-actions">
+      
+<a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+            <div class="mobile-menu-actions">
         <a href="login.html" class="btn btn-secondary">Login</a>
         <a href="contact.html" class="btn btn-primary">Get Started</a>
       </div>
@@ -133,12 +143,7 @@
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="../index.html">Home</a>
-        <span>/</span>
-        <span class="current">About</span>
-      </div>
-      <h1>Redefining How You Live</h1>
+<h1>Redefining How You Live</h1>
       <p>Nexora Home is your trusted partner in smart home technology, delivering seamless automation that elevates comfort, security and efficiency for modern living.</p>
     </div>
   </section>
@@ -173,8 +178,7 @@
         <p class="section-subtitle">Three principles guide every decision we make.</p>
       </div>
 
-      <div class="features-grid stagger-children" style="grid-template-columns:repeat(3,1fr);">
-        <div class="feature-card reveal card-hover-glow">
+<div class="features-grid stagger-children"><div class="feature-card reveal card-hover-glow">
           <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
           <h3>Quality First</h3>
           <p>We use only proven, enterprise-grade hardware and install it to exacting standards. Every cable, connection and configuration is verified.</p>
@@ -272,19 +276,19 @@
 
       <div class="team-grid stagger-children">
         <div class="team-card reveal card-hover-glow">
-          <div class="team-avatar">AM</div>
+<div class="team-avatar"><img src="../assets/images/Alex Morgan.jpg" alt="Alex Morgan, Founder and CEO" width="80" height="80"></div>
           <h3>Alex Morgan</h3>
           <p class="team-role">Founder &amp; CEO</p>
           <p>Former IoT engineer with a vision to bring premium automation to modern homes.</p>
         </div>
         <div class="team-card reveal card-hover-glow">
-          <div class="team-avatar">SC</div>
+<div class="team-avatar"><img src="../assets/images/Sophia Williams.jpg" alt="Sarah Chen, Chief Technology Officer" width="80" height="80"></div>
           <h3>Sarah Chen</h3>
           <p class="team-role">Chief Technology Officer</p>
           <p>Leads our ecosystem architecture and device integration strategy.</p>
         </div>
         <div class="team-card reveal card-hover-glow">
-          <div class="team-avatar">DP</div>
+<div class="team-avatar"><img src="../assets/images/Daniel Carter.jpg" alt="David Park, Head of Installation" width="80" height="80"></div>
           <h3>David Park</h3>
           <p class="team-role">Head of Installation</p>
           <p>Oversees our certified technician team and installation standards.</p>
@@ -343,11 +347,11 @@
         <div>
           <h4>Solutions</h4>
           <ul class="footer-links">
-            <li><a href="solutions.html">Smart Lighting</a></li>
-            <li><a href="solutions.html">Security Systems</a></li>
-            <li><a href="solutions.html">Climate Control</a></li>
-            <li><a href="solutions.html">Entertainment</a></li>
-            <li><a href="solutions.html">Energy Management</a></li>
+<li><a href="solutions.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="solutions.html#s-security">Security Systems</a></li>
+            <li><a href="solutions.html#s-climate">Climate Control</a></li>
+            <li><a href="solutions.html#s-entertainment">Entertainment</a></li>
+            <li><a href="solutions.html#s-energy">Energy Management</a></li>
           </ul>
         </div>
 

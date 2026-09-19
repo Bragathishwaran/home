@@ -12,6 +12,7 @@
 
 .dash-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -480,35 +481,6 @@
     display: flex;
   }
 
-  .dash-table thead {
-    display: none;
-  }
-
-  .dash-table tbody tr {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    margin-bottom: 8px;
-    border: 1px solid var(--border-light);
-    border-radius: var(--border-radius-md);
-    gap: 8px;
-  }
-
-  .dash-table tbody td {
-    padding: 4px 0;
-    border-bottom: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .dash-table tbody td::before {
-    content: attr(data-label);
-    font-weight: 600;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
-
   .invoice-row {
     flex-wrap: wrap;
   }
@@ -563,6 +535,39 @@
   .profile-avatar-section {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+/* Tables stack into labelled cards on phones only (tablets keep the
+   scrollable table layout thanks to the min-width on .dash-table). */
+@media (max-width: 767px) {
+  .dash-table thead {
+    display: none;
+  }
+
+  .dash-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin-bottom: 8px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-md);
+    gap: 8px;
+  }
+
+  .dash-table tbody td {
+    padding: 4px 0;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dash-table tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--text-muted);
   }
 }
 

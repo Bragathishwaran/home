@@ -36,15 +36,21 @@ function validateContactForm(form) {
   if (name && !name.value.trim()) {
     showFieldError(name, 'Full name is required');
     valid = false;
+  } else if (name && !isValidName(name.value)) {
+    showFieldError(name, 'Please enter your full name (letters only)');
+    valid = false;
   } else { clearFieldError(name); }
 
-  if (email && !isValidEmail(email.value)) {
+  if (email && !isValidEmail(email.value.trim())) {
     showFieldError(email, 'Valid email is required');
     valid = false;
   } else { clearFieldError(email); }
 
   if (phone && !phone.value.trim()) {
     showFieldError(phone, 'Phone number is required');
+    valid = false;
+  } else if (phone && !isValidPhone(phone.value)) {
+    showFieldError(phone, 'Enter a valid phone number (digits only)');
     valid = false;
   } else { clearFieldError(phone); }
 
@@ -67,7 +73,7 @@ function initLoginForm() {
     const password = form.querySelector('[name="password"]');
     let valid = true;
 
-    if (email && !isValidEmail(email.value)) {
+    if (email && !isValidEmail(email.value.trim())) {
       showFieldError(email, 'Valid email is required');
       valid = false;
     } else { clearFieldError(email); }
@@ -104,15 +110,21 @@ function initRegisterForm() {
     if (name && !name.value.trim()) {
       showFieldError(name, 'Full name is required');
       valid = false;
+    } else if (name && !isValidName(name.value)) {
+      showFieldError(name, 'Please enter your full name (letters only)');
+      valid = false;
     } else { clearFieldError(name); }
 
-    if (email && !isValidEmail(email.value)) {
+    if (email && !isValidEmail(email.value.trim())) {
       showFieldError(email, 'Valid email is required');
       valid = false;
     } else { clearFieldError(email); }
 
     if (phone && !phone.value.trim()) {
       showFieldError(phone, 'Phone number is required');
+      valid = false;
+    } else if (phone && !isValidPhone(phone.value)) {
+      showFieldError(phone, 'Enter a valid phone number (digits only)');
       valid = false;
     } else { clearFieldError(phone); }
 
@@ -218,6 +230,19 @@ function initWarrantyForm() {
 /* --- Utility Functions --- */
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function isValidName(name) {
+  const trimmed = name.trim();
+  if (trimmed.length < 2) return false;
+  if (!/^[A-Za-z][A-Za-z' .-]*$/.test(trimmed)) return false;
+  if (trimmed.replace(/[^A-Za-z]/g, '').length < 2) return false;
+  return true;
+}
+
+function isValidPhone(phone) {
+  const cleaned = phone.replace(/[\s\-()]/g, '');
+  return /^\+?[0-9]{7,15}$/.test(cleaned);
 }
 
 function showFieldError(field, message) {
