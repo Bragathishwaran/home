@@ -7,26 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDeviceToggles();
   initSettingsToggles();
   initNotificationDropdown();
-  initHomeSwitcher();
 });
-
-/* --- Home Switcher Dropdown (Home 1 / Home 2) --- */
-function initHomeSwitcher() {
-  document.addEventListener('click', (event) => {
-    if (!event.target.closest('.dashboard-home-switcher')) {
-      document.querySelectorAll('.dashboard-home-switcher.open').forEach((el) => el.classList.remove('open'));
-    }
-  });
-}
-
-function toggleHomeMenu(event) {
-  event.stopPropagation();
-  const wrapper = event.currentTarget.closest('.dashboard-home-switcher');
-  document.querySelectorAll('.dashboard-home-switcher.open').forEach((el) => {
-    if (el !== wrapper) el.classList.remove('open');
-  });
-  wrapper.classList.toggle('open');
-}
 
 /* --- Dashboard Navigation --- */
 function initDashboardNav() {

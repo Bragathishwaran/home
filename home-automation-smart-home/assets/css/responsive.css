@@ -142,7 +142,13 @@
   }
 
   .navbar-actions .btn-login,
-  .navbar-actions .btn-get-started {
+  .navbar-actions .btn-dashboard {
+    display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  .navbar-actions .dir-toggle {
     display: none;
   }
 }
@@ -488,11 +494,6 @@
 
   .dashboard-header {
     padding: 12px 16px;
-  }
-
-  .home-switch-btn {
-    padding: 7px 11px;
-    font-size: 0.82rem;
   }
 
   .navbar-brand {

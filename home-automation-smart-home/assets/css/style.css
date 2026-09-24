@@ -646,16 +646,27 @@ p {
   background: rgba(var(--accent-rgb), 0.1);
 }
 
-.navbar-actions .btn-get-started {
-  padding: 8px 16px;
-  font-size: 0.8rem;
+.navbar-actions .btn-dashboard {
+  padding: 6px 12px;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  box-shadow: 0 6px 18px rgba(176, 141, 87, 0.35);
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--electric-cyan);
+  border: 1px solid rgba(var(--accent-rgb), 0.4);
+  border-radius: var(--border-radius-sm);
+  transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
-[data-theme="dark"] .navbar-actions .btn-get-started {
-  box-shadow: 0 6px 18px rgba(198, 161, 91, 0.3);
+[data-theme="light"] .navbar-actions .btn-dashboard {
+  color: var(--color-accent);
+  border-color: rgba(var(--accent-rgb), 0.35);
+}
+
+.navbar-actions .btn-dashboard:hover {
+  color: var(--electric-cyan);
+  background: rgba(var(--accent-rgb), 0.1);
+  border-color: rgba(var(--accent-rgb), 0.6);
 }
 
 .theme-toggle {
@@ -3094,6 +3105,7 @@ select.form-control {
 
 .dashboard-main {
   flex: 1;
+  min-width: 0;
   margin-left: 260px;
   background: var(--bg-secondary);
   min-height: 100vh;
@@ -3302,6 +3314,7 @@ select.form-control {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
   padding: 24px;
+  min-width: 0;
 }
 
 .dash-panel-header {
