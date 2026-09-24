@@ -145,6 +145,11 @@
   .navbar-actions .btn-dashboard {
     display: none;
   }
+
+  .navbar-actions {
+    grid-column: 3;
+    grid-row: 1;
+  }
 }
 
 @media (max-width: 1279px) {
