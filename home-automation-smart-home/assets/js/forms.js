@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initServiceRequestForm();
   initTicketForm();
   initWarrantyForm();
+  initLoginSuccessPopup();
 });
 
 /* --- Contact Form --- */
@@ -84,12 +85,21 @@ function initLoginForm() {
     } else { clearFieldError(password); }
 
     if (valid) {
-      showToast('Welcome back!', 'Logging you in...', 'success');
-      setTimeout(() => {
-        window.location.href = 'dashboard/index.html';
-      }, 1200);
+      window.location.href = 'login.html?login=success';
     }
   });
+}
+
+/* --- Login Success Popup --- */
+function initLoginSuccessPopup() {
+  if (!document.getElementById('login-form')) return;
+
+  if (new URLSearchParams(window.location.search).get('login') === 'success') {
+    showToast('Login Successful!', 'Welcome back to Nexora Home.', 'success');
+    const url = new URL(window.location.href);
+    url.searchParams.delete('login');
+    window.history.replaceState({}, '', url);
+  }
 }
 
 /* --- Register Form --- */
