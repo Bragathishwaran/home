@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Nexora Home gallery — real smart home installations, product showcases, and design inspiration for lighting, comfort, security and whole-home automation.">
+    <title>Gallery | Nexora Home</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      .gallery-hero-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        max-width: 860px;
+        margin: 40px auto 0;
+      }
+      .gallery-hero-strip .gallery-hero-item {
+        position: relative;
+        height: 200px;
+        border-radius: var(--border-radius-md);
+        overflow: hidden;
+      }
+      .gallery-hero-strip img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-base);
+      }
+      .gallery-hero-strip .gallery-hero-item:hover img { transform: scale(1.06); }
+
+      .gallery-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+      .gallery-filter button {
+        font-family: inherit;
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 8px 18px;
+        border-radius: var(--border-radius-full);
+        border: 1px solid var(--border-color);
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all var(--transition-fast);
+      }
+      .gallery-filter button:hover { border-color: var(--electric-cyan); color: var(--electric-cyan); }
+      .gallery-filter button.is-active {
+        background: var(--electric-cyan-glow);
+        border-color: var(--electric-cyan);
+        color: var(--electric-cyan-primary, var(--electric-cyan));
+      }
+      [data-theme="light"] .gallery-filter button.is-active { color: var(--accent-strong); }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 18px;
+      }
+      .gallery-item {
+        position: relative;
+        aspect-ratio: 4 / 3;
+        border-radius: var(--border-radius-md);
+        overflow: hidden;
+        display: block;
+        border: 1px solid var(--border-color);
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-base), filter var(--transition-base);
+      }
+      .gallery-item:hover img { transform: scale(1.06); filter: brightness(0.92); }
+      .gallery-item-caption {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 18px;
+        background: linear-gradient(to top, rgba(17, 15, 12, 0.82) 0%, rgba(17, 15, 12, 0.1) 55%, transparent 100%);
+        opacity: 1;
+        transition: opacity var(--transition-fast);
+      }
+      .gallery-item-caption .tag {
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--intelligent-blue);
+        margin-bottom: 4px;
+      }
+      .gallery-item-caption h4 { margin: 0; font-size: 1rem; color: #F7F4ED; }
+      .gallery-item-caption p { margin: 4px 0 0; font-size: 0.78rem; color: rgba(247, 244, 237, 0.72); }
+
+      @media (max-width: 767px) {
+        .gallery-hero-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .gallery-hero-strip .gallery-hero-item:last-child { display: none; }
+      }
+      @media (max-width: 575px) {
+        .gallery-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand">
+                <svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="36" height="36" rx="8" fill="url(#logo-grad)"/>
+                    <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+                    <circle cx="18" cy="18" r="3" fill="url(#logo-grad)" opacity="0.9"/>
+                    <defs>
+                        <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36">
+                            <stop stop-color="#B08D57"/>
+                            <stop offset="1" stop-color="#D9C6A3"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="brand-name">NEXORA</span>
+            </a>
+
+            <div class="navbar-nav" id="navbarNav">
+                        <div class="nav-dropdown">
+          <a href="../index.html" class="nav-dropdown-toggle">Home <i class="bi bi-chevron-down dropdown-caret"></i></a>
+          <div class="nav-dropdown-menu">
+<a href="../index.html">Home 1</a>
+            <a href="../home2.html">Home 2</a>
+          </div>
+        </div>
+                        <a href="about.html">About</a>
+                        <a href="solutions.html">Solutions</a>
+                <a href="products.html">Products</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="installation-process.html">Installation</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </div>
+
+            <div class="navbar-actions">
+                <div class="dir-toggle" role="group" aria-label="Text direction">
+                  <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true" aria-label="Left to right">LTR</button>
+                  <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false" aria-label="Right to left">RTL</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <a href="dashboard/index.html" class="btn-dashboard">Dashboard</a>
+                <a href="login.html" class="btn-login">Login</a>
+                <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html" class="mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
+      <div class="mobile-menu-sub">
+        <a href="../index.html">Home 1</a>
+        <a href="../home2.html">Home 2</a>
+      </div>
+            <a href="about.html">About</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="products.html">Products</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="installation-process.html">Installation</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+            <div class="mobile-menu-actions">
+                <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
+                <a href="login.html" class="btn btn-outline">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Work, Beautifully Realized</h1>
+            <p class="subtitle">A look inside homes and products powered by Nexora — from immersive living rooms and calm bedrooms to whole-home security and entertainment spaces.</p>
+
+            <div class="gallery-hero-strip">
+                <div class="gallery-hero-item reveal">
+                    <img src="../assets/images/rooms/living-room-2.jpg" alt="Automated living room lighting scene" loading="eager">
+                </div>
+                <div class="gallery-hero-item reveal">
+                    <img src="../assets/images/rooms/home-theatre-1.jpg" alt="Home theatre entertainment setup" loading="eager">
+                </div>
+                <div class="gallery-hero-item reveal">
+                    <img src="../assets/images/rooms/home-office-1.jpg" alt="Smart home office with automated scenes" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="section-label">Project Showcase</div>
+            <h2 class="section-title">Completed Work &amp; Products</h2>
+            <p class="section-subtitle">Real installations and flagship devices, organized by category.</p>
+
+            <div class="gallery-filter" id="galleryFilter">
+                <button type="button" class="is-active" data-filter="all">All</button>
+                <button type="button" data-filter="living">Living &amp; Entertainment</button>
+                <button type="button" data-filter="comfort">Comfort &amp; Workspaces</button>
+                <button type="button" data-filter="security">Security &amp; Outdoors</button>
+                <button type="button" data-filter="products">Products</button>
+            </div>
+
+            <div class="gallery-grid stagger-children" id="galleryGrid">
+
+                <a class="gallery-item reveal" data-cat="living">
+                    <img src="../assets/images/rooms/living-room-1.jpg" alt="Living room with automated lighting" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Living</span>
+                        <h4>Living Room Scenes</h4>
+                        <p>Circadian lighting with one-tap mood scenes.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="living">
+                    <img src="../assets/images/rooms/living-room-2.jpg" alt="Entertainment-ready living area" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Living</span>
+                        <h4>Entertainment Ready</h4>
+                        <p>Media, ambience and climate in perfect sync.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="living">
+                    <img src="../assets/images/rooms/home-theatre-1.jpg" alt="Dedicated home theatre room" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Entertainment</span>
+                        <h4>Cinema Mode</h4>
+                        <p>Dimmed lighting and tuned audio for movie nights.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="living">
+                    <img src="../assets/images/rooms/home-theatre-2.jpg" alt="Home theatre with ambient wall lighting" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Entertainment</span>
+                        <h4>Ambient Wall Glow</h4>
+                        <p>Low-glow accent lighting behind the screen.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="living">
+                    <img src="../assets/images/rooms/entire-home-2.jpg" alt="Whole home at a glance" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Living</span>
+                        <h4>Whole Home</h4>
+                        <p>Unified scenes across every room.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="comfort">
+                    <img src="../assets/images/rooms/bedroom-1.jpg" alt="Automated bedroom with soft lighting" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Comfort</span>
+                        <h4>Calm Bedroom</h4>
+                        <p>Gradual wake and wind-down lighting routines.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="comfort">
+                    <img src="../assets/images/rooms/bedroom-2.jpg" alt="Bedroom with smart blind control" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Comfort</span>
+                        <h4>Blind Automation</h4>
+                        <p>Motorized blinds timed to sunrise and sleep.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="comfort">
+                    <img src="../assets/images/rooms/home-office-2.jpg" alt="Smart home office setup" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Workspace</span>
+                        <h4>Focus Office</h4>
+                        <p>Task lighting and temperature tuned for focus.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="comfort">
+                    <img src="../assets/images/rooms/home-office-1.jpg" alt="Home office with automated daylight scenes" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Workspace</span>
+                        <h4>Daylight Sync</h4>
+                        <p>Cool bright scenes that follow natural light.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="comfort">
+                    <img src="../assets/images/rooms/entire-home-wide.jpg" alt="Panorama of an automated home" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Comfort</span>
+                        <h4>Open Plan Living</h4>
+                        <p>Connected zones working as one space.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="security">
+                    <img src="../assets/images/rooms/security-1.jpg" alt="Smart security and smart lock" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Security</span>
+                        <h4>Smart Entry</h4>
+                        <p>Biometric locks and instant alerts.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="security">
+                    <img src="../assets/images/rooms/security-2.jpg" alt="Surveillance and monitoring setup" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Security</span>
+                        <h4>Always Watching</h4>
+                        <p>Privacy-first cameras and motion zones.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="security">
+                    <img src="../assets/images/rooms/outdoor-1.jpg" alt="Outdoor lighting and security" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Outdoors</span>
+                        <h4>Perimeter Protection</h4>
+                        <p>Outdoor sensors and flood alerting.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="security">
+                    <img src="../assets/images/rooms/outdoor-2.jpg" alt="Outdoor landscape lighting" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Outdoors</span>
+                        <h4>Garden Lighting</h4>
+                        <p>Path and accent lights on a schedule.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="products">
+                    <img src="../assets/images/products/nexora-smart-hub-x1.jpg" alt="Nexora Smart Node Hub" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Products</span>
+                        <h4>Smart Node Hub</h4>
+                        <p>The local-first brain of every Nexora home.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="products">
+                    <img src="../assets/images/products/nexora-light-panel-pro.jpg" alt="Nexora Light Panel Pro" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Products</span>
+                        <h4>Light Panel Pro</h4>
+                        <p>Architectural lighting with tunable white.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="products">
+                    <img src="../assets/images/features/climate-control.jpg" alt="Nexora Climate One thermostat" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Products</span>
+                        <h4>Climate One</h4>
+                        <p>Self-calibrating HVAC comfort control.</p>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" data-cat="products">
+                    <img src="../assets/images/products/nexora-sense-pro-sensor.jpg" alt="Nexora Sense Pro occupancy sensor" loading="lazy">
+                    <div class="gallery-item-caption">
+                        <span class="tag">Products</span>
+                        <h4>Sense Pro Sensor</h4>
+                        <p>Presence-driven automation, no batteries.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo">
+            <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="8" fill="url(#logo-grad)"/>
+              <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+              <circle cx="18" cy="18" r="3" fill="url(#logo-grad)" opacity="0.9"/>
+              <defs>
+                <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36">
+                  <stop stop-color="#B08D57"/>
+                  <stop offset="1" stop-color="#D9C6A3"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>NEXORA</span>
+          </a>
+          <p>Intelligent home automation, designed around the way you live. From lighting and security to climate and entertainment — your home, smarter by design.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@nexorahome" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../home2.html">Home 2</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="solutions.html#s-security">Security Systems</a></li>
+            <li><a href="solutions.html#s-climate">Climate Control</a></li>
+            <li><a href="solutions.html#s-entertainment">Entertainment</a></li>
+            <li><a href="solutions.html#s-energy">Energy Management</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="installation-process.html">Installation Process</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Get smarter home insights delivered to your inbox.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nexora Home. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="legal.html#privacy">Privacy Policy</a>
+          <a href="legal.html#terms">Terms of Service</a>
+          <a href="legal.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Chatbot -->
+    <div class="chatbot" id="chatbot">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
+            <i class="bi bi-chat-dots-fill"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <span><i class="bi bi-robot"></i> Nexora Assistant</span>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot">Hi there! How can I help you find the right smart home plan today?</div>
+            </div>
+            <form class="chatbot-input" id="chatbotForm">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." autocomplete="off">
+                <button type="submit" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+      (function () {
+        var filter = document.getElementById('galleryFilter');
+        var grid = document.getElementById('galleryGrid');
+        var items = Array.prototype.slice.call(grid.querySelectorAll('.gallery-item'));
+        if (!filter) return;
+        filter.addEventListener('click', function (e) {
+          var btn = e.target.closest('button[data-filter]');
+          if (!btn) return;
+          Array.prototype.forEach.call(filter.querySelectorAll('button'), function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var f = btn.getAttribute('data-filter');
+          items.forEach(function (item) {
+            var show = f === 'all' || item.getAttribute('data-cat') === f;
+            item.style.display = show ? '' : 'none';
+          });
+        });
+      })();
+    </script>
+
+</body>
+</html>

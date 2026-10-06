@@ -10,6 +10,18 @@
 }
 
 /* Desktop (1200px) */
+/* Footer: keep the 2-column layout until wide-enough for comfortable 5 columns */
+@media (max-width: 1349px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
 @media (max-width: 1199px) {
   .hero .container {
     grid-template-columns: 1fr;
@@ -33,7 +45,8 @@
     display: none;
   }
 
-  .features-grid {
+  .features-grid,
+  .solutions-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -56,11 +69,11 @@
   }
 
   .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-brand {
-    grid-column: span 3;
+    grid-column: span 2;
   }
 
   .stats-grid {
@@ -72,7 +85,9 @@
     display: none;
   }
 
-  .about-mission {
+  .about-mission,
+  .about-vision,
+  .about-hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -113,14 +128,6 @@
   .dash-grid {
     grid-template-columns: 1fr;
   }
-
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-brand {
-    grid-column: span 2;
-  }
 }
 
 /* Navbar compaction (fits the floating pill on narrow desktops) */
@@ -152,9 +159,40 @@
   }
 }
 
-@media (max-width: 1279px) {
+@media (min-width: 1101px) and (max-width: 1279px) {
   .navbar-actions .dir-toggle {
     display: none;
+  }
+}
+
+/* Show the RTL/LTR toggle on tablets and phones; compact it as space shrinks */
+@media (max-width: 1100px) {
+  .navbar-actions .dir-toggle {
+    display: inline-flex;
+  }
+
+  .navbar-actions .dir-btn {
+    padding: 5px 9px;
+    min-width: 44px;
+    font-size: 0.72rem;
+  }
+}
+
+/* Keep the full nav pill (with Gallery) fitting on narrow desktops */
+@media (min-width: 1101px) and (max-width: 1319px) {
+  .navbar-nav {
+    gap: 0;
+  }
+
+  .navbar-nav a {
+    padding: 8px 10px;
+    font-size: 0.84rem;
+  }
+
+  .navbar-actions .btn-login,
+  .navbar-actions .btn-dashboard {
+    padding: 8px 12px;
+    font-size: 0.82rem;
   }
 }
 
@@ -217,6 +255,15 @@
 
   .auth-visual {
     display: none;
+  }
+
+  .auth-form-side,
+  .auth-form-container {
+    min-width: 0;
+  }
+
+  .auth-form-side {
+    padding: 40px 20px;
   }
 
   .dashboard-sidebar {
@@ -409,7 +456,8 @@
     padding: 0 16px;
   }
 
-  .features-grid {
+  .features-grid,
+  .solutions-grid {
     grid-template-columns: 1fr;
   }
 

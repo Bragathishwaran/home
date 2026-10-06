@@ -8,6 +8,12 @@
   <meta property="og:description" content="Meet the team behind intelligent living. Nexora Home designs, installs and supports complete smart home ecosystems.">
   <meta property="og:type" content="website">
   <title>About Us | Nexora Home</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,16 +52,45 @@
       margin: 0 auto 20px;
       overflow: hidden;
       border: 2px solid rgba(176, 141, 87, 0.4);
+      position: relative;
+      flex-shrink: 0;
     }
     .team-avatar img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
+      object-position: center top;
       display: block;
     }
     .team-card h3 { font-size: 1.1rem; margin-bottom: 4px; }
     .team-card .team-role { color: var(--electric-cyan); font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; }
     .team-card p { font-size: 0.85rem; margin-bottom: 0; }
+    .about-deliverables {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 18px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .about-deliverables li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .about-deliverables li i {
+      color: var(--electric-cyan);
+      font-size: 1rem;
+      margin-top: 2px;
+    }
+    @media (max-width: 575px) { .about-deliverables { grid-template-columns: 1fr; } }
     @media (max-width: 991px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 575px) { .team-grid { grid-template-columns: 1fr; } }
   </style>
@@ -99,6 +134,7 @@
         <a href="installation-process.html">Installation</a>
 
             <a href="contact.html">Contact</a>
+<a href="gallery.html">Gallery</a>
 <a href="blog.html">Blog</a>
       </div>
 
@@ -132,6 +168,7 @@
       <a href="installation-process.html">Installation</a>
       
 <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
             <a href="blog.html">Blog</a>
             <div class="mobile-menu-actions">
         <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
@@ -140,30 +177,81 @@
     </div>
   </nav>
 
-  <!-- Page Hero -->
-  <section class="page-hero">
+  <!-- Page Hero with Visual Image -->
+  <section class="page-hero about-hero">
     <div class="container">
-<h1>Redefining How You Live</h1>
-      <p>Nexora Home is your trusted partner in smart home technology, delivering seamless automation that elevates comfort, security and efficiency for modern living.</p>
+      <div class="about-hero-grid">
+        <div class="about-hero-content reveal">
+          <span class="section-label"><i class="bi bi-buildings"></i> Who We Are</span>
+          <h1>Redefining How You Live</h1>
+          <p>Nexora Home is your trusted partner in smart home technology, delivering seamless automation that elevates comfort, security and efficiency for modern living.</p>
+          <div class="about-hero-highlights">
+            <div class="hero-highlight-item">
+              <i class="bi bi-shield-check"></i>
+              <span>ISO Certified Installation</span>
+            </div>
+            <div class="hero-highlight-item">
+              <i class="bi bi-lightning-charge"></i>
+              <span>Eco-Smart Energy Focus</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-hero-media reveal-right">
+          <div class="about-hero-image-wrapper">
+            <img src="../assets/images/rooms/entire-home-wide.jpg" alt="Modern luxury smart home architecture by Nexora" loading="eager">
+            <div class="about-hero-badge">
+              <span class="badge-num">500+</span>
+              <span class="badge-text">Homes Automated Across the Globe</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Mission Section -->
-  <section class="section">
+  <!-- Mission & Vision Section -->
+  <section class="section" id="mission-vision">
     <div class="container">
-      <div class="about-mission">
-        <div class="about-mission-content reveal">
+      <!-- Our Mission: Company Purpose -->
+      <div class="about-mission reveal" style="margin-bottom: 72px;">
+        <div class="about-mission-content">
           <span class="section-label"><i class="bi bi-bullseye"></i> Our Mission</span>
           <h2>Making Intelligent Living Accessible to Every Home</h2>
-          <p>We believe technology should serve people, not complicate their lives. Since 2021, our mission has been to design smart home systems that are reliable, elegant and genuinely useful.</p>
-          <p>Every Nexora installation is built on three principles: seamless integration, thoughtful design, and lasting quality. We measure our success by how effortlessly our systems become part of daily life.</p>
-          <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;">
+          <p>Nexora Home is a design-and-build smart automation company. Our core work is simple: we listen to how you live, design a system around that, install it to industrial standards, and support it for the life of your home. One team handles architecture, installation and care — so there is never a hand-off gap between the people who design your system and the people who install it.</p>
+          <p>Since 2021 we have completed 500+ residential and commercial smart projects — from single-bedroom apartments to full villa ecosystems — and 98% of our clients continue growing their systems with us. Our key achievements include a strict 40-point inspection on every handover, documented 20–30% reductions in household energy bills, and a 24/7 support line that our team actually answers.</p>
+          <ul class="about-deliverables">
+            <li><i class="bi bi-check-circle-fill"></i> End-to-end design &amp; certified installation</li>
+            <li><i class="bi bi-check-circle-fill"></i> 500+ homes and spaces automated</li>
+            <li><i class="bi bi-check-circle-fill"></i> 40-point inspection on every project</li>
+            <li><i class="bi bi-check-circle-fill"></i> 20–30% average energy-bill savings</li>
+            <li><i class="bi bi-check-circle-fill"></i> ISO-certified electricians &amp; IoT engineers</li>
+            <li><i class="bi bi-check-circle-fill"></i> 24/7 monitoring &amp; remote diagnostics</li>
+          </ul>
+          <p style="margin-top:20px;"><strong>Who we work with:</strong> homeowners upgrading room by room, architects and interior designers who specify smart infrastructure for new builds, and developers or businesses that need dependable lighting, climate and security systems across many spaces at once.</p>
+          <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;">
             <a href="solutions.html" class="btn btn-primary">Explore Solutions</a>
             <a href="contact.html" class="btn btn-secondary">Talk to Us</a>
           </div>
         </div>
         <div class="about-mission-visual reveal-right">
-          <img src="../assets/images/rooms/home-theatre-1.jpg" alt="Cinema-grade smart home theatre experience by Nexora" loading="lazy">
+          <img src="../assets/images/rooms/home-theatre-1.jpg" alt="Cinema-grade smart home theatre experience by Nexora" loading="eager">
+        </div>
+      </div>
+
+      <!-- Our Vision: Future Goals -->
+      <div class="about-vision reveal">
+        <div class="about-vision-visual reveal-left">
+          <img src="../assets/images/hero/hero-ambient-3.jpg" alt="Futuristic autonomous ambient living space" loading="lazy">
+        </div>
+        <div class="about-vision-content">
+          <span class="section-label"><i class="bi bi-compass"></i> Our Vision</span>
+          <h2>Pioneering the Future of Autonomous, Net-Zero Living</h2>
+          <p>Our goal for the future is to spearhead the global transition toward zero-friction, autonomous living spaces. By 2030, Nexora aims to transform over 50,000 residences into self-optimizing ecosystems that actively protect personal health, privacy, and the planet.</p>
+          <p>We are creating smart spaces where climate, energy storage, dynamic illumination, and security learn continuously from homeowner habits—reducing residential energy footprints by over 40% while delivering unparalleled peace of mind.</p>
+          <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+            <a href="installation-process.html" class="btn btn-primary">Our Process</a>
+            <a href="products.html" class="btn btn-outline">Explore Hardware</a>
+          </div>
         </div>
       </div>
     </div>
@@ -175,23 +263,50 @@
       <div class="text-center">
         <span class="section-label"><i class="bi bi-gem"></i> Smart Living Philosophy</span>
         <h2 class="section-title">Why We Do What We Do</h2>
-        <p class="section-subtitle">Three principles guide every decision we make.</p>
+        <p class="section-subtitle">Three principles guide every decision and architecture we make.</p>
       </div>
 
-<div class="features-grid stagger-children"><div class="feature-card reveal card-hover-glow">
-          <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
-          <h3>Quality First</h3>
-          <p>We use only proven, enterprise-grade hardware and install it to exacting standards. Every cable, connection and configuration is verified.</p>
+      <div class="features-grid stagger-children">
+        <div class="feature-card feature-visual-card reveal card-hover-glow">
+          <div class="feature-media">
+            <img src="../assets/images/smart-kitchen.jpg" alt="Precision smart kitchen hardware installation" loading="lazy">
+            <span class="feature-badge"><i class="bi bi-patch-check"></i> Enterprise Grade</span>
+          </div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+              <h3>Quality First</h3>
+            </div>
+            <p>We use only proven, enterprise-grade hardware and install it to exacting standards. Every cable, connection and configuration is verified.</p>
+          </div>
         </div>
-        <div class="feature-card reveal card-hover-glow">
-          <div class="feature-icon"><i class="bi bi-people"></i></div>
-          <h3>Human-Centered</h3>
-          <p>Our designs start with how you live, not with technology. Automation should adapt to your routine, not the other way around.</p>
+
+        <div class="feature-card feature-visual-card reveal card-hover-glow">
+          <div class="feature-media">
+            <img src="../assets/images/rooms/living-room-1.jpg" alt="Human-centered smart living room space" loading="lazy">
+            <span class="feature-badge"><i class="bi bi-people"></i> Lifestyle First</span>
+          </div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <div class="feature-icon"><i class="bi bi-people"></i></div>
+              <h3>Human-Centered</h3>
+            </div>
+            <p>Our designs start with how you live, not with technology. Automation should adapt to your routine, not the other way around.</p>
+          </div>
         </div>
-        <div class="feature-card reveal card-hover-glow">
-          <div class="feature-icon"><i class="bi bi-infinity"></i></div>
-          <h3>Future Ready</h3>
-          <p>We build systems that grow with you. Adding new devices, scenes and rooms later should be simple, not a project.</p>
+
+        <div class="feature-card feature-visual-card reveal card-hover-glow">
+          <div class="feature-media">
+            <img src="../assets/images/hero/hero-ambient-2.jpg" alt="Future-ready ambient smart lighting and controls" loading="lazy">
+            <span class="feature-badge"><i class="bi bi-infinity"></i> Modular IoT</span>
+          </div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <div class="feature-icon"><i class="bi bi-infinity"></i></div>
+              <h3>Future Ready</h3>
+            </div>
+            <p>We build systems that grow with you. Adding new devices, scenes and rooms later should be simple, not an overwhelming project.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -203,39 +318,92 @@
       <div class="text-center">
         <span class="section-label"><i class="bi bi-shield-check"></i> Why Choose Us</span>
         <h2 class="section-title">The Nexora Difference</h2>
-        <p class="section-subtitle">What sets our smart home installations apart.</p>
+        <p class="section-subtitle">What sets our smart home installations apart from ordinary systems.</p>
       </div>
 
       <div class="features-grid stagger-children">
-        <div class="feature-card reveal card-hover-glow">
-          <div class="feature-icon"><i class="bi bi-patch-check"></i></div>
-          <h3>Certified Installation</h3>
-          <p>All technicians are factory-certified in electrical safety and IoT integration, with strict code compliance on every job.</p>
+        <div class="feature-card feature-visual-card reveal card-hover-glow">
+          <div class="feature-media">
+            <img src="../assets/images/products/nexora-smart-hub-x1-2.jpg" alt="Certified electrical and IoT installation" loading="lazy">
+            <span class="feature-badge"><i class="bi bi-patch-check"></i> Certified</span>
+          </div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <div class="feature-icon"><i class="bi bi-patch-check"></i></div>
+              <h3>Certified Installation</h3>
+            </div>
+            <p>All technicians are factory-certified in electrical safety and IoT integration, with strict code compliance on every job.</p>
+          </div>
         </div>
-        <div class="feature-card reveal card-hover-glow">
-          <div class="feature-icon"><i class="bi bi-clipboard-check"></i></div>
-          <h3>Quality Assurance</h3>
-          <p>Every installation completes a 40-point inspection checklist before handover, backed by a written quality guarantee.</p>
+
+        <div class="feature-card feature-visual-card reveal card-hover-glow">
+          <div class="feature-media">
+            <img src="../assets/images/products/nexora-light-panel-pro.jpg" alt="Exacting 40-point quality assurance check" loading="lazy">
+            <span class="feature-badge"><i class="bi bi-clipboard-check"></i> 40-Point QA</span>
+          </div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <div class="feature-icon"><i class="bi bi-clipboard-check"></i></div>
+              <h3>Quality Assurance</h3>
+            </div>
+            <p>Every installation completes a 40-point inspection checklist before handover, backed by a comprehensive written quality guarantee.</p>
+          </div>
         </div>
-        <div class="feature-card reveal card-hover-glow">
-          <div class="feature-icon"><i class="bi bi-headset"></i></div>
-          <h3>Round-the-Clock Support</h3>
-          <p>Our support team is available 24/7 for all Signature and premium package customers, with remote diagnostics built in.</p>
+
+        <div class="feature-card feature-visual-card reveal card-hover-glow">
+          <div class="feature-media">
+            <img src="../assets/images/rooms/home-office-2.jpg" alt="Round-the-clock proactive smart home support" loading="lazy">
+            <span class="feature-badge"><i class="bi bi-headset"></i> 24/7 Monitoring</span>
+          </div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <div class="feature-icon"><i class="bi bi-headset"></i></div>
+              <h3>Round-the-Clock Support</h3>
+            </div>
+            <p>Our support team is available 24/7 for all Signature and premium package customers, with real-time remote diagnostics built in.</p>
+          </div>
         </div>
-        <div class="feature-card reveal card-hover-glow">
-          <div class="feature-icon"><i class="bi bi-sliders"></i></div>
-          <h3>Truly Custom Designs</h3>
-          <p>No cookie-cutter setups. Each home receives a unique design tailored to its architecture, wiring and lifestyle.</p>
+
+        <div class="feature-card feature-visual-card reveal card-hover-glow">
+          <div class="feature-media">
+            <img src="../assets/images/rooms/bedroom-2.jpg" alt="Bespoke custom smart home design for bedroom" loading="lazy">
+            <span class="feature-badge"><i class="bi bi-sliders"></i> Tailored</span>
+          </div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <div class="feature-icon"><i class="bi bi-sliders"></i></div>
+              <h3>Truly Custom Designs</h3>
+            </div>
+            <p>No cookie-cutter setups. Each home receives a unique architectural design tailored to its specific wiring, floorplan and lifestyle.</p>
+          </div>
         </div>
-        <div class="feature-card reveal card-hover-glow">
-          <div class="feature-icon"><i class="bi bi-graph-down-arrow"></i></div>
-          <h3>Proven Energy Savings</h3>
-          <p>Our clients see 20-30% reductions in energy bills through smart scheduling, monitoring and adaptive climate control.</p>
+
+        <div class="feature-card feature-visual-card reveal card-hover-glow">
+          <div class="feature-media">
+            <img src="../assets/images/features/energy-management.jpg" alt="Documented household energy savings" loading="lazy">
+            <span class="feature-badge"><i class="bi bi-graph-down-arrow"></i> -30% Bills</span>
+          </div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <div class="feature-icon"><i class="bi bi-graph-down-arrow"></i></div>
+              <h3>Proven Energy Savings</h3>
+            </div>
+            <p>Our clients see 20-30% reductions in energy bills through smart scheduling, automated standby cut-offs and adaptive climate control.</p>
+          </div>
         </div>
-        <div class="feature-card reveal card-hover-glow">
-          <div class="feature-icon"><i class="bi bi-arrow-up-circle"></i></div>
-          <h3>Always Upgradable</h3>
-          <p>Open architecture means future devices connect seamlessly. Expand room by room without replacing the core system.</p>
+
+        <div class="feature-card feature-visual-card reveal card-hover-glow">
+          <div class="feature-media">
+            <img src="../assets/images/rooms/security-3.jpg" alt="Expandable IoT architecture" loading="lazy">
+            <span class="feature-badge"><i class="bi bi-arrow-up-circle"></i> Future Proof</span>
+          </div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <div class="feature-icon"><i class="bi bi-arrow-up-circle"></i></div>
+              <h3>Always Upgradable</h3>
+            </div>
+            <p>Open architecture means future devices connect seamlessly. Expand room by room at any time without replacing the core system.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -339,8 +507,8 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="../home2.html">Home 2</a></li>
-            
-            
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
 
