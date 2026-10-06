@@ -1884,9 +1884,9 @@ p {
 
 .solution-pill:hover,
 .solution-pill.active {
-  background: rgba(176, 141, 87, 0.15);
+  background: rgba(255, 255, 255, 0.466);
   border-color: var(--accent-light);
-  color: var(--accent-light);
+  color: #db955b;
 }
 
 /* --- Solutions Section & Cards --- */
