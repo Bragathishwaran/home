@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <defs><linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#B08D57"/><stop offset="1" stop-color="#D9C6A3"/></linearGradient></defs>
+  <rect width="36" height="36" rx="8" fill="url(#logo-grad)"/>
+  <path d="M18 8 8 16v12h6v-6h8v6h6V16L18 8Z" fill="#fff" fill-opacity=".95"/>
+  <circle cx="18" cy="18" r="3" fill="url(#logo-grad)" opacity=".9"/>
+</svg>

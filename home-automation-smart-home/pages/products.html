@@ -61,8 +61,8 @@
     }
     .products-hero {
       position: relative;
-      background: linear-gradient(180deg, rgba(17, 15, 12, 0.82) 0%, rgba(17, 15, 12, 0.94) 100%),
-                  url('../assets/images/hero/living-room-hero.jpg') center center / cover no-repeat;
+      background: linear-gradient(180deg, rgba(17, 15, 12, 0.62) 0%, rgba(17, 15, 12, 0.84) 100%),
+                  url('../assets/images/products/nexora-smart-hub-x1-2.jpg') center 48% / cover no-repeat;
       padding: 160px 0 90px;
       overflow: hidden;
     }
@@ -78,7 +78,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(17, 15, 12, 0.42);
+      background: rgba(17, 15, 12, 0.12);
       pointer-events: none;
       z-index: 1;
     }
@@ -276,7 +276,6 @@
       text-align: center;
     }
     .featured-product-info h3 { text-align: center; }
-    .products-hero-showcase { text-align: center; }
     .no-results {
       display: none;
       text-align: center;
@@ -357,66 +356,6 @@
       font-size: 0.7rem;
       padding: 5px 10px;
       border-radius: 999px;
-    }
-    .products-hero-showcase {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      margin: 48px auto 0;
-      max-width: 860px;
-      text-align: left;
-    }
-    .products-hero-device {
-      position: relative;
-      min-height: 150px;
-      border-radius: var(--border-radius-md);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-    }
-    .products-hero-device img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform var(--transition-base);
-    }
-    .products-hero-device:hover img { transform: scale(1.05); }
-    .products-hero-device::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(17, 15, 12, 0.78) 0%, rgba(17, 15, 12, 0.08) 60%, transparent 100%);
-      pointer-events: none;
-    }
-    .products-hero-device span {
-      position: relative;
-      z-index: 2;
-      padding: 12px 14px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      color: #F3EFE7;
-    }
-    .products-hero-device span small {
-      display: block;
-      font-weight: 400;
-      color: rgba(247, 244, 237, 0.62);
-      font-size: 0.68rem;
-      margin-top: 2px;
-    }
-    @media (max-width: 767px) {
-      .products-hero-showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 575px) {
-      .products-hero-showcase { gap: 10px; }
-      .products-hero-device { min-height: 116px; }
     }
     @media (max-width: 991px) {
       .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -524,24 +463,6 @@
       <h1>Premium Smart Home Products</h1>
       <p style="margin: 0 auto; max-width: 640px;">Discover our curated catalog of intelligent devices, engineered to work seamlessly together in a unified, local-first automation ecosystem.</p>
 
-      <div class="products-hero-showcase">
-        <a class="products-hero-device" href="#productGrid" data-cat="energy" onclick="setCategory('energy'); return false;">
-          <img src="../assets/images/products/nexora-smart-hub-x1.jpg" alt="Nexora Smart Node Hub" loading="lazy">
-          <span>Smart Node Hub<small>The brain of your home</small></span>
-        </a>
-        <a class="products-hero-device" href="#productGrid" data-cat="lighting" onclick="setCategory('lighting'); return false;">
-          <img src="../assets/images/products/nexora-light-panel-pro.jpg" alt="Nexora Light Panel Pro" loading="lazy">
-          <span>Light Panel Pro<small>Ambient, tunable lighting</small></span>
-        </a>
-        <a class="products-hero-device" href="#productGrid" data-cat="climate" onclick="setCategory('climate'); return false;">
-          <img src="../assets/images/features/climate-control.jpg" alt="Nexora Climate One Thermostat" loading="lazy">
-          <span>Climate One<small>HVAC smart thermostat</small></span>
-        </a>
-        <a class="products-hero-device" href="#productGrid" data-cat="security" onclick="setCategory('security'); return false;">
-          <img src="../assets/images/products/nexora-sense-pro-sensor.jpg" alt="Nexora Sense Pro Sensor" loading="lazy">
-          <span>Sense Pro Sensor<small>Presence &amp; contact sensing</small></span>
-        </a>
-      </div>
     </div>
   </section>
 
@@ -574,7 +495,7 @@
         </a>
         <a href="#productGrid" class="category-card reveal" data-cat="climate" onclick="setCategory('climate'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/features/climate-control.jpg" alt="Climate / HVAC automation products" loading="lazy">
+            <img src="../assets/images/Nexora%20Climate%20One.jpg" alt="Climate / HVAC automation products" loading="lazy">
           </div>
           <div class="category-card-body">
             <h3>Climate / HVAC</h3>
@@ -592,7 +513,7 @@
         </a>
         <a href="#productGrid" class="category-card reveal" data-cat="energy" onclick="setCategory('energy'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/features/energy-management.jpg" alt="Energy Management products" loading="lazy">
+            <img src="../assets/images/Energy%20Management.jpg" alt="Energy Management products" loading="lazy">
           </div>
           <div class="category-card-body">
             <h3>Energy Management</h3>
@@ -601,11 +522,11 @@
         </a>
         <a href="#productGrid" class="category-card reveal" data-cat="all" onclick="setCategory('all'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/hero/hero-ambient-2.jpg" alt="Nexora complete product range" loading="lazy">
+            <img src="../assets/images/rooms/entire-home-wide.jpg" alt="Nexora complete product range" loading="lazy">
           </div>
           <div class="category-card-body">
             <h3>Complete Range</h3>
-            <p>Every Nexora product in one place - the full 15-device system, ready to mix and match.</p>
+            <p>Every Nexora product in one place, with 12 devices ready to mix and match.</p>
           </div>
         </a>
       </div>
@@ -643,7 +564,7 @@
         </div>
         <div class="featured-product card-hover-glow reveal">
           <div class="featured-product-img-wrap">
-            <img src="../assets/images/features/climate-control.jpg" alt="Nexora Climate One HVAC Thermostat" loading="lazy">
+            <img src="../assets/images/Nexora%20Climate%20One.jpg" alt="Nexora Climate One HVAC Thermostat" loading="lazy">
           </div>
           <div class="featured-product-info">
             <span class="badge badge-primary">Climate / HVAC</span>
@@ -662,7 +583,7 @@
           <span class="section-label"><i class="bi bi-box-seam"></i> Product Catalog</span>
           <h2>Devices That Think Ahead</h2>
         </div>
-        <span class="product-count" id="productCount">15 products available</span>
+        <span class="product-count" id="productCount">12 products available</span>
       </div>
 
       <div class="form-row product-filter-row">
@@ -695,7 +616,7 @@
             <div class="product-price">&#8377;4,499</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Light Panel Pro added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
@@ -716,7 +637,7 @@
             <div class="product-price">&#8377;3,499</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Light Strip RGBW added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
@@ -737,7 +658,7 @@
             <div class="product-price">&#8377;18,999</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','SoundBar Pro added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
@@ -758,7 +679,7 @@
             <div class="product-price">&#8377;24,999</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Audio Hub added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
@@ -779,14 +700,14 @@
             <div class="product-price">&#8377;11,499</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Surround Speakers added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
 
         <div class="product-card reveal" data-category="climate" data-price="11999" data-name="Climate One HVAC Thermostat Climate">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/features/climate-control.jpg" alt="Nexora Climate One HVAC Thermostat" loading="lazy">
+            <img src="../assets/images/Nexora%20Climate%20One.jpg" alt="Nexora Climate One HVAC Thermostat" loading="lazy">
             <span class="badge badge-primary">Climate / HVAC</span>
           </div>
           <div class="product-card-body">
@@ -800,7 +721,7 @@
             <div class="product-price">&#8377;11,999</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Climate One added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
@@ -821,7 +742,7 @@
             <div class="product-price">&#8377;8,999</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','SecureCam 360 added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
@@ -842,7 +763,7 @@
             <div class="product-price">&#8377;15,499</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Lock X added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
@@ -863,31 +784,11 @@
             <div class="product-price">&#8377;4,299</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Smart Way Switch added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
 
-        <div class="product-card reveal" data-category="climate" data-price="2999" data-name="Climate Load Module In-Wall Climate HVAC">
-          <div class="product-card-img-wrap">
-            <img src="../assets/images/products/nexora-sense-pro-sensor-2.jpg" alt="Nexora Climate Load Module" loading="lazy">
-            <span class="badge badge-primary">Climate / HVAC</span>
-          </div>
-          <div class="product-card-body">
-            <h3>Nexora Climate Load Module</h3>
-            <p class="product-desc">Compact in-wall power module controlling fans, heaters and ventilation loads with smooth dimming and relay switching.</p>
-            <ul class="product-specs">
-              <li><i class="bi bi-check2"></i> Fits standard switch backboxes</li>
-              <li><i class="bi bi-check2"></i> Relay + TRIAC load control</li>
-              <li><i class="bi bi-check2"></i> Comfort scene presets</li>
-            </ul>
-            <div class="product-price">&#8377;2,999</div>
-            <div class="product-actions">
-              <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Climate Load Module added to your request list.','success')">Add to Request</button>
-            </div>
-          </div>
-        </div>
 
         <div class="product-card reveal" data-category="energy" data-price="12999" data-name="Smart Node Application Controller Energy Management">
           <div class="product-card-img-wrap">
@@ -896,7 +797,7 @@
           </div>
           <div class="product-card-body">
             <h3>Nexora Smart Node Controller</h3>
-            <p class="product-desc">Local automation node for energy management â€” running tariff-aware schedules, peak-load shedding and multi-protocol device meshes offline.</p>
+            <p class="product-desc">Local automation node for energy management  —  running tariff-aware schedules, peak-load shedding and multi-protocol device meshes offline.</p>
             <ul class="product-specs">
               <li><i class="bi bi-check2"></i> Sub-millisecond local logic engine</li>
               <li><i class="bi bi-check2"></i> Thread, Zigbee 3.0 &amp; Matter</li>
@@ -905,7 +806,7 @@
             <div class="product-price">&#8377;12,999</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Smart Node Controller added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
@@ -926,56 +827,16 @@
             <div class="product-price">&#8377;9,999</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Gateway Node Pro added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
 
-        <div class="product-card reveal" data-category="security" data-price="3299" data-name="Sense Pro Smart Sensors Security">
-          <div class="product-card-img-wrap">
-            <img src="../assets/images/products/nexora-sense-pro-sensor.jpg" alt="Nexora Sense Pro Sensor" loading="lazy">
-            <span class="badge badge-primary">Security</span>
-          </div>
-          <div class="product-card-body">
-            <h3>Nexora Sense Pro</h3>
-            <p class="product-desc">Six-in-one security and presence sensor feeding motion, contact, vibration, temperature, humidity and light telemetry.</p>
-            <ul class="product-specs">
-              <li><i class="bi bi-check2"></i> Motion + contact tamper alerts</li>
-              <li><i class="bi bi-check2"></i> 2-year battery lifespan</li>
-              <li><i class="bi bi-check2"></i> Instant trigger notifications</li>
-            </ul>
-            <div class="product-price">&#8377;3,299</div>
-            <div class="product-actions">
-              <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Sense Pro added to your request list.','success')">Add to Request</button>
-            </div>
-          </div>
-        </div>
 
-        <div class="product-card reveal" data-category="climate" data-price="9499" data-name="Curtain Motor Motorized Curtains Climate">
-          <div class="product-card-img-wrap">
-            <img src="../assets/images/features/smart-curtains.jpg" alt="Nexora Whisper Curtain Motor" loading="lazy">
-            <span class="badge badge-primary">Climate / HVAC</span>
-          </div>
-          <div class="product-card-body">
-            <h3>Nexora Curtain Motor</h3>
-            <p class="product-desc">Smart motorized drapery that trims solar gain, stabilizes room temperature and adjusts shade levels by sunrise schedule.</p>
-            <ul class="product-specs">
-              <li><i class="bi bi-check2"></i> Ultra-quiet &lt;26dB motor</li>
-              <li><i class="bi bi-check2"></i> Sun-tracking shade schedules</li>
-              <li><i class="bi bi-check2"></i> Rechargeable battery or DC power</li>
-            </ul>
-            <div class="product-price">&#8377;9,499</div>
-            <div class="product-actions">
-              <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Curtain Motor added to your request list.','success')">Add to Request</button>
-            </div>
-          </div>
-        </div>
 
         <div class="product-card reveal" data-category="energy" data-price="5999" data-name="Energy Meter Energy Management">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/features/energy-management.jpg" alt="Nexora Energy Meter" loading="lazy">
+            <img src="../assets/images/Nexora%20Energy%20Meter.jpg" alt="Nexora Energy Meter" loading="lazy">
             <span class="badge badge-primary">Energy Management</span>
           </div>
           <div class="product-card-body">
@@ -989,7 +850,7 @@
             <div class="product-price">&#8377;5,999</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','Energy Meter added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to Request</button>
             </div>
           </div>
         </div>
@@ -1034,7 +895,6 @@
             <a href="https://x.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
             <a href="https://www.instagram.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com/company/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.youtube.com/@nexorahome" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 
@@ -1126,6 +986,25 @@
   <script src="../assets/js/main.js"></script>
 
   <script>
+    window.addToCart = function(button) {
+      const card = button.closest('.product-card');
+      const name = card.querySelector('h3').textContent.trim();
+      const product = {
+        id: card.dataset.name,
+        name,
+        price: Number(card.dataset.price) || 0,
+        image: card.querySelector('.product-card-img-wrap img')?.getAttribute('src') || '',
+        quantity: 1
+      };
+      let cart = [];
+      try { cart = JSON.parse(localStorage.getItem('nexoraCart') || '[]'); } catch (error) { cart = []; }
+      const existing = cart.find(item => item.id === product.id);
+      if (existing) existing.quantity += 1;
+      else cart.push(product);
+      localStorage.setItem('nexoraCart', JSON.stringify(cart));
+      window.location.href = 'cart.html';
+    };
+
     const categoryFilter = document.getElementById('categoryFilter');
     const productSearch = document.getElementById('productSearch');
     const productCards = document.querySelectorAll('.product-card');

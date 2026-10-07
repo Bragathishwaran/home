@@ -23,6 +23,7 @@
     { "src": "/about", "dest": "/pages/about.html" },
     { "src": "/contact", "dest": "/pages/contact.html" },
     { "src": "/products", "dest": "/pages/products.html" },
+    { "src": "/cart", "dest": "/pages/cart.html" },
     { "src": "/pricing", "dest": "/pages/pricing.html" },
     { "src": "/installation", "dest": "/pages/installation-process.html" },
     { "src": "/services", "dest": "/pages/services.html" },

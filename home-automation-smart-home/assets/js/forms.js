@@ -22,6 +22,14 @@ function initContactForm() {
   const emailField = form.querySelector('[name="email"]');
   const phoneField = form.querySelector('[name="phone"]');
   const messageField = form.querySelector('[name="message"]');
+  const consultationDateField = form.querySelector('[name="consultation-date"]');
+
+  if (consultationDateField) {
+    const today = new Date();
+    today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+    consultationDateField.min = today.toISOString().slice(0, 10);
+    wireLiveValidation(consultationDateField, (live) => validateConsultationDate(consultationDateField, live));
+  }
 
   applyInputFilter(nameField, (v) => v.replace(/[^A-Za-z\s]/g, ''));
   applyInputFilter(emailField, (v) => v.replace(/\s/g, ''));
@@ -39,6 +47,7 @@ function initContactForm() {
       validateEmailField(emailField, false),
       validatePhoneField(phoneField, false),
       validateRequiredText(messageField, 'Please enter your message', false),
+      validateConsultationDate(consultationDateField, false),
     ];
     if (checks.every(Boolean)) {
       submitContactPayload(buildContactPayload(form));
@@ -52,7 +61,25 @@ function validateContactForm(form) {
     validateEmailField(form.querySelector('[name="email"]'), false),
     validatePhoneField(form.querySelector('[name="phone"]'), false),
     validateRequiredText(form.querySelector('[name="message"]'), 'Please enter your message', false),
+    validateConsultationDate(form.querySelector('[name="consultation-date"]'), false),
   ].every(Boolean);
+}
+
+function validateConsultationDate(field, live) {
+  if (!field || !field.value) {
+    clearFieldError(field);
+    return true;
+  }
+  const today = new Date();
+  today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+  const minDate = today.toISOString().slice(0, 10);
+  field.min = minDate;
+  if (field.value < minDate) {
+    showFieldError(field, 'Please choose today or a future date');
+    return false;
+  }
+  clearFieldError(field);
+  return true;
 }
 
 function buildContactPayload(form) {

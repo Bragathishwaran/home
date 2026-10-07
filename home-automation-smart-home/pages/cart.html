@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review the Nexora smart home products you selected and request a tailored quote.">
+  <title>Your Request | Nexora Home</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <style>
+    .request-page { min-height: 70vh; padding: 140px 0 80px; }
+    .request-heading { text-align: center; margin: 0 auto 36px; max-width: 720px; }
+    .request-list { display: grid; gap: 16px; max-width: 900px; margin: 0 auto; }
+    .request-item { display: grid; grid-template-columns: 100px minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 18px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--border-radius-lg); }
+    .request-item img { width: 100px; height: 82px; object-fit: cover; border-radius: 10px; background: var(--bg-surface); }
+    .request-item h2 { font-size: 1.05rem; margin: 0 0 6px; }
+    .request-item p { color: var(--text-secondary); margin: 0; }
+    .request-item-price { font-weight: 700; white-space: nowrap; }
+    .request-remove { border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; padding: 10px; }
+    .request-summary { max-width: 900px; margin: 20px auto 0; padding: 22px; border: 1px solid var(--border-color); border-radius: var(--border-radius-lg); background: var(--bg-card); display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .request-summary p { margin: 0; color: var(--text-secondary); }
+    .request-total { color: var(--text-primary); font-size: 1.2rem; font-weight: 700; }
+    .request-actions { display: flex; justify-content: flex-end; gap: 12px; max-width: 900px; margin: 18px auto 0; flex-wrap: wrap; }
+    .request-empty { text-align: center; max-width: 600px; margin: 0 auto; padding: 48px 24px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--border-radius-lg); }
+    .request-empty i { display: block; color: var(--accent); font-size: 2.4rem; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      .request-page { padding: 112px 0 56px; }
+      .request-item { grid-template-columns: 72px minmax(0, 1fr) auto; gap: 12px; padding: 12px; }
+      .request-item img { width: 72px; height: 72px; }
+      .request-item-price { grid-column: 2; }
+      .request-remove { grid-column: 3; grid-row: 1 / span 2; }
+      .request-summary { align-items: flex-start; flex-direction: column; }
+      .request-actions > * { flex: 1 1 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar scrolled">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="10" fill="#B08D57"/><path d="M9 17.5 18 10l9 7.5V27h-7v-6h-4v6H9V17.5Z" fill="#fff"/><circle cx="18" cy="17" r="2.4" fill="#fff" opacity=".8"/></svg><span class="brand-name">NEXORA</span></a>
+      <nav class="navbar-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="navbar-actions"><button class="theme-toggle" type="button" aria-label="Toggle color theme"><i class="bi bi-moon-fill"></i></button></div>
+    </div>
+  </header>
+  <main class="request-page">
+    <div class="container">
+      <div class="request-heading">
+        <span class="section-label"><i class="bi bi-bag-check"></i> Product Request</span>
+        <h1 class="section-title">Your Selected Products</h1>
+        <p>Review your selections before asking our team for a tailored quote.</p>
+      </div>
+      <div id="requestContent" aria-live="polite"></div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer-bottom"><p>&copy; 2026 Nexora Home. All rights reserved.</p><div class="footer-bottom-links"><a href="products.html">Continue browsing</a><a href="contact.html">Contact</a></div></div></footer>
+  <script src="../assets/js/theme.js"></script>
+  <script>
+    const requestContent = document.getElementById('requestContent');
+    const money = value => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(value);
+    function readCart() {
+      try { return JSON.parse(localStorage.getItem('nexoraCart') || '[]'); } catch (error) { return []; }
+    }
+    function renderCart() {
+      const items = readCart();
+      if (!items.length) {
+        requestContent.innerHTML = '<div class="request-empty"><i class="bi bi-bag"></i><h2>Your request list is empty</h2><p>Add products from the catalog to start a quote request.</p><a class="btn btn-primary" href="products.html">Browse Products</a></div>';
+        return;
+      }
+      const rows = items.map((item, index) => `<article class="request-item"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}"><div><h2>${escapeHtml(item.name)}</h2><p>Quantity: ${Number(item.quantity) || 1}</p></div><strong class="request-item-price">${money((Number(item.price) || 0) * (Number(item.quantity) || 1))}</strong><button class="request-remove" type="button" aria-label="Remove ${escapeHtml(item.name)}" data-remove="${index}"><i class="bi bi-trash"></i></button></article>`).join('');
+      const total = items.reduce((sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 1), 0);
+      requestContent.innerHTML = `<div class="request-list">${rows}</div><div class="request-summary"><p>Estimated product total<br><small>Installation and custom configuration quoted separately</small></p><span class="request-total">${money(total)}</span></div><div class="request-actions"><button class="btn btn-outline" type="button" id="clearRequest">Clear request</button><a class="btn btn-primary" id="quoteRequest" href="contact.html">Request a Quote</a><a class="btn btn-secondary" href="products.html">Continue Browsing</a></div>`;
+      requestContent.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
+        const next = readCart(); next.splice(Number(button.dataset.remove), 1); localStorage.setItem('nexoraCart', JSON.stringify(next)); renderCart();
+      }));
+      document.getElementById('clearRequest').addEventListener('click', () => { localStorage.removeItem('nexoraCart'); renderCart(); });
+      document.getElementById('quoteRequest').href = 'contact.html?products=' + encodeURIComponent(items.map(item => `${item.name} x${Number(item.quantity) || 1}`).join(', '));
+    }
+    function escapeHtml(value) {
+      return String(value || '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+    }
+    renderCart();
+  </script>
+</body>
+</html>
