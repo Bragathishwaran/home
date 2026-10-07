@@ -40,15 +40,82 @@
   </style>
 </head>
 <body>
-  <header class="navbar scrolled">
+  <nav class="navbar">
     <div class="container">
-      <a class="navbar-brand" href="../index.html"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="10" fill="#B08D57"/><path d="M9 17.5 18 10l9 7.5V27h-7v-6h-4v6H9V17.5Z" fill="#fff"/><circle cx="18" cy="17" r="2.4" fill="#fff" opacity=".8"/></svg><span class="brand-name">NEXORA</span></a>
-      <nav class="navbar-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a>
-      </nav>
-      <div class="navbar-actions"><button class="theme-toggle" type="button" aria-label="Toggle color theme"><i class="bi bi-moon-fill"></i></button></div>
+      <a href="../index.html" class="navbar-brand">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="url(#logo-grad)"/>
+          <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+          <circle cx="18" cy="18" r="3" fill="url(#logo-grad)" opacity="0.9"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36">
+              <stop stop-color="#B08D57"/>
+              <stop offset="1" stop-color="#D9C6A3"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-name">NEXORA</span>
+      </a>
+
+      <div class="navbar-nav" id="navbarNav">
+                <div class="nav-dropdown">
+          <a href="../index.html" class="nav-dropdown-toggle">Home <i class="bi bi-chevron-down dropdown-caret"></i></a>
+          <div class="nav-dropdown-menu">
+<a href="../index.html">Home 1</a>
+            <a href="../home2.html">Home 2</a>
+          </div>
+</div>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="installation-process.html">Installation</a>
+
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+      </div>
+
+      <div class="navbar-actions">
+        <div class="dir-toggle" role="group" aria-label="Text direction">
+          <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true" aria-label="Left to right">LTR</button>
+          <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false" aria-label="Right to left">RTL</button>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="dashboard/index.html" class="btn-dashboard">Dashboard</a>
+        <a href="login.html" class="btn-login">Login</a>
+        <div class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
     </div>
-  </header>
+
+    <div class="mobile-menu">
+      <a href="../index.html" class="mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
+      <div class="mobile-menu-sub">
+        <a href="../index.html">Home 1</a>
+        <a href="../home2.html">Home 2</a>
+</div>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="installation-process.html">Installation</a>
+<a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <div class="mobile-menu-dir dir-toggle" role="group" aria-label="Text direction">
+        <button type="button" class="dir-btn" data-dir="ltr" aria-label="Left to right">LTR</button>
+        <button type="button" class="dir-btn" data-dir="rtl" aria-label="Right to left">RTL</button>
+      </div>
+      <div class="mobile-menu-actions">
+        <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
+<a href="login.html" class="btn btn-secondary">Login</a>
+      </div>
+    </div>
+  </nav>
   <main class="request-page">
     <div class="container">
       <div class="request-heading">
@@ -59,8 +126,85 @@
       <div id="requestContent" aria-live="polite"></div>
     </div>
   </main>
-  <footer class="footer"><div class="container footer-bottom"><p>&copy; 2026 Nexora Home. All rights reserved.</p><div class="footer-bottom-links"><a href="products.html">Continue browsing</a><a href="contact.html">Contact</a></div></div></footer>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand" style="font-size:1.3rem;">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#flogo)"/>
+              <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+              <circle cx="18" cy="18" r="3" fill="url(#flogo)" opacity="0.9"/>
+              <defs><linearGradient id="flogo" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#B08D57"/><stop offset="1" stop-color="#D9C6A3"/></linearGradient></defs>
+            </svg>
+            <span class="brand-name">NEXORA</span>
+          </a>
+          <p>Intelligence for Every Space. Designing, installing and supporting intelligent home automation systems since 2021.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../home2.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+<li><a href="services.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="services.html#s-security">Security Systems</a></li>
+            <li><a href="services.html#s-climate">Climate Control</a></li>
+            <li><a href="services.html#s-entertainment">Entertainment</a></li>
+            <li><a href="services.html#s-energy">Energy Management</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="installation-process.html">Installation Process</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Get smarter home insights delivered to your inbox.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nexora Home. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="legal.html#privacy">Privacy Policy</a>
+          <a href="legal.html#terms">Terms of Service</a>
+          <a href="legal.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
   <script>
     const requestContent = document.getElementById('requestContent');
     const money = value => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(value);

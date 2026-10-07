@@ -98,6 +98,7 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
+      align-items: stretch;
     }
     .category-card {
       display: flex;
@@ -145,6 +146,10 @@
     .category-card-body {
       padding: 18px 20px 22px;
       text-align: center;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
     }
     .category-card-body h3 {
       font-size: 1.05rem;
@@ -156,6 +161,7 @@
       margin: 0;
       line-height: 1.55;
     }
+    #productGrid { scroll-margin-top: 110px; }
     .product-price {
       font-family: var(--font-heading);
       font-weight: 700;
@@ -481,16 +487,16 @@
           </div>
           <div class="category-card-body">
             <h3>Light Automation</h3>
-            <p>Architectural lighting with tunable whites and adaptive scenes.</p>
+            <p>Circadian-ready panels and RGBW accents create precise, scene-based lighting for every room.</p>
           </div>
         </a>
         <a href="#productGrid" class="category-card reveal" data-cat="audio" onclick="setCategory('audio'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/rooms/home-theatre-2.jpg" alt="Audio / Video products" loading="lazy">
+            <img src="../assets/images/Nexora%20SoundBar%20Pro.jpg" alt="Nexora audio and video equipment" loading="lazy">
           </div>
           <div class="category-card-body">
             <h3>Audio / Video</h3>
-            <p>Whole-home sound, Home theatre and multi-zone AV distribution.</p>
+            <p>Bring together multi-room audio, home theatre, and centralized AV controls in one connected system.</p>
           </div>
         </a>
         <a href="#productGrid" class="category-card reveal" data-cat="climate" onclick="setCategory('climate'); return false;">
@@ -499,79 +505,36 @@
           </div>
           <div class="category-card-body">
             <h3>Climate / HVAC</h3>
-            <p>Self-learning thermostats, smart shading and load control for all-season comfort.</p>
+            <p>Coordinate smart thermostats and HVAC schedules for year-round comfort and more efficient energy use.</p>
           </div>
         </a>
         <a href="#productGrid" class="category-card reveal" data-cat="security" onclick="setCategory('security'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/rooms/security-1.jpg" alt="Security products" loading="lazy">
+            <img src="../assets/images/Nexora%20SecureCam%20360.jpg" alt="Nexora smart security camera" loading="lazy">
           </div>
           <div class="category-card-body">
             <h3>Security</h3>
-            <p>AI surveillance, smart locks and round-the-clock protection.</p>
+            <p>Combine cameras, smart locks, and sensors for clear visibility and dependable access control.</p>
           </div>
         </a>
         <a href="#productGrid" class="category-card reveal" data-cat="energy" onclick="setCategory('energy'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/Energy%20Management.jpg" alt="Energy Management products" loading="lazy">
+            <img src="../assets/images/Nexora%20Energy%20Meter.jpg" alt="Nexora whole-home energy meter" loading="lazy">
           </div>
           <div class="category-card-body">
             <h3>Energy Management</h3>
-            <p>Whole-home metering, automation nodes and gateways that cut waste and peak loads.</p>
+            <p>Monitor household usage and coordinate hubs, gateways, and automation to reduce avoidable energy use.</p>
           </div>
         </a>
         <a href="#productGrid" class="category-card reveal" data-cat="all" onclick="setCategory('all'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/rooms/entire-home-wide.jpg" alt="Nexora complete product range" loading="lazy">
+            <img src="../assets/images/products/products.jpg" alt="Collection of connected smart home devices for lighting, climate, security, and control" loading="lazy">
           </div>
           <div class="category-card-body">
             <h3>Complete Range</h3>
-            <p>Every Nexora product in one place, with 12 devices ready to mix and match.</p>
+            <p>Explore all 12 devices, from smart hubs and lighting to security, climate, and entertainment.</p>
           </div>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="catalog-header">
-        <div>
-          <span class="section-label"><i class="bi bi-stars"></i> Featured Hardware</span>
-          <h2 class="section-title">Core Devices, Perfectly Aligned</h2>
-        </div>
-      </div>
-      <div class="featured-products">
-        <div class="featured-product card-hover-glow reveal">
-          <div class="featured-product-img-wrap">
-            <img src="../assets/images/products/nexora-smart-hub-x1.jpg" alt="Nexora Smart Node Application Controller" loading="lazy">
-          </div>
-          <div class="featured-product-info">
-            <span class="badge badge-primary">Energy Management</span>
-            <h3>Nexora Smart Node Controller</h3>
-            <p>The central local brain of your smart home. Zero-latency processing with Thread &amp; Zigbee 3.0.</p>
-          </div>
-        </div>
-        <div class="featured-product card-hover-glow reveal">
-          <div class="featured-product-img-wrap">
-            <img src="../assets/images/products/nexora-light-panel-pro.jpg" alt="Nexora Light Panel Pro" loading="lazy">
-          </div>
-          <div class="featured-product-info">
-            <span class="badge badge-primary">Light Automation</span>
-            <h3>Nexora Light Panel Pro</h3>
-            <p>Recessed architectural panel with circadian tunable whites and ambient scenes for every mood.</p>
-          </div>
-        </div>
-        <div class="featured-product card-hover-glow reveal">
-          <div class="featured-product-img-wrap">
-            <img src="../assets/images/Nexora%20Climate%20One.jpg" alt="Nexora Climate One HVAC Thermostat" loading="lazy">
-          </div>
-          <div class="featured-product-info">
-            <span class="badge badge-primary">Climate / HVAC</span>
-            <h3>Nexora Climate One</h3>
-            <p>Self-calibrating smart thermostat wall interface that optimizes HVAC comfort and energy use.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -623,7 +586,7 @@
 
         <div class="product-card reveal" data-category="lighting" data-price="3499" data-name="Light Strip RGB Light Automation">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/hero/hero-ambient-1.jpg" alt="Nexora Dynamic RGBW Light Strip" loading="lazy">
+            <img src="../assets/images/Nexora%20Light%20Strip%20RGBW.jpg" alt="Nexora Dynamic RGBW Light Strip illuminating a media room" loading="lazy">
             <span class="badge badge-primary">Light Automation</span>
           </div>
           <div class="product-card-body">
@@ -644,7 +607,7 @@
 
         <div class="product-card reveal" data-category="audio" data-price="18999" data-name="SoundBar Pro Audio Video">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/rooms/home-theatre-2.jpg" alt="Nexora SoundBar Pro" loading="lazy">
+            <img src="../assets/images/Nexora%20SoundBar%20Pro.jpg" alt="Nexora SoundBar Pro" loading="lazy">
             <span class="badge badge-primary">Audio / Video</span>
           </div>
           <div class="product-card-body">
@@ -686,7 +649,7 @@
 
         <div class="product-card reveal" data-category="audio" data-price="11499" data-name="Surround Speakers Wireless Audio Video">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/hero/hero-ambient-3.jpg" alt="Nexora Surround Speaker Pair" loading="lazy">
+            <img src="../assets/images/Nexora%20Surround%20Speakers.jpg" alt="Nexora Surround Speaker Pair" loading="lazy">
             <span class="badge badge-primary">Audio / Video</span>
           </div>
           <div class="product-card-body">
@@ -728,7 +691,7 @@
 
         <div class="product-card reveal" data-category="security" data-price="8999" data-name="SecureCam 360 Security Camera">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/rooms/security-1.jpg" alt="Nexora SecureCam 360 Security" loading="lazy">
+            <img src="../assets/images/Nexora%20SecureCam%20360.jpg" alt="Nexora SecureCam 360 Security" loading="lazy">
             <span class="badge badge-primary">Security</span>
           </div>
           <div class="product-card-body">
@@ -749,7 +712,7 @@
 
         <div class="product-card reveal" data-category="security" data-price="15499" data-name="Lock X Smart Lock Security">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/rooms/security-2.jpg" alt="Nexora Lock X Smart Lock" loading="lazy">
+            <img src="../assets/images/Nexora%20Lock%20X%20Deadbolt.jpg" alt="Nexora Lock X Smart Lock" loading="lazy">
             <span class="badge badge-primary">Security</span>
           </div>
           <div class="product-card-body">
@@ -770,7 +733,7 @@
 
         <div class="product-card reveal" data-category="lighting" data-price="4299" data-name="Smart Way Switch Light Automation">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/products/nexora-light-panel-pro-2.jpg" alt="Nexora Smart Way Switch" loading="lazy">
+            <img src="../assets/images/Nexora%20Smart%20Way%20Switch.jpg" alt="Nexora Smart Way Switch" loading="lazy">
             <span class="badge badge-primary">Light Automation</span>
           </div>
           <div class="product-card-body">

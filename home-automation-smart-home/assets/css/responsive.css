@@ -3,6 +3,7 @@
 .container {
 max-width: 1320px;
 }
+
 }
 @media (max-width: 1349px) {
 .footer-grid {
@@ -1007,4 +1008,59 @@ gap: 6px;
 .footer-links a {
 line-height: 1.4;
 }
+}
+
+@media (max-width: 767px) {
+  .footer-brand,
+  .footer-newsletter,
+  .footer-grid > div:not(.footer-brand):not(.footer-newsletter) {
+    text-align: left;
+    justify-self: start;
+    align-items: flex-start;
+  }
+
+  .footer-grid > div:not(.footer-brand):not(.footer-newsletter) .footer-links {
+    align-items: flex-start;
+  }
+
+  .footer .footer-brand > a.navbar-brand,
+  .footer .footer-brand > a.footer-logo {
+    justify-self: start;
+    margin-left: 0;
+  }
+
+  .footer-brand p,
+  .footer-newsletter p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+
+  .footer-newsletter .newsletter-form {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-newsletter .newsletter-form input {
+    width: min(100%, 360px);
+  }
+
+  .footer-newsletter .newsletter-form button {
+    width: auto;
+    align-self: flex-start;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-bottom-links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }

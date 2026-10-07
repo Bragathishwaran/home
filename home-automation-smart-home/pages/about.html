@@ -69,6 +69,13 @@
     .team-card h3 { font-size: 1.1rem; margin-bottom: 4px; }
     .team-card .team-role { color: var(--electric-cyan); font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; }
     .team-card p { font-size: 0.85rem; margin-bottom: 0; }
+    .about-installation-image { object-position: center 52%; }
+    .about-hero-media { min-width: 0; }
+    .about-hero-image-wrapper img {
+      height: clamp(280px, 35vw, 440px);
+      object-fit: cover;
+      object-position: center;
+    }
     .about-deliverables {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -91,6 +98,9 @@
       margin-top: 2px;
     }
     @media (max-width: 575px) { .about-deliverables { grid-template-columns: 1fr; } }
+    @media (max-width: 767px) {
+      .about-hero-image-wrapper img { height: clamp(240px, 72vw, 360px); }
+    }
     @media (max-width: 991px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 575px) { .team-grid { grid-template-columns: 1fr; } }
   </style>
@@ -199,11 +209,7 @@
         </div>
         <div class="about-hero-media reveal-right">
           <div class="about-hero-image-wrapper">
-            <img src="../assets/images/rooms/entire-home-wide.jpg" alt="Modern luxury smart home architecture by Nexora" loading="eager">
-            <div class="about-hero-badge">
-              <span class="badge-num">500+</span>
-              <span class="badge-text">Homes Automated Across the Globe</span>
-            </div>
+            <img src="../assets/images/products/products.jpg" alt="Smart home devices and controls arranged in a connected modern living space" loading="eager">
           </div>
         </div>
       </div>
@@ -256,7 +262,7 @@
       <div class="features-grid stagger-children">
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
-            <img src="../assets/images/smart-kitchen.jpg" alt="Precision smart kitchen hardware installation" loading="lazy">
+            <img src="../assets/images/products/products.jpg" alt="A coordinated collection of smart home devices selected for reliable everyday use" loading="lazy">
             <span class="feature-badge"><i class="bi bi-patch-check"></i> Enterprise Grade</span>
           </div>
           <div class="feature-content">
@@ -270,7 +276,7 @@
 
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
-            <img src="../assets/images/rooms/living-room-1.jpg" alt="Human-centered smart living room space" loading="lazy">
+            <img src="../assets/images/Human-Centered.jpg" alt="Homeowner using connected controls in a comfortable smart home" loading="lazy">
             <span class="feature-badge"><i class="bi bi-people"></i> Lifestyle First</span>
           </div>
           <div class="feature-content">
@@ -284,7 +290,7 @@
 
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
-            <img src="../assets/images/hero/hero-ambient-2.jpg" alt="Future-ready ambient smart lighting and controls" loading="lazy">
+            <img src="../assets/images/products/nexora-smart-hub-x1-2.jpg" alt="Connected smart home hub coordinating lighting, climate, security, and energy devices" loading="lazy">
             <span class="feature-badge"><i class="bi bi-infinity"></i> Modular IoT</span>
           </div>
           <div class="feature-content">
@@ -310,7 +316,7 @@
       <div class="features-grid stagger-children">
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
-            <img src="../assets/images/products/nexora-smart-hub-x1-2.jpg" alt="Certified electrical and IoT installation" loading="lazy">
+            <img class="about-installation-image" src="../assets/images/products/certified%20installation.jpg" alt="Smart home installation overview showing connected lighting, climate, security, audio, and curtain systems" loading="lazy">
             <span class="feature-badge"><i class="bi bi-patch-check"></i> Certified</span>
           </div>
           <div class="feature-content">
@@ -324,7 +330,7 @@
 
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
-            <img src="../assets/images/products/nexora-light-panel-pro.jpg" alt="Exacting 40-point quality assurance check" loading="lazy">
+            <img src="../assets/images/products/Quality%20Assurance.jpg" alt="Smart home lighting and controls reviewed as part of quality assurance" loading="lazy">
             <span class="feature-badge"><i class="bi bi-clipboard-check"></i> 40-Point QA</span>
           </div>
           <div class="feature-content">
@@ -338,7 +344,7 @@
 
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
-            <img src="../assets/images/rooms/home-office-2.jpg" alt="Nexora technical support for a smart home system" loading="lazy">
+            <img src="../assets/images/products/Responsive%20Technical%20Support.jpg" alt="Technician assisting a homeowner with smart home controls" loading="lazy">
             <span class="feature-badge"><i class="bi bi-headset"></i> Ongoing Care</span>
           </div>
           <div class="feature-content">
@@ -352,7 +358,7 @@
 
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
-            <img src="../assets/images/rooms/bedroom-2.jpg" alt="Bespoke custom smart home design for bedroom" loading="lazy">
+            <img src="../assets/images/products/Truly%20Custom%20Designs.jpg" alt="Custom home design plans for a connected residence" loading="lazy">
             <span class="feature-badge"><i class="bi bi-sliders"></i> Tailored</span>
           </div>
           <div class="feature-content">
@@ -366,7 +372,7 @@
 
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
-            <img src="../assets/images/features/energy-management.jpg" alt="Documented household energy savings" loading="lazy">
+            <img src="../assets/images/products/procen%20energy%20savings.jpg" alt="Smart lighting scenes designed to reduce energy use" loading="lazy">
             <span class="feature-badge"><i class="bi bi-graph-down-arrow"></i> -30% Bills</span>
           </div>
           <div class="feature-content">
@@ -380,7 +386,7 @@
 
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
-            <img src="../assets/images/rooms/security-3.jpg" alt="Expandable IoT architecture" loading="lazy">
+            <img src="../assets/images/products/products.jpg" alt="A range of smart home devices ready to expand the system" loading="lazy">
             <span class="feature-badge"><i class="bi bi-arrow-up-circle"></i> Future Proof</span>
           </div>
           <div class="feature-content">

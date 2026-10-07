@@ -37,33 +37,6 @@
       }
       .gallery-hero-strip .gallery-hero-item:hover img { transform: scale(1.06); }
 
-      .gallery-filter {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-bottom: 40px;
-      }
-      .gallery-filter button {
-        font-family: inherit;
-        font-size: 0.82rem;
-        font-weight: 600;
-        padding: 8px 18px;
-        border-radius: var(--border-radius-full);
-        border: 1px solid var(--border-color);
-        background: var(--bg-secondary);
-        color: var(--text-secondary);
-        cursor: pointer;
-        transition: all var(--transition-fast);
-      }
-      .gallery-filter button:hover { border-color: var(--electric-cyan); color: var(--electric-cyan); }
-      .gallery-filter button.is-active {
-        background: var(--electric-cyan-glow);
-        border-color: var(--electric-cyan);
-        color: var(--electric-cyan-primary, var(--electric-cyan));
-      }
-      [data-theme="light"] .gallery-filter button.is-active { color: var(--accent-strong); }
-
       .gallery-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -216,175 +189,101 @@
         <div class="container">
             <div class="section-label">Project Showcase</div>
             <h2 class="section-title">Completed Work &amp; Products</h2>
-            <p class="section-subtitle">Real installations and flagship devices, organized by category.</p>
-
-            <div class="gallery-filter" id="galleryFilter">
-                <button type="button" class="is-active" data-filter="all">All</button>
-                <button type="button" data-filter="living">Living &amp; Entertainment</button>
-                <button type="button" data-filter="comfort">Comfort &amp; Workspaces</button>
-                <button type="button" data-filter="security">Security &amp; Outdoors</button>
-                <button type="button" data-filter="products">Products</button>
-            </div>
+            <p class="section-subtitle">A curated selection of connected spaces, security systems and Nexora devices.</p>
 
             <div class="gallery-grid stagger-children" id="galleryGrid">
 
-                <a class="gallery-item reveal" data-cat="living">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/rooms/living-room-1.jpg" alt="Living room with automated lighting" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Living</span>
                         <h4>Living Room Scenes</h4>
                         <p>Circadian lighting with one-tap mood scenes.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="living">
-                    <img src="../assets/images/rooms/living-room-2.jpg" alt="Entertainment-ready living area" loading="lazy">
-                    <div class="gallery-item-caption">
-                        <span class="tag">Living</span>
-                        <h4>Entertainment Ready</h4>
-                        <p>Media, ambience and climate in perfect sync.</p>
-                    </div>
-                </a>
-
-                <a class="gallery-item reveal" data-cat="living">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/rooms/home-theatre-1.jpg" alt="Dedicated home theatre room" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Entertainment</span>
                         <h4>Cinema Mode</h4>
                         <p>Dimmed lighting and tuned audio for movie nights.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="living">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/rooms/home-theatre-2.jpg" alt="Home theatre with ambient wall lighting" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Entertainment</span>
                         <h4>Ambient Wall Glow</h4>
                         <p>Low-glow accent lighting behind the screen.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="living">
-                    <img src="../assets/images/rooms/entire-home-2.jpg" alt="Whole home at a glance" loading="lazy">
-                    <div class="gallery-item-caption">
-                        <span class="tag">Living</span>
-                        <h4>Whole Home</h4>
-                        <p>Unified scenes across every room.</p>
-                    </div>
-                </a>
-
-                <a class="gallery-item reveal" data-cat="comfort">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/rooms/bedroom-1.jpg" alt="Automated bedroom with soft lighting" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Comfort</span>
                         <h4>Calm Bedroom</h4>
                         <p>Gradual wake and wind-down lighting routines.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="comfort">
-                    <img src="../assets/images/rooms/bedroom-2.jpg" alt="Bedroom with smart blind control" loading="lazy">
-                    <div class="gallery-item-caption">
-                        <span class="tag">Comfort</span>
-                        <h4>Blind Automation</h4>
-                        <p>Motorized blinds timed to sunrise and sleep.</p>
-                    </div>
-                </a>
-
-                <a class="gallery-item reveal" data-cat="comfort">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/rooms/home-office-2.jpg" alt="Smart home office setup" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Workspace</span>
                         <h4>Focus Office</h4>
                         <p>Task lighting and temperature tuned for focus.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="comfort">
-                    <img src="../assets/images/rooms/home-office-1.jpg" alt="Home office with automated daylight scenes" loading="lazy">
-                    <div class="gallery-item-caption">
-                        <span class="tag">Workspace</span>
-                        <h4>Daylight Sync</h4>
-                        <p>Cool bright scenes that follow natural light.</p>
-                    </div>
-                </a>
-
-                <a class="gallery-item reveal" data-cat="comfort">
-                    <img src="../assets/images/rooms/entire-home-wide.jpg" alt="Panorama of an automated home" loading="lazy">
-                    <div class="gallery-item-caption">
-                        <span class="tag">Comfort</span>
-                        <h4>Open Plan Living</h4>
-                        <p>Connected zones working as one space.</p>
-                    </div>
-                </a>
-
-                <a class="gallery-item reveal" data-cat="security">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/rooms/security-1.jpg" alt="Smart security and smart lock" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Security</span>
                         <h4>Smart Entry</h4>
                         <p>Biometric locks and instant alerts.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="security">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/rooms/security-2.jpg" alt="Surveillance and monitoring setup" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Security</span>
                         <h4>Always Watching</h4>
                         <p>Privacy-first cameras and motion zones.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="security">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/rooms/outdoor-1.jpg" alt="Outdoor lighting and security" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Outdoors</span>
                         <h4>Perimeter Protection</h4>
                         <p>Outdoor sensors and flood alerting.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="security">
-                    <img src="../assets/images/rooms/outdoor-2.jpg" alt="Outdoor landscape lighting" loading="lazy">
-                    <div class="gallery-item-caption">
-                        <span class="tag">Outdoors</span>
-                        <h4>Garden Lighting</h4>
-                        <p>Path and accent lights on a schedule.</p>
-                    </div>
-                </a>
-
-                <a class="gallery-item reveal" data-cat="products">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/products/nexora-smart-hub-x1.jpg" alt="Nexora Smart Node Hub" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Products</span>
                         <h4>Smart Node Hub</h4>
                         <p>The local-first brain of every Nexora home.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="products">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/products/nexora-light-panel-pro.jpg" alt="Nexora Light Panel Pro" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Products</span>
                         <h4>Light Panel Pro</h4>
                         <p>Architectural lighting with tunable white.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="products">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/features/climate-control.jpg" alt="Nexora Climate One thermostat" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Products</span>
                         <h4>Climate One</h4>
                         <p>Self-calibrating HVAC comfort control.</p>
                     </div>
                 </a>
 
-                <a class="gallery-item reveal" data-cat="products">
+                <a class="gallery-item reveal">
                     <img src="../assets/images/products/nexora-sense-pro-sensor.jpg" alt="Nexora Sense Pro occupancy sensor" loading="lazy">
                     <div class="gallery-item-caption">
-                        <span class="tag">Products</span>
                         <h4>Sense Pro Sensor</h4>
                         <p>Presence-driven automation, no batteries.</p>
                     </div>
@@ -502,25 +401,5 @@
     <script src="../assets/js/navbar.js"></script>
     <script src="../assets/js/animations.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script>
-      (function () {
-        var filter = document.getElementById('galleryFilter');
-        var grid = document.getElementById('galleryGrid');
-        var items = Array.prototype.slice.call(grid.querySelectorAll('.gallery-item'));
-        if (!filter) return;
-        filter.addEventListener('click', function (e) {
-          var btn = e.target.closest('button[data-filter]');
-          if (!btn) return;
-          Array.prototype.forEach.call(filter.querySelectorAll('button'), function (b) { b.classList.remove('is-active'); });
-          btn.classList.add('is-active');
-          var f = btn.getAttribute('data-filter');
-          items.forEach(function (item) {
-            var show = f === 'all' || item.getAttribute('data-cat') === f;
-            item.style.display = show ? '' : 'none';
-          });
-        });
-      })();
-    </script>
-
 </body>
 </html>
