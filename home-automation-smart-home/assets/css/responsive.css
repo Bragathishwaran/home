@@ -867,3 +867,144 @@ color: #000;
 background: #fff;
 }
 }
+
+/* Compact mobile layouts for pricing, About, and the shared footer. */
+@media (max-width: 767px) {
+#mission-vision .about-mission-stats {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#mission-vision .about-mission-content > div[style*="display:flex"],
+#mission-vision .about-vision-content > div[style*="display:flex"] {
+justify-content: center;
+}
+
+#mission-vision .about-mission {
+margin-bottom: 40px;
+}
+
+#pricing-comparison .dash-table {
+display: block;
+width: 100%;
+}
+
+#pricing-comparison .dash-table tbody {
+display: grid;
+gap: 10px;
+}
+
+#pricing-comparison .dash-table tbody tr {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 4px 8px;
+padding: 10px 8px;
+margin: 0;
+}
+
+#pricing-comparison .dash-table tbody td {
+min-width: 0;
+padding: 4px 2px;
+font-size: 0.82rem;
+line-height: 1.35;
+overflow-wrap: anywhere;
+}
+
+#pricing-comparison .dash-table tbody td:first-child {
+grid-column: 1 / -1;
+justify-content: center;
+margin-bottom: 2px;
+padding-bottom: 8px;
+border-bottom: 1px solid var(--border-light);
+font-weight: 700;
+}
+
+#pricing-comparison .dash-table tbody td:first-child::before {
+display: none;
+}
+
+#pricing-comparison .dash-table tbody td:not(:first-child) {
+gap: 4px;
+}
+
+#pricing-comparison .dash-table tbody td::before {
+font-size: 0.68rem;
+line-height: 1.2;
+}
+
+.footer {
+padding-top: 48px;
+}
+
+.footer-grid {
+gap: 24px;
+padding-bottom: 36px;
+}
+}
+
+@media (max-width: 575px) {
+#mission-vision .about-mission {
+margin-bottom: 32px;
+}
+
+#mission-vision .about-mission-content > div[style*="display:flex"],
+#mission-vision .about-vision-content > div[style*="display:flex"] {
+flex-direction: column;
+align-items: center;
+}
+
+#mission-vision .about-mission-content > div[style*="display:flex"] .btn,
+#mission-vision .about-vision-content > div[style*="display:flex"] .btn {
+width: 100%;
+max-width: 320px;
+}
+
+.content-layout-page .pricing-card {
+padding: 26px 20px;
+}
+
+.content-layout-page .pricing-card-media {
+margin: -26px -20px 22px;
+}
+
+.content-layout-page .pricing-card-media img {
+height: 150px;
+}
+
+.content-layout-page .pricing-amount .amount {
+font-size: clamp(1.8rem, 8vw, 2.25rem);
+}
+
+.content-layout-page .pricing-amount .currency {
+font-size: 1rem;
+}
+
+.content-layout-page .pricing-period {
+margin-bottom: 22px;
+}
+
+.content-layout-page .pricing-features {
+gap: 10px;
+margin-bottom: 24px;
+}
+
+.content-layout-page .pricing-features li {
+align-items: flex-start;
+line-height: 1.45;
+}
+
+.footer-grid {
+gap: 20px;
+}
+
+.footer h4 {
+margin-bottom: 10px;
+}
+
+.footer-links {
+gap: 6px;
+}
+
+.footer-links a {
+line-height: 1.4;
+}
+}
