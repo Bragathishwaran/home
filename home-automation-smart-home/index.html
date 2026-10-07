@@ -9,7 +9,7 @@
   <meta property="og:description" content="Transform everyday living with intelligent lighting, security, climate control and automation.">
   <meta property="og:type" content="website">
   <title>Nexora Home - Intelligence for Every Space</title>
-  <!-- Favicon -->
+  
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
@@ -25,12 +25,11 @@
   <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
-  <!-- Page Loader -->
+  
   <div class="page-loader">
     <div class="loader-spinner"></div>
   </div>
 
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="navbar-brand">
@@ -57,7 +56,7 @@
 </div>
         </div>
                 <a href="pages/about.html">About</a>
-                <a href="pages/solutions.html">Solutions</a>
+                <a href="pages/services.html">Services</a>
         <a href="pages/products.html">Products</a>
         <a href="pages/pricing.html">Pricing</a>
         <a href="pages/installation-process.html">Installation</a>
@@ -83,7 +82,6 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu">
       <a href="index.html" class="active mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
       <div class="mobile-menu-sub">
@@ -91,7 +89,7 @@
         <a href="home2.html">Home 2</a>
 </div>
             <a href="pages/about.html">About</a>
-            <a href="pages/solutions.html">Solutions</a>
+            <a href="pages/services.html">Services</a>
       <a href="pages/products.html">Products</a>
       <a href="pages/pricing.html">Pricing</a>
       <a href="pages/installation-process.html">Installation</a>
@@ -99,6 +97,10 @@
 <a href="pages/contact.html">Contact</a>
       <a href="pages/gallery.html">Gallery</a>
       <a href="pages/blog.html">Blog</a>
+      <div class="mobile-menu-dir dir-toggle" role="group" aria-label="Text direction">
+        <button type="button" class="dir-btn" data-dir="ltr" aria-label="Left to right">LTR</button>
+        <button type="button" class="dir-btn" data-dir="rtl" aria-label="Right to left">RTL</button>
+      </div>
       <div class="mobile-menu-actions">
         <a href="pages/dashboard/index.html" class="btn btn-outline">Dashboard</a>
 <a href="pages/login.html" class="btn btn-secondary">Login</a>
@@ -106,7 +108,6 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
@@ -117,8 +118,8 @@
         <h1>Your Home.<br><span class="highlight">Smarter by Design.</span></h1>
         <p>Transform everyday living with intelligent lighting, security, climate control, entertainment and automation &mdash; designed around the way you live.</p>
         <div class="hero-buttons">
-          <a href="pages/solutions.html" class="btn btn-primary btn-lg">
-            <i class="bi bi-arrow-right-short"></i> Explore Smart Solutions
+          <a href="pages/services.html" class="btn btn-primary btn-lg">
+            <i class="bi bi-arrow-right-short"></i> Explore Our Services
           </a>
           <a href="pages/contact.html" class="btn btn-secondary btn-lg" >
             <i class="bi bi-calendar-check"></i> Book a Consultation
@@ -129,11 +130,10 @@
       <div class="hero-visual">
         <div class="hero-visual-frame">
           <div class="smart-home-illustration">
-            <!-- Smart Home SVG Illustration -->
+            
             <img src="assets/images/hero/living-room-hero.jpg" alt="Modern smart living room with Nexora ambient lighting and automation" class="hero-visual-img" loading="eager">
           </div>
 
-          <!-- Floating UI Cards -->
           <div class="floating-card fc-1">
             <div class="card-icon cyan"><i class="bi bi-lightbulb"></i></div>
             <div>
@@ -145,7 +145,7 @@
             <div class="card-icon green"><i class="bi bi-thermometer-half"></i></div>
             <div>
               <div class="card-label">Living Room</div>
-              <div class="card-value" id="fc-temp">22°C</div>
+              <div class="card-value" id="fc-temp">22Â°C</div>
             </div>
           </div>
           <div class="floating-card fc-3">
@@ -167,7 +167,6 @@
     </div>
   </section>
 
-  <!-- Features Section -->
   <section class="section" id="features">
     <div class="container">
       <div class="text-center">
@@ -208,7 +207,7 @@
         <div class="feature-card feature-visual-card reveal card-hover-glow">
           <div class="feature-media">
             <img src="assets/images/features/climate-control.jpg" alt="Smart thermostat and automated climate control" loading="lazy">
-            <span class="feature-badge"><i class="bi bi-thermometer-half"></i> Precision 22°C</span>
+            <span class="feature-badge"><i class="bi bi-thermometer-half"></i> Precision 22Â°C</span>
           </div>
           <div class="feature-content">
             <div class="feature-header">
@@ -264,7 +263,6 @@
     </div>
   </section>
 
-  <!-- Smart Home Live Demo -->
   <section class="section demo-section" id="demo">
     <div class="container">
       <div class="text-center" style="margin-bottom:48px;">
@@ -283,7 +281,6 @@
             <button class="demo-tab" data-panel="panel-energy"><i class="bi bi-lightning-charge"></i> Energy</button>
           </div>
 
-          <!-- Lighting Panel -->
           <div class="demo-panel active" id="panel-lighting">
             <h4><i class="bi bi-lightbulb"></i> Smart Lighting</h4>
             <div class="control-row">
@@ -308,12 +305,11 @@
             </div>
           </div>
 
-          <!-- Climate Panel -->
           <div class="demo-panel" id="panel-climate">
             <h4><i class="bi bi-thermometer-half"></i> Climate Control</h4>
             <div class="control-row" style="justify-content:center;gap:24px;">
               <button class="btn btn-ghost btn-icon" id="temp-down"><i class="bi bi-dash-lg"></i></button>
-              <span class="control-value" id="temp-display" style="font-size:2rem;">22°C</span>
+              <span class="control-value" id="temp-display" style="font-size:2rem;">22Â°C</span>
               <button class="btn btn-ghost btn-icon" id="temp-up"><i class="bi bi-plus-lg"></i></button>
             </div>
             <div class="control-row">
@@ -326,7 +322,6 @@
             </div>
           </div>
 
-          <!-- Security Panel -->
           <div class="demo-panel" id="panel-security">
             <h4><i class="bi bi-shield-check"></i> Security System</h4>
             <div class="control-row">
@@ -347,7 +342,6 @@
             </div>
           </div>
 
-          <!-- Curtains Panel -->
           <div class="demo-panel" id="panel-curtains">
             <h4><i class="bi bi-window"></i> Smart Curtains</h4>
             <div class="control-row" style="justify-content:center;gap:16px;">
@@ -363,7 +357,6 @@
             </div>
           </div>
 
-          <!-- Energy Panel -->
           <div class="demo-panel" id="panel-energy">
             <h4><i class="bi bi-lightning-charge"></i> Energy Monitor</h4>
             <div class="energy-grid">
@@ -386,14 +379,13 @@
           </div>
         </div>
 
-        <!-- Smart Home Preview -->
         <div class="smart-home-preview">
           <div class="room-visual">
             <div id="light-overlay" style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%, rgba(255,220,150,0.5) 0%, rgba(255,200,100,0.15) 40%, transparent 70%);pointer-events:none;transition:opacity 0.5s ease;opacity:0.27;"></div>
-                        <img class="room-photo" src="assets/images/Experience Your Home.png" alt="Experience your home - smart living room preview">
+                        <img class="room-photo" src="assets/images/Experience Your Home.jpg" alt="Experience your home - smart living room preview">
             <div class="room-status-bar">
               <div class="room-stat" id="stat-light"><i class="bi bi-lightbulb"></i> Lights: <strong>68%</strong></div>
-              <div class="room-stat" id="stat-temp"><i class="bi bi-thermometer-half"></i> Climate: <strong>22°C</strong></div>
+              <div class="room-stat" id="stat-temp"><i class="bi bi-thermometer-half"></i> Climate: <strong>22Â°C</strong></div>
               <div class="room-stat" id="stat-security"><i class="bi bi-shield-check"></i> Security: <strong>Armed</strong></div>
               <div class="room-stat" id="stat-curtain"><i class="bi bi-window"></i> Curtains: <strong>75%</strong></div>
             </div>
@@ -403,12 +395,11 @@
     </div>
   </section>
 
-  <!-- Solutions Preview -->
   <section class="section" id="solutions-preview">
     <div class="container">
       <div class="text-center">
-        <span class="section-label"><i class="bi bi-grid"></i> Solutions</span>
-        <h2 class="section-title">Smart Solutions for Every Room</h2>
+        <span class="section-label"><i class="bi bi-grid"></i> Services</span>
+        <h2 class="section-title">Smart Home Services for Every Room</h2>
         <p class="section-subtitle">From a single room to your entire home, we create intelligent spaces tailored to your needs.</p>
       </div>
 
@@ -419,7 +410,7 @@
           <div class="solution-card-content">
             <h3>Living Room</h3>
             <p>Complete entertainment and comfort automation for your primary living space.</p>
-            <a href="pages/solutions.html#s-lighting" class="btn btn-sm btn-outline">Explore <i class="bi bi-arrow-right"></i></a>
+            <a href="pages/services.html#s-lighting" class="btn btn-sm btn-outline">Explore <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
         <div class="solution-card reveal">
@@ -428,7 +419,7 @@
           <div class="solution-card-content">
             <h3>Bedroom</h3>
 <p>Gentle wake-up routines, automated curtains and perfect sleep environment.</p>
-            <a href="pages/solutions.html#s-climate" class="btn btn-sm btn-outline">Explore <i class="bi bi-arrow-right"></i></a>
+            <a href="pages/services.html#s-climate" class="btn btn-sm btn-outline">Explore <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
         <div class="solution-card reveal">
@@ -437,18 +428,17 @@
           <div class="solution-card-content">
             <h3>Security</h3>
 <p>Round-the-clock protection with smart locks, cameras and motion detection.</p>
-            <a href="pages/solutions.html#s-security" class="btn btn-sm btn-outline">Explore <i class="bi bi-arrow-right"></i></a>
+            <a href="pages/services.html#s-security" class="btn btn-sm btn-outline">Explore <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
       </div>
 
       <div style="text-align:center;margin-top:40px;">
-        <a href="pages/solutions.html" class="btn btn-secondary">View All Solutions <i class="bi bi-arrow-right"></i></a>
+        <a href="pages/services.html" class="btn btn-secondary">View All Services <i class="bi bi-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Preview -->
   <section class="section pricing-section" id="pricing-preview">
     <div class="container">
       <div class="text-center">
@@ -458,7 +448,7 @@
       </div>
 
       <div class="pricing-grid stagger-children">
-        <!-- Essential -->
+        
         <div class="pricing-card reveal">
           <div class="pricing-tier">Essential</div>
           <div class="pricing-amount" data-monthly="49,999" data-yearly="39,999">
@@ -475,7 +465,6 @@
           <a href="pages/pricing.html" class="btn btn-secondary">Get Started</a>
         </div>
 
-        <!-- Connect -->
         <div class="pricing-card featured reveal">
           <div class="pricing-tier">Connect</div>
           <div class="pricing-amount" data-monthly="99,999" data-yearly="84,999">
@@ -494,7 +483,6 @@
           <a href="pages/pricing.html" class="btn btn-primary">Get Started</a>
         </div>
 
-        <!-- Signature -->
         <div class="pricing-card reveal">
           <div class="pricing-tier">Signature</div>
           <div class="pricing-amount" data-monthly="1,99,999" data-yearly="1,69,999">
@@ -517,7 +505,6 @@
     </div>
   </section>
 
-  <!-- Stats Section -->
   <section class="stats-section">
     <div class="container">
       <div class="stats-grid">
@@ -541,22 +528,20 @@
     </div>
   </section>
 
-  <!-- Parallax Experience Band -->
   <section class="parallax-section">
     <div class="parallax-bg" style="background-image:url('assets/images/hero/hero-ambient-3.jpg');"></div>
     <div class="parallax-scrim"></div>
     <div class="container parallax-content">
       <span class="section-label"><i class="bi bi-stars"></i> The Nexora Experience</span>
       <h2>Imagine Your Whole Home Working Together</h2>
-      <p>Lighting, climate, security and entertainment — orchestrated by one intelligent system that learns how you live.</p>
+      <p>Lighting, climate, security and entertainment â€” orchestrated by one intelligent system that learns how you live.</p>
       <div class="parallax-actions">
-        <a href="pages/solutions.html" class="btn btn-primary btn-lg"><i class="bi bi-grid"></i> Explore Solutions</a>
+        <a href="pages/services.html" class="btn btn-primary btn-lg"><i class="bi bi-grid"></i> Explore Services</a>
         <a href="pages/contact.html" class="btn btn-outline btn-lg"><i class="bi bi-calendar-check"></i> Book a Demo</a>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section class="section" id="testimonials">
     <div class="container">
       <div class="text-center">
@@ -611,7 +596,6 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
       <h2>Ready to Make Your Home <span class="text-gradient">Smarter</span>?</h2>
@@ -627,7 +611,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -654,22 +637,22 @@
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
+            <li><a href="home2.html">Home</a></li>
             <li><a href="pages/about.html">About Us</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
-            <li><a href="home2.html">Home 2</a></li>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/blog.html">Blog</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Solutions</h4>
+          <h4>Services</h4>
           <ul class="footer-links">
-<li><a href="pages/solutions.html#s-lighting">Smart Lighting</a></li>
-            <li><a href="pages/solutions.html#s-security">Security Systems</a></li>
-            <li><a href="pages/solutions.html#s-climate">Climate Control</a></li>
-            <li><a href="pages/solutions.html#s-entertainment">Entertainment</a></li>
-            <li><a href="pages/solutions.html#s-energy">Energy Management</a></li>
+<li><a href="pages/services.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="pages/services.html#s-security">Security Systems</a></li>
+            <li><a href="pages/services.html#s-climate">Climate Control</a></li>
+            <li><a href="pages/services.html#s-entertainment">Entertainment</a></li>
+            <li><a href="pages/services.html#s-energy">Energy Management</a></li>
           </ul>
         </div>
 
@@ -705,7 +688,6 @@
     </div>
   </footer>
 
-  <!-- Chatbot -->
   <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat assistant">
     <i class="bi bi-robot"></i>
   </button>
@@ -732,10 +714,8 @@
     </div>
   </div>
 
-  <!-- Back to Top -->
   <button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
-  <!-- Scripts -->
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/navbar.js"></script>
   <script src="assets/js/animations.js"></script>
@@ -743,7 +723,6 @@
   <script src="assets/js/smart-home.js"></script>
   <script src="assets/js/pricing.js"></script>
 
-  <!-- Chatbot Script -->
   <script>
     (function() {
       const toggle = document.getElementById('chatbotToggle');

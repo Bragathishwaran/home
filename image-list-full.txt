@@ -1,0 +1,42 @@
+﻿assets\images\Alex Morgan.jpg
+assets\images\Daniel Carter.jpg
+assets\images\Experience Your Home.png
+assets\images\features\climate-control.jpg
+assets\images\features\energy-management.jpg
+assets\images\features\smart-curtains.jpg
+assets\images\hero\hero-ambient-1.jpg
+assets\images\hero\hero-ambient-2.jpg
+assets\images\hero\hero-ambient-3.jpg
+assets\images\hero\living-room-hero.jpg
+assets\images\Kitchen.jpg
+assets\images\logo.jpg
+assets\images\Nexora Light Panel Pro.jpg
+assets\images\products\nexora-light-panel-pro.jpg
+assets\images\products\nexora-light-panel-pro-2.jpg
+assets\images\products\nexora-sense-pro-sensor.jpg
+assets\images\products\nexora-sense-pro-sensor-2.jpg
+assets\images\products\nexora-smart-hub-x1.jpg
+assets\images\products\nexora-smart-hub-x1-2.jpg
+assets\images\rooms\bedroom-1.jpg
+assets\images\rooms\bedroom-2.jpg
+assets\images\rooms\bedroom-3.jpg
+assets\images\rooms\entire-home-1.jpg
+assets\images\rooms\entire-home-2.jpg
+assets\images\rooms\entire-home-wide.jpg
+assets\images\rooms\home-office-1.jpg
+assets\images\rooms\home-office-2.jpg
+assets\images\rooms\home-theatre-1.jpg
+assets\images\rooms\home-theatre-2.jpg
+assets\images\rooms\living-room-1.jpg
+assets\images\rooms\living-room-2.jpg
+assets\images\rooms\outdoor-1.jpg
+assets\images\rooms\outdoor-2.jpg
+assets\images\rooms\security-1.jpg
+assets\images\rooms\security-2.jpg
+assets\images\rooms\security-3.jpg
+assets\images\smart-kitchen.jpg
+assets\images\solutions\hospital-automation.jpg
+assets\images\solutions\hotel-automation.jpg
+assets\images\solutions\office-automation.jpg
+assets\images\Sophia Williams.jpg
+assets\images\watermarked_img_10536507801288394421.jpg

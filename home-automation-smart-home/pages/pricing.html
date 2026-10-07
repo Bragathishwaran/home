@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore Nexora Home's simple, transparent pricing. Choose from Essential, Connect, and Signature smart home packages, compare features, and request a custom quote.">
     <title>Pricing | Nexora Home</title>
-  <!-- Favicon -->
+  
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
@@ -17,9 +17,8 @@
     <link rel="stylesheet" href="../assets/css/dashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body class="content-layout-page">
 
-    <!-- Navbar -->
         <nav class="navbar" id="navbar">
         <div class="container">
             <a href="../index.html" class="navbar-brand">
@@ -46,7 +45,7 @@
           </div>
 </div>
                         <a href="about.html">About</a>
-                        <a href="solutions.html">Solutions</a>
+                        <a href="services.html">Services</a>
                 <a href="products.html">Products</a>
                 <a href="pricing.html" class="active">Pricing</a>
                 <a href="installation-process.html">Installation</a>
@@ -72,7 +71,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <a href="../index.html" class="mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
       <div class="mobile-menu-sub">
@@ -80,7 +78,7 @@
         <a href="../home2.html">Home 2</a>
 </div>
             <a href="about.html">About</a>
-            <a href="solutions.html">Solutions</a>
+            <a href="services.html">Services</a>
             <a href="products.html">Products</a>
             <a href="pricing.html" class="active">Pricing</a>
             <a href="installation-process.html">Installation</a>
@@ -88,6 +86,10 @@
 <a href="contact.html">Contact</a>
             <a href="gallery.html">Gallery</a>
             <a href="blog.html">Blog</a>
+            <div class="mobile-menu-dir dir-toggle" role="group" aria-label="Text direction">
+              <button type="button" class="dir-btn" data-dir="ltr" aria-label="Left to right">LTR</button>
+              <button type="button" class="dir-btn" data-dir="rtl" aria-label="Right to left">RTL</button>
+            </div>
             <div class="mobile-menu-actions">
                 <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
 <a href="login.html" class="btn btn-outline">Login</a>
@@ -95,15 +97,13 @@
         </div>
     </nav>
 
-    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
 <h1>Simple, Transparent Pricing</h1>
-            <p class="subtitle">No hidden costs, no surprises. Choose the plan that fits your home, your lifestyle, and your budget — or let us craft something entirely custom.</p>
+            <p class="subtitle">No hidden costs, no surprises. Choose the plan that fits your home, your lifestyle, and your budget Ã¢â‚¬â€ or let us craft something entirely custom.</p>
         </div>
     </section>
 
-    <!-- Pricing Cards -->
     <section class="section">
         <div class="container">
             <div class="section-label">Packages</div>
@@ -111,14 +111,16 @@
             <p class="section-subtitle">Every package is a one-time investment that includes devices, setup, the Nexora app, and ongoing support. Upgrade or expand anytime.</p>
             <div class="pricing-grid stagger-children">
 
-                <!-- Plan 1: Essential -->
                 <div class="pricing-card reveal">
+                    <div class="pricing-card-media">
+                        <img src="../assets/images/rooms/living-room-1.jpg" alt="Essential smart apartment with automated lighting" loading="lazy">
+                    </div>
                     <div class="pricing-tier">Essential</div>
                     <div class="pricing-amount">
                         <span class="currency">&#8377;</span>
                         <span class="amount">49,999</span>
                     </div>
-                    <div class="pricing-period">One-time · Perfect for small apartments</div>
+                    <div class="pricing-period">One-time Ã‚Â· Perfect for small apartments</div>
                     <ul class="pricing-features">
                         <li><i class="bi bi-check-circle-fill"></i> Up to 10 smart devices</li>
                         <li><i class="bi bi-check-circle-fill"></i> Smart lighting control</li>
@@ -132,14 +134,16 @@
                     <a href="contact.html" class="btn btn-outline">Choose Essential</a>
                 </div>
 
-                <!-- Plan 2: Connect -->
                 <div class="pricing-card featured reveal">
+                    <div class="pricing-card-media">
+                        <img src="../assets/images/rooms/living-room-2.jpg" alt="Connect package smart living room with climate and security" loading="lazy">
+                    </div>
                     <div class="pricing-tier">Connect</div>
                     <div class="pricing-amount">
                         <span class="currency">&#8377;</span>
                         <span class="amount">99,999</span>
                     </div>
-                    <div class="pricing-period">One-time · Our most popular plan</div>
+                    <div class="pricing-period">One-time Ã‚Â· Our most popular plan</div>
                     <ul class="pricing-features">
                         <li><i class="bi bi-check-circle-fill"></i> Up to 30 smart devices</li>
                         <li><i class="bi bi-check-circle-fill"></i> Smart lighting &amp; scenes</li>
@@ -157,14 +161,16 @@
                     <a href="contact.html" class="btn btn-primary">Choose Connect</a>
                 </div>
 
-                <!-- Plan 3: Signature -->
                 <div class="pricing-card reveal">
+                    <div class="pricing-card-media">
+                        <img src="../assets/images/rooms/entire-home-wide.jpg" alt="Signature package whole-home smart automation" loading="lazy">
+                    </div>
                     <div class="pricing-tier">Signature</div>
                     <div class="pricing-amount">
                         <span class="currency">&#8377;</span>
                         <span class="amount">1,99,999</span>
                     </div>
-                    <div class="pricing-period">One-time · For complete smart living</div>
+                    <div class="pricing-period">One-time Ã‚Â· For complete smart living</div>
                     <ul class="pricing-features">
                         <li><i class="bi bi-check-circle-fill"></i> Unlimited smart devices</li>
                         <li><i class="bi bi-check-circle-fill"></i> Everything in Connect</li>
@@ -183,12 +189,11 @@
         </div>
     </section>
 
-    <!-- Request Custom Quote CTA -->
     <section class="section cta-section">
         <div class="container text-center">
             <div class="reveal">
                 <h2 class="section-title">Looking for Something More Custom?</h2>
-                <p class="section-subtitle">Every home is different. Tell us about your space and we'll design a tailored package with a transparent, itemized quote — at no cost.</p>
+                <p class="section-subtitle">Every home is different. Tell us about your space and we'll design a tailored package with a transparent, itemized quote Ã¢â‚¬â€ at no cost.</p>
                 <a href="contact.html#quote" class="btn btn-primary btn-lg mt-3">
                     <i class="bi bi-clipboard-check me-2"></i>
                     Request Custom Quote
@@ -197,8 +202,7 @@
         </div>
     </section>
 
-    <!-- Pricing Comparison Table -->
-    <section class="section">
+    <section class="section" id="pricing-comparison">
         <div class="container">
             <div class="section-label">Compare Plans</div>
             <h2 class="section-title">Detailed Comparison</h2>
@@ -298,12 +302,13 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section class="section">
         <div class="container">
-            <div class="section-label">FAQ</div>
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Everything you need to know about pricing, installation, and what's included before you get started.</p>
+            <div class="text-center">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about pricing, installation, and what's included before you get started.</p>
+            </div>
             <div class="faq-list stagger-children">
 
                 <div class="faq-item reveal">
@@ -394,7 +399,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="section text-center">
         <div class="container">
             <div class="reveal">
@@ -405,7 +409,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -432,22 +435,22 @@
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
+            <li><a href="../home2.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="../home2.html">Home 2</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Solutions</h4>
+          <h4>Services</h4>
           <ul class="footer-links">
-<li><a href="solutions.html#s-lighting">Smart Lighting</a></li>
-            <li><a href="solutions.html#s-security">Security Systems</a></li>
-            <li><a href="solutions.html#s-climate">Climate Control</a></li>
-            <li><a href="solutions.html#s-entertainment">Entertainment</a></li>
-            <li><a href="solutions.html#s-energy">Energy Management</a></li>
+<li><a href="services.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="services.html#s-security">Security Systems</a></li>
+            <li><a href="services.html#s-climate">Climate Control</a></li>
+            <li><a href="services.html#s-entertainment">Entertainment</a></li>
+            <li><a href="services.html#s-energy">Energy Management</a></li>
           </ul>
         </div>
 
@@ -483,12 +486,10 @@
     </div>
   </footer>
 
-    <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="bi bi-arrow-up"></i>
     </button>
 
-    <!-- Chatbot -->
     <div class="chatbot" id="chatbot">
         <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
             <i class="bi bi-chat-dots-fill"></i>
@@ -508,14 +509,12 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="../assets/js/theme.js"></script>
     <script src="../assets/js/navbar.js"></script>
     <script src="../assets/js/animations.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/pricing.js"></script>
 
-    <!-- FAQ Toggle -->
     <script>
         (function () {
             document.addEventListener('click', function (e) {

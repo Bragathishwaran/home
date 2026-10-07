@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practical smart home guidance from Nexora Home.">
+  <title>Article | Nexora Home</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/article.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand">
+                <svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="36" height="36" rx="8" fill="url(#logo-grad)"/>
+                    <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+                    <circle cx="18" cy="18" r="3" fill="url(#logo-grad)" opacity="0.9"/>
+                    <defs>
+                        <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36">
+                            <stop stop-color="#B08D57"/>
+                            <stop offset="1" stop-color="#D9C6A3"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="brand-name">NEXORA</span>
+            </a>
+
+            <div class="navbar-nav" id="navbarNav">
+                        <div class="nav-dropdown">
+          <a href="../index.html" class="nav-dropdown-toggle">Home <i class="bi bi-chevron-down dropdown-caret"></i></a>
+          <div class="nav-dropdown-menu">
+<a href="../index.html">Home 1</a>
+            <a href="../home2.html">Home 2</a>
+          </div>
+        </div>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Services</a>
+                <a href="products.html">Products</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="installation-process.html">Installation</a>
+                
+                <a href="contact.html">Contact</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html" class="active">Blog</a>
+            </div>
+
+            <div class="navbar-actions">
+                <div class="dir-toggle" role="group" aria-label="Text direction">
+                  <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true" aria-label="Left to right">LTR</button>
+                  <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false" aria-label="Right to left">RTL</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <a href="dashboard/index.html" class="btn-dashboard">Dashboard</a>
+                <a href="login.html" class="btn-login">Login</a>
+                <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html" class="mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
+      <div class="mobile-menu-sub">
+        <a href="../index.html">Home 1</a>
+        <a href="../home2.html">Home 2</a>
+      </div>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="products.html">Products</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="installation-process.html">Installation</a>
+            
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html" class="active">Blog</a>
+            <div class="mobile-menu-dir dir-toggle" role="group" aria-label="Text direction">
+              <button type="button" class="dir-btn" data-dir="ltr" aria-label="Left to right">LTR</button>
+              <button type="button" class="dir-btn" data-dir="rtl" aria-label="Right to left">RTL</button>
+            </div>
+            <div class="mobile-menu-actions">
+                <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
+                <a href="login.html" class="btn btn-outline">Login</a>
+            </div>
+        </div>
+    </nav>
+
+  <main id="articlePage" class="article-page" aria-live="polite">
+    <div class="article-loading">Loading article...</div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo">
+            <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="8" fill="url(#logo-grad)"/>
+              <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+              <circle cx="18" cy="18" r="3" fill="url(#logo-grad)" opacity="0.9"/>
+              <defs>
+                <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36">
+                  <stop stop-color="#B08D57"/>
+                  <stop offset="1" stop-color="#D9C6A3"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>NEXORA</span>
+          </a>
+          <p>Intelligent home automation, designed around the way you live. From lighting and security to climate and entertainment Ã¢â‚¬â€ your home, smarter by design.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@nexorahome" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../home2.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="services.html#s-security">Security Systems</a></li>
+            <li><a href="services.html#s-climate">Climate Control</a></li>
+            <li><a href="services.html#s-entertainment">Entertainment</a></li>
+            <li><a href="services.html#s-energy">Energy Management</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="installation-process.html">Installation Process</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Get smarter home insights delivered to your inbox.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nexora Home. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="legal.html#privacy">Privacy Policy</a>
+          <a href="legal.html#terms">Terms of Service</a>
+          <a href="legal.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    const articles = {
+      'apartment-essentials': {
+        category: 'Guide', date: 'Sep 12, 2026', read: '6 min read',
+        title: '5 Smart Home Essentials for Apartment Living',
+        image: '../assets/images/rooms/living-room-2.jpg', alt: 'Warm ambient lighting in a modern apartment living room',
+        intro: 'A practical starting plan for choosing connected devices that fit a smaller home, respect rental limits, and work together without clutter.',
+        sections: [
+          ['Start with a reliable foundation', 'A compact smart hub and dependable Wi-Fi make the rest of an apartment setup easier to manage. Choose a hub that supports the devices you plan to add, place it centrally, and keep essential controls local where possible. If your router struggles at the far end of the apartment, improve coverage before adding more connected devices.'],
+          ['Choose upgrades that earn their space', 'Smart switches and bulbs make lighting more useful without taking over a room. Use a smart plug for a lamp or appliance that you want to schedule, and add a door or motion sensor where it solves a clear everyday problem. A small number of well-chosen devices usually feels better than a collection of gadgets with overlapping jobs.'],
+          ['Make the system renter friendly', 'Look for wireless sensors, plug-in devices, and controls that can be removed cleanly when you move. Before changing a wall switch or drilling, check your lease and ask the property owner. Label devices and keep a simple note of the original switch positions so the home is easy to restore.'],
+          ['A simple order for getting started', 'Begin with Wi-Fi coverage and the hub, then automate one lighting zone. Add a sensor or smart plug after you are comfortable with the app, and finish by creating a few schedules for the routines you already follow. This step-by-step approach keeps setup manageable and makes it clear which additions are genuinely useful.']
+        ]
+      },
+      'lighting-scenes': {
+        category: 'Tips', date: 'Sep 3, 2026', read: '4 min read',
+        title: 'Lighting Scenes That Match Your Daily Rhythm',
+        image: '../assets/images/rooms/bedroom-1.jpg', alt: 'Calm bedroom with soft automated lighting',
+        intro: 'Build lighting routines around the way your day changes, using comfortable brightness, natural color, and simple controls.',
+        sections: [
+          ['Build scenes around moments', 'A useful scene describes what you are doing, not just a color setting. Start with a gentle morning scene, a brighter work setting, a comfortable evening level, and a low-light path for late nights. Keep each scene easy to recognize and available from both the app and a physical switch.'],
+          ['Use brightness and color together', 'Bright, cooler light can help a workspace feel clear during the day. In the evening, lower the brightness and shift toward warmer tones in the rooms where you relax. Bedrooms often benefit from a gradual fade before sleep and a softer, timed increase in the morning rather than a sudden full-brightness switch.'],
+          ['Let sensors help, but keep control simple', 'Occupancy sensors can turn lights off in rooms that are often left empty, while daylight sensors can reduce artificial light near windows. Set a reasonable delay so lights do not switch off while someone is still in the room. A manual switch or app override should always be easy to use.'],
+          ['Test the routine in real life', 'Run each scene for a few days and adjust it based on how the room feels at the actual time of day. Avoid stacking several schedules that compete with one another. A small set of predictable scenes makes lighting feel natural and keeps the system simple for everyone at home.']
+        ]
+      },
+      'security-sensors': {
+        category: 'Security', date: 'Aug 21, 2026', read: '7 min read',
+        title: 'Security Sensors: A Practical Guide to Whole-Home Coverage',
+        image: '../assets/images/rooms/security-1.jpg', alt: 'Smart home security sensor and camera coverage',
+        intro: 'Plan sensor placement by entry point and room, then connect alerts and controls into a system that is useful without being intrusive.',
+        sections: [
+          ['Cover entry points first', 'Start with the doors and windows that are most accessible from outside. Contact sensors can report when an entry point opens, while a door lock can add a convenient way to check and secure the home remotely. Place cameras where they can see useful approach paths without pointing into private areas.'],
+          ['Use motion sensors to fill the gaps', 'Motion sensors are most helpful in hallways, shared living areas, and routes between entry points and the rest of the home. Avoid placing them directly opposite windows or near heat sources if those conditions cause false alerts. Walk through the area and check the sensor view before fixing it in place.'],
+          ['Create zones that fit your household', 'Separate the home into practical zones such as perimeter, common areas, and private rooms. This makes it easier to arm entry sensors while people are inside, or to receive an alert from a particular area without treating every movement as an emergency. Agree on the notification settings with everyone who uses the system.'],
+          ['Review privacy and test regularly', 'Use strong account passwords, enable multi-factor authentication where available, and limit access to people who need it. Set camera retention and notification preferences deliberately. Test sensors and alarms on a schedule, and update device firmware so the system stays reliable as the home changes.']
+        ]
+      },
+      'installation-guide': {
+        category: 'Installation', date: 'Aug 8, 2026', read: '5 min read',
+        title: 'What to Expect During Your Nexora Installation',
+        image: '../assets/images/rooms/home-office-1.jpg', alt: 'Smart home office prepared for professional installation',
+        intro: 'Follow the steps from site assessment through installation, testing, and handover so you know what to expect at every stage.',
+        sections: [
+          ['Before the installation visit', 'The project begins with a conversation about your routines, rooms, and priorities. A site assessment checks existing wiring, Wi-Fi coverage, switch locations, and the devices you already own. From this information, the team prepares a plan that identifies what will be installed and how each system will work together.'],
+          ['Installation day, room by room', 'The team protects work areas, confirms device locations, and completes the planned wiring and mounting. Devices are then connected to the home network and grouped by room. Working in a clear sequence helps keep disruption down and makes it easier to confirm each space before moving to the next.'],
+          ['Configuration and quality checks', 'After installation, scenes, schedules, sensors, and access permissions are configured to match the agreed plan. The team checks that switches, locks, cameras, and controls respond as expected, and resolves any connectivity or calibration issues before handover.'],
+          ['Handover and ongoing support', 'At handover, your installer walks you through the app, important controls, and common troubleshooting steps. Keep the device list and project notes somewhere accessible. You can then request adjustments as your routines change or add more rooms over time.']
+        ]
+      },
+      'energy-monitoring': {
+        category: 'Energy', date: 'Jul 19, 2026', read: '6 min read',
+        title: 'Cutting Energy Bills With Smart Monitoring',
+        image: '../assets/images/rooms/entire-home-2.jpg', alt: 'Whole-home energy monitoring on a tablet',
+        intro: 'Use clear energy data to spot avoidable consumption, build useful schedules, and measure which changes make a difference.',
+        sections: [
+          ['Understand where energy goes', 'A home energy monitor makes consumption easier to see by showing current demand and, when supported, usage by circuit or appliance. Start by observing a normal week. Note when the largest loads run and compare weekday and weekend patterns before changing schedules.'],
+          ['Automate the easy wins', 'Schedules can switch off lights and standby loads when rooms are empty. Smart thermostats can avoid heating or cooling an empty home, while sensible temperature ranges preserve comfort. If you have solar or a battery, shift flexible loads to times when your own generation is available.'],
+          ['Use alerts to catch unusual usage', 'A sudden rise in overnight consumption or an appliance running longer than usual can be a useful prompt to investigate. Choose a few meaningful alerts rather than notifying yourself about every small fluctuation. Monitoring is most effective when it helps you make a clear decision.'],
+          ['Measure results and adjust', 'Compare similar periods and account for changes in weather, occupancy, and appliance use. Keep automations that reduce waste without making the home uncomfortable, and revise schedules when seasons or routines change. The goal is a steady improvement you can verify, not a one-time setting.']
+        ]
+      },
+      'home-theatre': {
+        category: 'Entertainment', date: 'Jul 4, 2026', read: '4 min read',
+        title: 'Building a Home Theatre That Controls Itself',
+        image: '../assets/images/rooms/home-theatre-1.jpg', alt: 'Home theatre with automated lighting and entertainment controls',
+        intro: 'Bring lighting, blinds, display, and audio together in a home theatre scene that stays easy for everyone to operate.',
+        sections: [
+          ['Plan the room before choosing devices', 'Decide where viewers will sit, where the screen or projector belongs, and how people will enter the room. These choices help determine speaker positions, cable routes, lighting zones, and where a control panel or remote will be easiest to reach.'],
+          ['Make one scene handle the setup', 'A movie scene can lower the lights, close motorized blinds, switch the display to the right input, and set the audio system to the preferred mode. Sequence actions with short delays when devices need time to wake up, and provide a clear pause or stop control.'],
+          ['Keep the rest of the home in mind', 'Use sound zones and sensible volume limits so a film does not disturb sleeping family members. A quiet scene can also reduce corridor lighting while keeping a safe path available. Network equipment should be placed where it can reliably reach both the theatre devices and the rest of the home.'],
+          ['Keep manual controls available', 'A good automation should make the room easier to use, while still allowing anyone to adjust lights, volume, or playback directly. Label the main controls, test the scene with each household member, and make sure the room can return to its normal state with one simple action.']
+        ]
+      }
+    };
+
+    const slug = new URLSearchParams(window.location.search).get('post');
+    const article = articles[slug];
+    const page = document.getElementById('articlePage');
+    if (!article) {
+      document.title = 'Article Not Found | Nexora Home';
+      page.innerHTML = '<div class="article-not-found"><h1>Article not found</h1><p>That journal article may have moved.</p><a class="btn btn-primary" href="blog.html">Browse the journal</a></div>';
+    } else {
+      document.title = article.title + ' | Nexora Home Journal';
+      page.innerHTML = `
+        <div class="article-wrap">
+          <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="blog.html">Journal</a><i class="bi bi-chevron-right"></i><span>${article.category}</span></nav>
+          <header class="article-heading">
+            <span class="article-category">${article.category}</span>
+            <h1>${article.title}</h1>
+            <p class="article-meta">Nexora Home <span aria-hidden="true">·</span> ${article.date} <span aria-hidden="true">·</span> ${article.read}</p>
+          </header>
+          <figure class="article-cover"><img src="${article.image}" alt="${article.alt}"></figure>
+          <article class="article-content">
+            <p class="article-intro">${article.intro}</p>
+            ${article.sections.map(([heading, copy]) => `<section><h2>${heading}</h2><p>${copy}</p></section>`).join('')}
+            <div class="article-cta"><h2>Planning your smart home?</h2><p>Talk with the Nexora team about a setup that fits your home and daily routine.</p><a class="btn btn-primary" href="contact.html">Book a consultation <i class="bi bi-arrow-right"></i></a></div>
+          </article>
+          <a class="article-back-link" href="blog.html"><i class="bi bi-arrow-left"></i> Back to all articles</a>
+        </div>`;
+    }
+  </script>
+</body>
+</html>

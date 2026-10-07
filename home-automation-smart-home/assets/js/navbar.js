@@ -143,8 +143,8 @@ function toggleMobileHome(event) {
 
 /* --- Text Direction Toggle (LTR / RTL) --- */
 function initDirToggle() {
-  const group = document.querySelector('.dir-toggle');
-  if (!group) return;
+  const groups = document.querySelectorAll('.dir-toggle');
+  if (!groups.length) return;
 
   const html = document.documentElement;
   const saved = (() => {
@@ -154,20 +154,24 @@ function initDirToggle() {
 
   applyDir(initial);
 
-  group.addEventListener('click', (e) => {
-    const btn = e.target.closest('.dir-btn');
-    if (!btn) return;
-    const dir = btn.dataset.dir;
-    applyDir(dir);
-    try { localStorage.setItem('nexora:dir', dir); } catch (e) {}
+  groups.forEach(group => {
+    group.addEventListener('click', (e) => {
+      const btn = e.target.closest('.dir-btn');
+      if (!btn) return;
+      const dir = btn.dataset.dir;
+      applyDir(dir);
+      try { localStorage.setItem('nexora:dir', dir); } catch (e) {}
+    });
   });
 
   function applyDir(dir) {
     html.setAttribute('dir', dir);
-    group.querySelectorAll('.dir-btn').forEach(btn => {
-      const active = btn.dataset.dir === dir;
-      btn.classList.toggle('is-active', active);
-      btn.setAttribute('aria-pressed', String(active));
+    groups.forEach(group => {
+      group.querySelectorAll('.dir-btn').forEach(btn => {
+        const active = btn.dataset.dir === dir;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', String(active));
+      });
     });
   }
 }

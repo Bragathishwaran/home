@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Nexora Home services for connected lighting, security, climate, entertainment, and whole-home automation, tailored to every lifestyle.">
+    <title>Smart Home Services | Nexora Home</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+        <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand">
+                <svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="36" height="36" rx="8" fill="url(#logo-grad)"/>
+                    <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+                    <circle cx="18" cy="18" r="3" fill="url(#logo-grad)" opacity="0.9"/>
+                    <defs>
+                        <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36">
+                            <stop stop-color="#B08D57"/>
+                            <stop offset="1" stop-color="#D9C6A3"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="brand-name">NEXORA</span>
+            </a>
+
+            <div class="navbar-nav" id="navbarNav">
+                        <div class="nav-dropdown">
+          <a href="../index.html" class="nav-dropdown-toggle">Home <i class="bi bi-chevron-down dropdown-caret"></i></a>
+          <div class="nav-dropdown-menu">
+<a href="../index.html">Home 1</a>
+            <a href="../home2.html">Home 2</a>
+          </div>
+</div>
+                        <a href="about.html">About</a>
+                        <a href="services.html" class="active">Services</a>
+                <a href="products.html">Products</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="installation-process.html">Installation</a>
+
+            <a href="contact.html">Contact</a>
+<a href="gallery.html">Gallery</a>
+<a href="blog.html">Blog</a>
+            </div>
+
+            <div class="navbar-actions">
+                <div class="dir-toggle" role="group" aria-label="Text direction">
+                  <button type="button" class="dir-btn is-active" data-dir="ltr" aria-pressed="true" aria-label="Left to right">LTR</button>
+                  <button type="button" class="dir-btn" data-dir="rtl" aria-pressed="false" aria-label="Right to left">RTL</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <a href="dashboard/index.html" class="btn-dashboard">Dashboard</a>
+                <a href="login.html" class="btn-login">Login</a>
+                <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html" class="mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
+      <div class="mobile-menu-sub">
+        <a href="../index.html">Home 1</a>
+        <a href="../home2.html">Home 2</a>
+</div>
+            <a href="about.html">About</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="products.html">Products</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="installation-process.html">Installation</a>
+            
+<a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <div class="mobile-menu-dir dir-toggle" role="group" aria-label="Text direction">
+              <button type="button" class="dir-btn" data-dir="ltr" aria-label="Left to right">LTR</button>
+              <button type="button" class="dir-btn" data-dir="rtl" aria-label="Right to left">RTL</button>
+            </div>
+            <div class="mobile-menu-actions">
+                <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
+<a href="login.html" class="btn btn-outline">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container text-center">
+            <span class="section-label"><i class="bi bi-diagram-3"></i> Intelligent Ecosystems</span>
+            <h1>Smart Home Services for Every Space &amp; Industry.</h1>
+            <p class="subtitle" style="margin: 0 auto; max-width: 680px;">Whether you want to automate a single room, a sprawling estate, a healthcare clinic, or a corporate workplace, Nexora engineers tailored automation systems that adapt seamlessly to your lifestyle.</p>
+            
+            <div class="solutions-nav-pills">
+                <a href="#sector-solutions" class="solution-pill active"><i class="bi bi-diagram-3"></i> Core Domain Services</a>
+                <a href="#room-solutions" class="solution-pill"><i class="bi bi-house"></i> By Room</a>
+                <a href="#use-case-solutions" class="solution-pill"><i class="bi bi-stars"></i> By Use Case</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="sector-solutions">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 48px;">
+                <span class="section-label"><i class="bi bi-buildings"></i> Domain &amp; Commercial Services</span>
+                <h2 class="section-title">Automation Engineered for Every Industry</h2>
+                <p class="section-subtitle">From private residences to hospitals, corporate offices, and luxury hotels, discover how Nexora's smart systems elevate comfort, safety, and efficiency.</p>
+            </div>
+
+            <div class="solutions-grid stagger-children">
+                
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/entire-home-wide.jpg" alt="Comprehensive Home Automation Solution by Nexora" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-house-check"></i> Residential</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-house-check"></i></div>
+                                <h3>Home Automation</h3>
+                            </div>
+                            <p class="solution-card-desc">Unify every room in your residence under one intelligent ecosystem. Effortlessly control lighting, climate, security, and shading from a single intuitive touchpanel or voice command.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Whole-home synchronized scene controls</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Centralized wall touchpanels &amp; mobile app</li>
+                                <li><i class="bi bi-check-circle-fill"></i> AI-driven adaptive energy &amp; climate optimization</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Unified family access &amp; perimeter safety monitoring</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?interest=home" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Home Automation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/solutions/office-automation.jpg" alt="Smart Corporate Office Automation by Nexora" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-building"></i> Commercial</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-building"></i></div>
+                                <h3>Office Automation</h3>
+                            </div>
+                            <p class="solution-card-desc">Modernize corporate workplaces with occupancy-driven climate and lighting, smart conference room scheduling, privacy glass automation, and unified facility telemetry.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> One-touch boardroom presentation modes</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Occupancy-based circadian linear illumination</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Contactless biometric &amp; badge access control</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Commercial HVAC scheduling &amp; energy analytics</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?interest=office" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Office Automation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/solutions/hospital-automation.jpg" alt="Intelligent Hospital and Healthcare Automation by Nexora" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-hospital"></i> Healthcare</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-hospital"></i></div>
+                                <h3>Hospital Automation</h3>
+                            </div>
+                            <p class="solution-card-desc">Elevate patient recovery and clinical precision with antimicrobial touchless controls, circadian healing lighting cycles, and integrated telemetry for medical staff.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Circadian patient room recovery illumination</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Touchless hygienic environmental switches</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Nurse dispatch integration &amp; emergency sync</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Sterile air quality &amp; negative pressure monitoring</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?interest=hospital" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Hospital Automation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/solutions/hotel-automation.jpg" alt="Luxury Hotel Guestroom Automation by Nexora" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-buildings"></i> Hospitality</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-buildings"></i></div>
+                                <h3>Hotel Automation</h3>
+                            </div>
+                            <p class="solution-card-desc">Deliver exceptional 5-star guest stays with mobile digital keyless suite access, bespoke welcome scenes, bedside smart consoles, and automated energy setbacks during vacancy.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Smartphone digital key &amp; contactless check-in</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Personalized welcome lighting &amp; climate scenes</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Unoccupied energy-saving setback automation</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Integrated bedside concierge &amp; service console</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?interest=hotel" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Hotel Automation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/entire-home-1.jpg" alt="Luxury Villa and Estate Automation by Nexora" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-gem"></i> Private Estates</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-gem"></i></div>
+                                <h3>Villa &amp; Estate Automation</h3>
+                            </div>
+                            <p class="solution-card-desc">Architectural-grade smart infrastructure for expansive private estates. Seamlessly manage multi-acre perimeter security, heated pool systems, and smart landscape illumination.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Multi-acre perimeter infrared &amp; camera defense</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Infinity pool, spa &amp; water feature automation</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Architectural facade &amp; landscape smart lighting</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Dedicated on-premise rack server management</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?interest=villa" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Estate Automation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/hero/hero-ambient-2.jpg" alt="Smart Retail and Showroom Automation by Nexora" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-shop"></i> Retail &amp; Commercial</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-shop"></i></div>
+                                <h3>Retail &amp; Showroom</h3>
+                            </div>
+                            <p class="solution-card-desc">Captivate customers with footfall-responsive lighting sequences, zone-controlled acoustic ambiance, automated display spotlights, and scheduled security closures.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Dynamic product display spotlighting &amp; scenes</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Footfall-adaptive ambient acoustic zoning</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Scheduled motorized shutters &amp; sensor alarms</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Real-time multi-location energy telemetry</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?interest=retail" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Retail Automation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="room-solutions" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 48px;">
+                <span class="section-label"><i class="bi bi-house"></i> By Room</span>
+                <h2 class="section-title">Services Tailored to Every Space</h2>
+                <p class="section-subtitle">Each room in your home has unique operational needs. Our solutions are designed to address them individually, creating the perfect environment wherever you are.</p>
+            </div>
+            
+            <div class="solutions-grid stagger-children">
+                
+                <div class="solution-card card-hover-glow reveal" id="s-lighting">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/living-room-2.jpg" alt="Living Room smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-tv"></i> Social Space</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-tv"></i></div>
+                                <h3>Living Room</h3>
+                            </div>
+                            <p class="solution-card-desc">Transform your living room into an ambient entertainment sanctuary with automated lighting scenes, intelligent climate control, and seamless media integration.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Smart lighting scenes &amp; mood dimming</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Voice-controlled television &amp; streaming</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Automated motorized blinds &amp; shades</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Multi-zone acoustic audio distribution</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?room=living" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Living Room</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/bedroom-1.jpg" alt="Bedroom smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-moon-stars"></i> Rest &amp; Wellness</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-moon-stars"></i></div>
+                                <h3>Bedroom</h3>
+                            </div>
+                            <p class="solution-card-desc">Create a restorative sleep sanctuary with circadian sunrise wake-up sequences, gentle ambient lighting, and automated temperature adjusting to your natural sleep cycle.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Gentle sunrise wake-up illumination</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Sleep-cycle smart thermostat scheduling</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Automated motorized blackout curtains</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Bedside master off scene switch</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?room=bedroom" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Bedroom</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/smart-kitchen.jpg" alt="Smart Kitchen automation and appliances" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-cup-hot"></i> Culinary IoT</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-cup-hot"></i></div>
+                                <h3>Smart Kitchen</h3>
+                            </div>
+                            <p class="solution-card-desc">Streamline your cooking experience with smart kitchen appliance integration, hands-free voice controls, automated under-cabinet lighting, and safety leak sensors.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Smart appliance scheduling &amp; status</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Voice-activated timers &amp; recipe display</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Automated water leak &amp; smoke shutdown</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Task &amp; ambient counter illumination by zone</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?room=kitchen" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Kitchen</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/home-office-1.jpg" alt="Home Office smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-laptop"></i> Focus &amp; Work</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-laptop"></i></div>
+                                <h3>Home Office</h3>
+                            </div>
+                            <p class="solution-card-desc">Boost productivity with a workspace that automatically calibrates task lighting, eliminates environmental distractions, and tunes climate for sustained focus.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> One-touch focus mode automation</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Glare-reducing motorized task blinds</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Video conference acoustic lighting mode</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Meeting schedule calendar indicator lights</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?room=office" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Home Office</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/home-theatre-1.jpg" alt="Home Theatre smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-film"></i> Cinema Grade</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-film"></i></div>
+                                <h3>Home Theatre</h3>
+                            </div>
+                            <p class="solution-card-desc">Experience commercial cinema-quality entertainment at home with one-touch scene triggers for screen deployment, audio calibration, and starlight ceiling effects.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> One-touch movie start &amp; intermission scenes</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Immersive Dolby Atmos surround calibration</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Fiber-optic starlight ceiling integration</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Automated motorized blackout &amp; quiet HVAC</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?room=theatre" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Home Theatre</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/outdoor-1.jpg" alt="Outdoor smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-tree"></i> Patio &amp; Grounds</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-tree"></i></div>
+                                <h3>Outdoor &amp; Landscapes</h3>
+                            </div>
+                            <p class="solution-card-desc">Extend intelligent living outside with weatherproof systems for pathway lighting, smart weather-adaptive irrigation, perimeter sensors, and patio audio.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Architectural landscape &amp; path illumination</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Weather-predictive smart irrigation timing</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Weatherproof outdoor audio &amp; TV integration</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Automated gate, driveway &amp; garage triggers</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?room=outdoor" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Outdoor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="use-case-solutions">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 48px;">
+                <span class="section-label"><i class="bi bi-stars"></i> By Use Case</span>
+                <h2 class="section-title">Specialized Capabilities for Every Goal</h2>
+                <p class="section-subtitle">No matter what priority you wish to optimize, Nexora delivers dedicated engineering packages designed for uncompromising performance.</p>
+            </div>
+
+            <div class="solutions-grid stagger-children">
+                
+                <div class="solution-card card-hover-glow reveal" id="s-climate">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/bedroom-3.jpg" alt="Comfort and climate smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-thermometer-half"></i> Climate</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-thermometer-half"></i></div>
+                                <h3>Comfort &amp; Climate</h3>
+                            </div>
+                            <p class="solution-card-desc">Enjoy an environment that continuously senses and responds with predictive temperature regulation, humidity balancing, and fresh air ventilation.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Multi-zone adaptive climate regulation</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Indoor CO2 &amp; particulate air monitoring</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Smart geofencing pre-cooling &amp; pre-heating</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Silent automated HVAC fan balancing</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?usecase=comfort" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Comfort</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal" id="s-security">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/security-1.jpg" alt="Intelligent Security smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-shield-lock"></i> Defense</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-shield-lock"></i></div>
+                                <h3>Intelligent Security</h3>
+                            </div>
+                            <p class="solution-card-desc">Safeguard what matters most with 24/7 smart surveillance, instant intrusion verification, encrypted digital door access, and automatic deterrence sirens.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> 4K AI-powered vision &amp; motion recognition</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Keyless biometric &amp; keypad door locks</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Tamper-proof perimeter vibration sensors</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Instant encrypted mobile alarm notifications</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?usecase=security" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Security</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal" id="s-energy">
+                    <div class="solution-visual">
+                        <img src="../assets/images/features/energy-management.jpg" alt="Energy Efficiency and solar management" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-lightning-charge"></i> Eco Savings</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-lightning-charge"></i></div>
+                                <h3>Energy Efficiency</h3>
+                            </div>
+                            <p class="solution-card-desc">Dramatically reduce power consumption and utility expenses with automated solar energy storage balancing, phantom power shut-off, and live telemetry.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Real-time per-circuit power monitoring</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Solar inverter &amp; battery state synchronization</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Automated standby phantom power cutoff</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Peak-rate load shifting algorithms</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?usecase=energy" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Energy Efficiency</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal" id="s-entertainment">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/home-theatre-2.jpg" alt="Entertainment smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-music-note-beamed"></i> Media &amp; Audio</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-music-note-beamed"></i></div>
+                                <h3>Hi-Fi Entertainment</h3>
+                            </div>
+                            <p class="solution-card-desc">Unify streaming audio, lossless music libraries, video distribution, and gaming consoles into an effortless one-tap multi-room entertainment network.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Lossless multi-room synchronized streaming</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Discrete architectural in-wall speakers</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Party mode one-tap whole-house sound</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Voice, touchpanel &amp; smartphone management</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?usecase=entertainment" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Entertainment</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/hero/living-room-hero.jpg" alt="Universal Accessibility smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-universal-access"></i> Universal Access</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-universal-access"></i></div>
+                                <h3>Universal Accessibility</h3>
+                            </div>
+                            <p class="solution-card-desc">Create an inclusive, barrier-free living space with natural voice commands, automated motorized doorways, hands-free lighting, and emergency assistance dispatch.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Complete hands-free voice control across rooms</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Automated zero-effort door &amp; gate motors</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Single-touch emergency assistance dialer</li>
+                                <li><i class="bi bi-check-circle-fill"></i> High-contrast simplified touchscreen UI</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?usecase=accessibility" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Accessibility</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card card-hover-glow reveal">
+                    <div class="solution-visual">
+                        <img src="../assets/images/rooms/entire-home-2.jpg" alt="Luxury Living smart home solution" loading="lazy">
+                        <span class="solution-badge"><i class="bi bi-gem"></i> Bespoke Luxury</span>
+                    </div>
+                    <div class="solution-card-content">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="solution-icon"><i class="bi bi-gem"></i></div>
+                                <h3>Bespoke Luxury Living</h3>
+                            </div>
+                            <p class="solution-card-desc">The pinnacle of smart design. Custom climate vaults for wine cellars, automated pool temperature and cover control, concierge integration, and designer brass keypads.</p>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Precision climate &amp; lighting wine cellars</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Bespoke milled metal keypad finishes</li>
+                                <li><i class="bi bi-check-circle-fill"></i> White-glove personal concierge support</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Invisible motorized architectural concealments</li>
+                            </ul>
+                        </div>
+                        <div class="solution-action">
+                            <a href="contact.html?usecase=luxury" class="btn btn-primary"><i class="bi bi-arrow-right-circle"></i> Explore Luxury Living</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section text-center">
+        <div class="container">
+            <div class="reveal">
+                <h2 class="section-title">Ready to Find Your Perfect Solution?</h2>
+                <p class="section-subtitle">Book a free consultation with our smart home experts and discover how Nexora Home can transform your space.</p>
+                <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand" style="font-size:1.3rem;">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#flogo)"/>
+              <path d="M18 8L8 16V28H14V22H22V28H28V16L18 8Z" fill="white" fill-opacity="0.95"/>
+              <circle cx="18" cy="18" r="3" fill="url(#flogo)" opacity="0.9"/>
+              <defs><linearGradient id="flogo" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#B08D57"/><stop offset="1" stop-color="#D9C6A3"/></linearGradient></defs>
+            </svg>
+            <span class="brand-name">NEXORA</span>
+          </a>
+          <p>Intelligence for Every Space. Designing, installing and supporting intelligent home automation systems since 2021.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@nexorahome" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../home2.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+<li><a href="services.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="services.html#s-security">Security Systems</a></li>
+            <li><a href="services.html#s-climate">Climate Control</a></li>
+            <li><a href="services.html#s-entertainment">Entertainment</a></li>
+            <li><a href="services.html#s-energy">Energy Management</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="installation-process.html">Installation Process</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Get smarter home insights delivered to your inbox.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nexora Home. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="legal.html#privacy">Privacy Policy</a>
+          <a href="legal.html#terms">Terms of Service</a>
+          <a href="legal.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <div class="chatbot" id="chatbot">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
+            <i class="bi bi-chat-dots-fill"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <span><i class="bi bi-robot"></i> Nexora Assistant</span>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot">Hi there! How can I help you find the right smart home solution today?</div>
+            </div>
+            <form class="chatbot-input" id="chatbotForm">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." autocomplete="off">
+                <button type="submit" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

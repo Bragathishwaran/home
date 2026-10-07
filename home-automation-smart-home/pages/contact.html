@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <meta property="og:description" content="Get in touch with Nexora Home - smart home automation experts. Request a free consultation today.">
   <meta property="og:type" content="website">
   <title>Contact Us | Nexora Home</title>
-  <!-- Favicon -->
+  
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
@@ -23,13 +23,12 @@
   <link rel="stylesheet" href="../assets/css/responsive.css">
   <link rel="stylesheet" href="../assets/css/animations.css">
 </head>
-<body>
-  <!-- Page Loader -->
+<body class="content-layout-page">
+  
   <div class="page-loader">
     <div class="loader-spinner"></div>
   </div>
 
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <a href="../index.html" class="navbar-brand">
@@ -56,7 +55,7 @@
           </div>
 </div>
                 <a href="about.html">About</a>
-                <a href="solutions.html">Solutions</a>
+                <a href="services.html">Services</a>
         <a href="products.html">Products</a>
         <a href="pricing.html">Pricing</a>
         <a href="installation-process.html">Installation</a>
@@ -82,7 +81,6 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu">
       <a href="../index.html" class="mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
       <div class="mobile-menu-sub">
@@ -90,7 +88,7 @@
         <a href="../home2.html">Home 2</a>
 </div>
             <a href="about.html">About</a>
-            <a href="solutions.html">Solutions</a>
+            <a href="services.html">Services</a>
       <a href="products.html">Products</a>
       <a href="pricing.html">Pricing</a>
       <a href="installation-process.html">Installation</a>
@@ -98,6 +96,10 @@
 <a href="contact.html" class="active">Contact</a>
             <a href="gallery.html">Gallery</a>
             <a href="blog.html">Blog</a>
+            <div class="mobile-menu-dir dir-toggle" role="group" aria-label="Text direction">
+              <button type="button" class="dir-btn" data-dir="ltr" aria-label="Left to right">LTR</button>
+              <button type="button" class="dir-btn" data-dir="rtl" aria-label="Right to left">RTL</button>
+            </div>
             <div class="mobile-menu-actions">
         <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
 <a href="login.html" class="btn btn-secondary">Login</a>
@@ -105,7 +107,6 @@
     </div>
   </nav>
 
-  <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
 <h1>Get in Touch</h1>
@@ -113,11 +114,10 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="section">
+  <section class="section" id="contact-details">
     <div class="container">
-      <div class="contact-grid">
-        <!-- Left: Info Cards + Form -->
+      <div class="contact-grid contact-page-grid">
+        
         <div>
           <div class="contact-info-cards">
             <div class="contact-info-card reveal" style="align-items:center;gap:16px;">
@@ -150,22 +150,22 @@
             </div>
           </div>
 
-          <form id="contact-form" class="card reveal" style="padding:40px;">
-            <h3 style="margin-bottom:24px;">Request a Consultation</h3>
+          <form id="contact-form" class="card reveal contact-form-card" novalidate>
+            <h3>Request a Consultation</h3>
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name <span style="color:#ef4444;">*</span></label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Your full name">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required autocomplete="name">
               </div>
               <div class="form-group">
                 <label for="email">Email <span style="color:#ef4444;">*</span></label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="you@email.com">
+                <input type="email" id="email" name="email" class="form-control" placeholder="you@email.com" required autocomplete="email">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="phone">Phone <span style="color:#ef4444;">*</span></label>
-                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 98765 43210">
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter 10-digit mobile number" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" autocomplete="tel" required>
               </div>
               <div class="form-group">
                 <label for="property-type">Property Type</label>
@@ -210,52 +210,51 @@
             </div>
             <div class="form-group">
               <label for="message">Message <span style="color:#ef4444;">*</span></label>
-              <textarea id="message" name="message" class="form-control" placeholder="Tell us about your home and what you'd like to automate..."></textarea>
+              <textarea id="message" name="message" class="form-control" placeholder="Tell us about your home and what you'd like to automate..." required></textarea>
             </div>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
-              <button type="submit" class="btn btn-primary" style="flex:1;min-width:180px;">
+            <div class="contact-form-actions">
+              <button type="submit" class="btn btn-primary">
                 <i class="bi bi-send"></i> Request Consultation
               </button>
-              <button type="button" class="btn btn-secondary" style="flex:1;min-width:180px;">
+              <button type="button" class="btn btn-secondary">
                 <i class="bi bi-file-earmark-text"></i> Get a Custom Quote
               </button>
             </div>
           </form>
         </div>
 
-        <!-- Right: Map + Info -->
         <div>
-          <div class="card reveal" style="padding:32px;margin-bottom:24px;">
-            <h3 style="margin-bottom:8px;"><i class="bi bi-geo-alt" style="color:var(--electric-cyan);margin-right:6px;"></i>Visit Our Experience Center</h3>
-            <p style="max-width:320px;margin-bottom:16px;font-size:0.9rem;color:var(--text-secondary);">Experience the full range of Nexora smart home products in person at our Chennai showroom.</p>
-            <div style="position:relative;width:100%;height:300px;border-radius:var(--border-radius-md);overflow:hidden;border:1px solid var(--border-color);">
+          <div class="card reveal contact-location-card">
+            <h3><i class="bi bi-geo-alt"></i>Visit Our Experience Center</h3>
+            <p>Experience the full range of Nexora smart home products in person at our Chennai showroom.</p>
+            <div class="contact-map-frame">
               <iframe
                 src="https://maps.google.com/maps?q=Old%20Mahabalipuram%20Road%2C%20Thiruvanmiyur%2C%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 width="100%" height="100%" style="border:0;position:absolute;inset:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 title="Nexora Home Experience Center location map"></iframe>
             </div>
-            <span class="badge badge-primary" style="margin-top:14px;">123 Tech Park, OMR, Chennai</span>
+            <span class="badge badge-primary contact-address">123 Tech Park, OMR, Chennai</span>
           </div>
 
-          <div class="card reveal" style="padding:32px;">
-            <h3 style="margin-bottom:16px;">What Happens Next?</h3>
-            <ul style="display:flex;flex-direction:column;gap:16px;">
-              <li style="display:flex;gap:14px;align-items:flex-start;">
-                <div class="feature-icon" style="width:40px;height:40px;font-size:0.9rem;margin-bottom:0;flex-shrink:0;"><i class="bi bi-1-circle"></i></div>
+          <div class="card reveal contact-next-card">
+            <h3>What Happens Next?</h3>
+            <ul class="contact-next-steps">
+              <li>
+                <div class="feature-icon"><i class="bi bi-1-circle"></i></div>
                 <div>
                   <h5 style="font-size:0.95rem;margin-bottom:4px;">Free Consultation Call</h5>
                   <p style="font-size:0.85rem;margin-bottom:0;">We understand your needs within 30 minutes.</p>
                 </div>
               </li>
-              <li style="display:flex;gap:14px;align-items:flex-start;">
-                <div class="feature-icon" style="width:40px;height:40px;font-size:0.9rem;margin-bottom:0;flex-shrink:0;"><i class="bi bi-2-circle"></i></div>
+              <li>
+                <div class="feature-icon"><i class="bi bi-2-circle"></i></div>
                 <div>
                   <h5 style="font-size:0.95rem;margin-bottom:4px;">Site Assessment</h5>
                   <p style="font-size:0.85rem;margin-bottom:0;">Our experts visit your home for a detailed evaluation.</p>
                 </div>
               </li>
-              <li style="display:flex;gap:14px;align-items:flex-start;">
-                <div class="feature-icon" style="width:40px;height:40px;font-size:0.9rem;margin-bottom:0;flex-shrink:0;"><i class="bi bi-3-circle"></i></div>
+              <li>
+                <div class="feature-icon"><i class="bi bi-3-circle"></i></div>
                 <div>
                   <h5 style="font-size:0.95rem;margin-bottom:4px;">Custom Proposal</h5>
                   <p style="font-size:0.85rem;margin-bottom:0;">Receive a tailored quote within 48 hours.</p>
@@ -268,7 +267,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta-section">
     <div class="container">
       <h2>Prefers Speaking Directly?</h2>
@@ -280,7 +278,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -307,22 +304,22 @@
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
+            <li><a href="../home2.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="../home2.html">Home 2</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Solutions</h4>
+          <h4>Services</h4>
           <ul class="footer-links">
-<li><a href="solutions.html#s-lighting">Smart Lighting</a></li>
-            <li><a href="solutions.html#s-security">Security Systems</a></li>
-            <li><a href="solutions.html#s-climate">Climate Control</a></li>
-            <li><a href="solutions.html#s-entertainment">Entertainment</a></li>
-            <li><a href="solutions.html#s-energy">Energy Management</a></li>
+<li><a href="services.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="services.html#s-security">Security Systems</a></li>
+            <li><a href="services.html#s-climate">Climate Control</a></li>
+            <li><a href="services.html#s-entertainment">Entertainment</a></li>
+            <li><a href="services.html#s-energy">Energy Management</a></li>
           </ul>
         </div>
 
@@ -358,7 +355,6 @@
     </div>
   </footer>
 
-  <!-- Chatbot -->
   <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat assistant">
     <i class="bi bi-robot"></i>
   </button>
@@ -385,10 +381,8 @@
     </div>
   </div>
 
-  <!-- Back to Top -->
   <button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
-  <!-- Scripts -->
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/animations.js"></script>

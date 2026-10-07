@@ -18,7 +18,7 @@ Built with pure HTML5, CSS3, JavaScript (ES6+) — no framework required. Works 
   - Security (arming, door lock, cameras, motion detection)
   - Curtains (open, close, position slider)
   - Energy (consumption, daily usage, energy saved)
-- **Solutions** page — by room (7) and by use case (6)
+- **Services** page — by room (7) and by use case (6)
 - **Products** catalog — 12 products, category filter + live search
 - **Pricing** — 3 packages (Essential / Connect / Signature) with comparison table + FAQ
 - **Installation Process** — 6-step visual timeline + FAQ
@@ -56,7 +56,7 @@ home-automation-smart-home/
 ├── README.md
 │
 ├── pages/
-│   ├── solutions.html
+│   ├── services.html
 │   ├── products.html
 │   ├── pricing.html
 │   ├── installation-process.html
@@ -94,7 +94,7 @@ home-automation-smart-home/
 │   │   ├── dashboard.js
 │   │   └── theme.js
 │   │
-│   ├── images/   (hero, solutions, products, rooms, installation, team, backgrounds)
+│   ├── images/   (hero, services, products, rooms, installation, team, backgrounds)
 │   └── icons/
 │
 └── components/
@@ -146,7 +146,7 @@ Then open `http://localhost:8000`.
 
 ## 🧭 Navigation Guide
 
-- **Marketing site:** Home · Solutions · Products · Pricing · Installation · About · Contact
+- **Marketing site:** Home · Services · Products · Pricing · Installation · About · Contact
 - **Auth:** Login → forwards to Client Dashboard after success
 - **Dashboard sidebar:** Dashboard · My Devices · Service Requests · Installation Tracking · Service Tickets · Warranties · Invoices · Profile · Settings · Logout
 

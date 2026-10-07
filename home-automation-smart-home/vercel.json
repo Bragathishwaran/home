@@ -25,6 +25,7 @@
     { "src": "/products", "dest": "/pages/products.html" },
     { "src": "/pricing", "dest": "/pages/pricing.html" },
     { "src": "/installation", "dest": "/pages/installation-process.html" },
+    { "src": "/services", "dest": "/pages/services.html" },
     { "src": "/solutions", "dest": "/pages/solutions.html" },
     { "src": "/login", "dest": "/pages/login.html" },
     { "src": "/register", "dest": "/pages/register.html" },

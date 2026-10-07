@@ -8,7 +8,7 @@
   <meta property="og:description" content="Explore the complete Nexora product catalog for intelligent home automation.">
   <meta property="og:type" content="website">
   <title>Smart Home Products | Nexora Home</title>
-  <!-- Favicon -->
+  
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
@@ -28,7 +28,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      margin-bottom: 40px;
+      margin-bottom: 28px;
       flex-wrap: wrap;
     }
     .catalog-header h2 { margin-bottom: 0; }
@@ -85,6 +85,14 @@
     .products-hero .container {
       position: relative;
       z-index: 2;
+      text-align: center;
+    }
+    .products-hero h1 { color: var(--soft-white); }
+    .products-hero p {
+      color: rgba(247, 244, 237, 0.86);
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .category-grid {
       display: grid;
@@ -206,10 +214,12 @@
       display: flex;
       flex-direction: column;
       flex: 1;
+      align-items: stretch;
     }
     .product-card h3 {
       font-size: 1.15rem;
       margin-bottom: 6px;
+      text-align: center;
     }
     .product-card .product-desc {
       font-size: 0.88rem;
@@ -217,14 +227,19 @@
       margin-bottom: 16px;
       line-height: 1.6;
       flex: 1;
+      text-align: center;
     }
     .product-specs {
       list-style: none;
       padding: 0;
-      margin: 0 0 20px;
+      margin: 0 auto 20px;
       display: flex;
       flex-direction: column;
       gap: 6px;
+      width: fit-content;
+      max-width: 100%;
+      align-self: center;
+      text-align: left;
     }
     .product-specs li {
       font-size: 0.8rem;
@@ -240,6 +255,28 @@
       margin-top: auto;
     }
     .product-actions .btn { flex: 1; padding: 10px 16px; font-size: 0.85rem; }
+    .product-price { text-align: center; }
+    .catalog-header {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .catalog-header > div { text-align: center; }
+    .catalog-header .section-label {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-filter-row {
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .featured-product-info {
+      align-items: center;
+      text-align: center;
+    }
+    .featured-product-info h3 { text-align: center; }
+    .products-hero-showcase { text-align: center; }
     .no-results {
       display: none;
       text-align: center;
@@ -254,9 +291,9 @@
     .no-results i { font-size: 3rem; color: var(--border-color); margin-bottom: 16px; }
     .featured-products {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 28px;
-      margin-bottom: 56px;
+      align-items: stretch;
     }
     .featured-product {
       background: var(--bg-card);
@@ -296,13 +333,16 @@
       padding: 22px 24px 24px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 8px;
       flex: 1;
+      text-align: center;
     }
     .featured-product-info h3 {
       font-family: var(--font-heading);
       font-size: 1.15rem;
+      line-height: 1.35;
+      min-height: 2.7em;
       margin: 0;
       color: var(--text-primary);
     }
@@ -311,6 +351,7 @@
       color: var(--text-secondary);
       margin: 0;
       line-height: 1.6;
+      flex: 1;
     }
     .featured-product-info .badge {
       font-size: 0.7rem;
@@ -379,25 +420,26 @@
     }
     @media (max-width: 991px) {
       .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .featured-products { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
+      .featured-products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 575px) {
       .product-grid { grid-template-columns: minmax(0, 1fr); }
+      .featured-products { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin-left: auto; margin-right: auto; }
       .product-filter-row { grid-template-columns: 1fr; }
       .product-card-body { padding: 20px 18px; }
       .product-actions { flex-direction: column; }
       .category-grid { grid-template-columns: minmax(0, 1fr); }
+      .featured-product-info h3 { min-height: 0; }
     }
     </style>
 </head>
 <body>
-  <!-- Page Loader -->
+  
   <div class="page-loader">
     <div class="loader-spinner"></div>
   </div>
 
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <a href="../index.html" class="navbar-brand">
@@ -424,7 +466,7 @@
           </div>
 </div>
                 <a href="about.html">About</a>
-                <a href="solutions.html">Solutions</a>
+                <a href="services.html">Services</a>
         <a href="products.html" class="active">Products</a>
         <a href="pricing.html">Pricing</a>
         <a href="installation-process.html">Installation</a>
@@ -450,7 +492,6 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu">
       <a href="../index.html" class="mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
       <div class="mobile-menu-sub">
@@ -458,7 +499,7 @@
         <a href="../home2.html">Home 2</a>
 </div>
             <a href="about.html">About</a>
-            <a href="solutions.html">Solutions</a>
+            <a href="services.html">Services</a>
       <a href="products.html" class="active">Products</a>
       <a href="pricing.html">Pricing</a>
       <a href="installation-process.html">Installation</a>
@@ -466,6 +507,10 @@
 <a href="contact.html">Contact</a>
       <a href="gallery.html">Gallery</a>
       <a href="blog.html">Blog</a>
+      <div class="mobile-menu-dir dir-toggle" role="group" aria-label="Text direction">
+        <button type="button" class="dir-btn" data-dir="ltr" aria-label="Left to right">LTR</button>
+        <button type="button" class="dir-btn" data-dir="rtl" aria-label="Right to left">RTL</button>
+      </div>
       <div class="mobile-menu-actions">
         <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
 <a href="login.html" class="btn btn-secondary">Login</a>
@@ -473,7 +518,6 @@
     </div>
   </nav>
 
-  <!-- Page Hero with Relevant Background Image -->
   <section class="page-hero products-hero">
     <div class="container text-center">
       <span class="section-label"><i class="bi bi-cpu"></i> Hardware &amp; Ecosystem</span>
@@ -481,7 +525,7 @@
       <p style="margin: 0 auto; max-width: 640px;">Discover our curated catalog of intelligent devices, engineered to work seamlessly together in a unified, local-first automation ecosystem.</p>
 
       <div class="products-hero-showcase">
-        <a class="products-hero-device" href="#productGrid" data-cat="nodeapp" onclick="setCategory('nodeapp'); return false;">
+        <a class="products-hero-device" href="#productGrid" data-cat="energy" onclick="setCategory('energy'); return false;">
           <img src="../assets/images/products/nexora-smart-hub-x1.jpg" alt="Nexora Smart Node Hub" loading="lazy">
           <span>Smart Node Hub<small>The brain of your home</small></span>
         </a>
@@ -489,7 +533,7 @@
           <img src="../assets/images/products/nexora-light-panel-pro.jpg" alt="Nexora Light Panel Pro" loading="lazy">
           <span>Light Panel Pro<small>Ambient, tunable lighting</small></span>
         </a>
-        <a class="products-hero-device" href="#productGrid" data-cat="hvac" onclick="setCategory('hvac'); return false;">
+        <a class="products-hero-device" href="#productGrid" data-cat="climate" onclick="setCategory('climate'); return false;">
           <img src="../assets/images/features/climate-control.jpg" alt="Nexora Climate One Thermostat" loading="lazy">
           <span>Climate One<small>HVAC smart thermostat</small></span>
         </a>
@@ -501,10 +545,9 @@
     </div>
   </section>
 
-  <!-- Browse by Category -->
   <section class="section">
     <div class="container">
-      <div class="catalog-header" style="margin-bottom:40px;">
+      <div class="catalog-header">
         <div>
           <span class="section-label"><i class="bi bi-grid-3x3-gap"></i> Browse by Category</span>
           <h2 class="section-title">Automation for Every System</h2>
@@ -529,13 +572,13 @@
             <p>Whole-home sound, Home theatre and multi-zone AV distribution.</p>
           </div>
         </a>
-        <a href="#productGrid" class="category-card reveal" data-cat="hvac" onclick="setCategory('hvac'); return false;">
+        <a href="#productGrid" class="category-card reveal" data-cat="climate" onclick="setCategory('climate'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/features/climate-control.jpg" alt="HVAC automation products" loading="lazy">
+            <img src="../assets/images/features/climate-control.jpg" alt="Climate / HVAC automation products" loading="lazy">
           </div>
           <div class="category-card-body">
-            <h3>HVAC</h3>
-            <p>Self-learning climate regulation for comfort and energy savings.</p>
+            <h3>Climate / HVAC</h3>
+            <p>Self-learning thermostats, smart shading and load control for all-season comfort.</p>
           </div>
         </a>
         <a href="#productGrid" class="category-card reveal" data-cat="security" onclick="setCategory('security'); return false;">
@@ -547,32 +590,31 @@
             <p>AI surveillance, smart locks and round-the-clock protection.</p>
           </div>
         </a>
-        <a href="#productGrid" class="category-card reveal" data-cat="waycontrol" onclick="setCategory('waycontrol'); return false;">
+        <a href="#productGrid" class="category-card reveal" data-cat="energy" onclick="setCategory('energy'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/products/nexora-light-panel-pro-2.jpg" alt="Smart Way Control products" loading="lazy">
+            <img src="../assets/images/features/energy-management.jpg" alt="Energy Management products" loading="lazy">
           </div>
           <div class="category-card-body">
-            <h3>Smart Way Control</h3>
-            <p>Multi-way touch switches and in-wall control modules.</p>
+            <h3>Energy Management</h3>
+            <p>Whole-home metering, automation nodes and gateways that cut waste and peak loads.</p>
           </div>
         </a>
-        <a href="#productGrid" class="category-card reveal" data-cat="nodeapp" onclick="setCategory('nodeapp'); return false;">
+        <a href="#productGrid" class="category-card reveal" data-cat="all" onclick="setCategory('all'); return false;">
           <div class="category-card-img-wrap">
-            <img src="../assets/images/products/nexora-smart-hub-x1.jpg" alt="Smart Node Application products" loading="lazy">
+            <img src="../assets/images/hero/hero-ambient-2.jpg" alt="Nexora complete product range" loading="lazy">
           </div>
           <div class="category-card-body">
-            <h3>Smart Node Application</h3>
-            <p>Local-first automation nodes and mesh gateways.</p>
+            <h3>Complete Range</h3>
+            <p>Every Nexora product in one place - the full 15-device system, ready to mix and match.</p>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Featured Hardware -->
   <section class="section">
     <div class="container">
-      <div class="catalog-header" style="margin-bottom:40px;">
+      <div class="catalog-header">
         <div>
           <span class="section-label"><i class="bi bi-stars"></i> Featured Hardware</span>
           <h2 class="section-title">Core Devices, Perfectly Aligned</h2>
@@ -584,7 +626,7 @@
             <img src="../assets/images/products/nexora-smart-hub-x1.jpg" alt="Nexora Smart Node Application Controller" loading="lazy">
           </div>
           <div class="featured-product-info">
-            <span class="badge badge-primary">Smart Node Application</span>
+            <span class="badge badge-primary">Energy Management</span>
             <h3>Nexora Smart Node Controller</h3>
             <p>The central local brain of your smart home. Zero-latency processing with Thread &amp; Zigbee 3.0.</p>
           </div>
@@ -604,7 +646,7 @@
             <img src="../assets/images/features/climate-control.jpg" alt="Nexora Climate One HVAC Thermostat" loading="lazy">
           </div>
           <div class="featured-product-info">
-            <span class="badge badge-primary">HVAC Automation</span>
+            <span class="badge badge-primary">Climate / HVAC</span>
             <h3>Nexora Climate One</h3>
             <p>Self-calibrating smart thermostat wall interface that optimizes HVAC comfort and energy use.</p>
           </div>
@@ -613,7 +655,6 @@
     </div>
   </section>
 
-  <!-- Products Section -->
   <section class="section">
     <div class="container">
       <div class="catalog-header">
@@ -621,27 +662,23 @@
           <span class="section-label"><i class="bi bi-box-seam"></i> Product Catalog</span>
           <h2>Devices That Think Ahead</h2>
         </div>
-        <span class="product-count" id="productCount">14 products available</span>
+        <span class="product-count" id="productCount">15 products available</span>
       </div>
 
       <div class="form-row product-filter-row">
         <select class="form-control" id="categoryFilter">
           <option value="all">All Categories</option>
           <option value="lighting">Light Automation</option>
-          <option value="audio">Audio / Video</option>
-          <option value="hvac">HVAC</option>
           <option value="security">Security</option>
-          <option value="waycontrol">Smart Way Control</option>
-          <option value="nodeapp">Smart Node Application</option>
-          <option value="sensors">Smart Sensors</option>
-          <option value="curtains">Motorized Curtains</option>
-          <option value="energy">Energy Monitoring</option>
+          <option value="climate">Climate / HVAC</option>
+          <option value="audio">Audio / Video</option>
+          <option value="energy">Energy Management</option>
         </select>
         <input type="search" class="form-control" id="productSearch" placeholder="Search products by name or category...">
       </div>
 
       <div class="product-grid" id="productGrid">
-        <!-- 1. Light Automation - Light Panel Pro -->
+        
         <div class="product-card reveal" data-category="lighting" data-price="4499" data-name="Light Panel Pro Light Automation">
           <div class="product-card-img-wrap">
             <img src="../assets/images/products/nexora-light-panel-pro.jpg" alt="Nexora Light Panel Pro" loading="lazy">
@@ -663,7 +700,6 @@
           </div>
         </div>
 
-        <!-- 2. Light Automation - RGBW Strip -->
         <div class="product-card reveal" data-category="lighting" data-price="3499" data-name="Light Strip RGB Light Automation">
           <div class="product-card-img-wrap">
             <img src="../assets/images/hero/hero-ambient-1.jpg" alt="Nexora Dynamic RGBW Light Strip" loading="lazy">
@@ -685,7 +721,6 @@
           </div>
         </div>
 
-        <!-- 3. Audio/Video - SoundBar Pro -->
         <div class="product-card reveal" data-category="audio" data-price="18999" data-name="SoundBar Pro Audio Video">
           <div class="product-card-img-wrap">
             <img src="../assets/images/rooms/home-theatre-2.jpg" alt="Nexora SoundBar Pro" loading="lazy">
@@ -707,7 +742,6 @@
           </div>
         </div>
 
-        <!-- 4. Audio/Video - Multi-Zone Hub -->
         <div class="product-card reveal" data-category="audio" data-price="24999" data-name="Cinema Multi-Zone Audio Hub Audio Video">
           <div class="product-card-img-wrap">
             <img src="../assets/images/rooms/home-theatre-1.jpg" alt="Nexora Cinema Multi-Zone Audio Hub" loading="lazy">
@@ -729,11 +763,31 @@
           </div>
         </div>
 
-        <!-- 5. HVAC - Climate One -->
-        <div class="product-card reveal" data-category="hvac" data-price="11999" data-name="Climate One HVAC Thermostat">
+        <div class="product-card reveal" data-category="audio" data-price="11499" data-name="Surround Speakers Wireless Audio Video">
+          <div class="product-card-img-wrap">
+            <img src="../assets/images/hero/hero-ambient-3.jpg" alt="Nexora Surround Speaker Pair" loading="lazy">
+            <span class="badge badge-primary">Audio / Video</span>
+          </div>
+          <div class="product-card-body">
+            <h3>Nexora Surround Speakers</h3>
+            <p class="product-desc">Wireless satellite speaker pair delivering cinema-grade surround envelopes with automatic room calibration and multi-room sync.</p>
+            <ul class="product-specs">
+              <li><i class="bi bi-check2"></i> Room-correction tuning</li>
+              <li><i class="bi bi-check2"></i> Dolby Audio surround pairing</li>
+              <li><i class="bi bi-check2"></i> Wi-Fi &amp; Bluetooth 5.3 streams</li>
+            </ul>
+            <div class="product-price">&#8377;11,499</div>
+            <div class="product-actions">
+              <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
+              <button class="btn btn-primary" onclick="showToast('Request Added','Surround Speakers added to your request list.','success')">Add to Request</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-category="climate" data-price="11999" data-name="Climate One HVAC Thermostat Climate">
           <div class="product-card-img-wrap">
             <img src="../assets/images/features/climate-control.jpg" alt="Nexora Climate One HVAC Thermostat" loading="lazy">
-            <span class="badge badge-primary">HVAC</span>
+            <span class="badge badge-primary">Climate / HVAC</span>
           </div>
           <div class="product-card-body">
             <h3>Nexora Climate One</h3>
@@ -751,7 +805,6 @@
           </div>
         </div>
 
-        <!-- 6. Security - SecureCam 360 -->
         <div class="product-card reveal" data-category="security" data-price="8999" data-name="SecureCam 360 Security Camera">
           <div class="product-card-img-wrap">
             <img src="../assets/images/rooms/security-1.jpg" alt="Nexora SecureCam 360 Security" loading="lazy">
@@ -773,7 +826,6 @@
           </div>
         </div>
 
-        <!-- 7. Security - Lock X Smart Lock -->
         <div class="product-card reveal" data-category="security" data-price="15499" data-name="Lock X Smart Lock Security">
           <div class="product-card-img-wrap">
             <img src="../assets/images/rooms/security-2.jpg" alt="Nexora Lock X Smart Lock" loading="lazy">
@@ -795,15 +847,14 @@
           </div>
         </div>
 
-        <!-- 8. Smart Way Control - Multi-Way Touch Switch -->
-        <div class="product-card reveal" data-category="waycontrol" data-price="4299" data-name="Smart Way Control Touch Switch">
+        <div class="product-card reveal" data-category="lighting" data-price="4299" data-name="Smart Way Switch Light Automation">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/products/nexora-light-panel-pro-2.jpg" alt="Nexora Smart Way Control Touch Switch" loading="lazy">
-            <span class="badge badge-primary">Smart Way Control</span>
+            <img src="../assets/images/products/nexora-light-panel-pro-2.jpg" alt="Nexora Smart Way Switch" loading="lazy">
+            <span class="badge badge-primary">Light Automation</span>
           </div>
           <div class="product-card-body">
             <h3>Nexora Smart Way Switch</h3>
-            <p class="product-desc">Multi-way smart touch switch panel supporting 2-way, 3-way, and master scene triggering with capacitive haptic feedback.</p>
+            <p class="product-desc">Multi-way smart lighting switch with capacitive glass touch, master scene triggers, and independent dimming per circuit.</p>
             <ul class="product-specs">
               <li><i class="bi bi-check2"></i> 2-way, 3-way &amp; multi-point sync</li>
               <li><i class="bi bi-check2"></i> Capacitive glass touch panel</li>
@@ -817,37 +868,35 @@
           </div>
         </div>
 
-        <!-- 9. Smart Way Control - In-Wall Dimmer Module -->
-        <div class="product-card reveal" data-category="waycontrol" data-price="2999" data-name="Smart Way Control In-Wall Module">
+        <div class="product-card reveal" data-category="climate" data-price="2999" data-name="Climate Load Module In-Wall Climate HVAC">
           <div class="product-card-img-wrap">
-            <img src="../assets/images/products/nexora-sense-pro-sensor-2.jpg" alt="Nexora Smart Way In-Wall Dimmer Module" loading="lazy">
-            <span class="badge badge-primary">Smart Way Control</span>
+            <img src="../assets/images/products/nexora-sense-pro-sensor-2.jpg" alt="Nexora Climate Load Module" loading="lazy">
+            <span class="badge badge-primary">Climate / HVAC</span>
           </div>
           <div class="product-card-body">
-            <h3>Nexora In-Wall Way Module</h3>
-            <p class="product-desc">Micro in-wall relay and dimmer module retrofitting existing switchboards for seamless 2-way and 3-way smart automation.</p>
+            <h3>Nexora Climate Load Module</h3>
+            <p class="product-desc">Compact in-wall power module controlling fans, heaters and ventilation loads with smooth dimming and relay switching.</p>
             <ul class="product-specs">
               <li><i class="bi bi-check2"></i> Fits standard switch backboxes</li>
-              <li><i class="bi bi-check2"></i> 2-way mechanical switch support</li>
-              <li><i class="bi bi-check2"></i> Trailing-edge smooth dimming</li>
+              <li><i class="bi bi-check2"></i> Relay + TRIAC load control</li>
+              <li><i class="bi bi-check2"></i> Comfort scene presets</li>
             </ul>
             <div class="product-price">&#8377;2,999</div>
             <div class="product-actions">
               <button class="btn btn-secondary" onclick="showToast('Details','Full specifications available on request.','info')">View Details</button>
-              <button class="btn btn-primary" onclick="showToast('Request Added','In-Wall Way Module added to your request list.','success')">Add to Request</button>
+              <button class="btn btn-primary" onclick="showToast('Request Added','Climate Load Module added to your request list.','success')">Add to Request</button>
             </div>
           </div>
         </div>
 
-        <!-- 10. Smart Node Application - Controller Node -->
-        <div class="product-card reveal" data-category="nodeapp" data-price="12999" data-name="Smart Node Application Controller">
+        <div class="product-card reveal" data-category="energy" data-price="12999" data-name="Smart Node Application Controller Energy Management">
           <div class="product-card-img-wrap">
             <img src="../assets/images/products/nexora-smart-hub-x1-2.jpg" alt="Nexora Smart Node Application Controller" loading="lazy">
-            <span class="badge badge-primary">Smart Node Application</span>
+            <span class="badge badge-primary">Energy Management</span>
           </div>
           <div class="product-card-body">
             <h3>Nexora Smart Node Controller</h3>
-            <p class="product-desc">Industrial-grade automation node running local rule engines, executing sensor meshes, and orchestrating multi-protocol IoT.</p>
+            <p class="product-desc">Local automation node for energy management â€” running tariff-aware schedules, peak-load shedding and multi-protocol device meshes offline.</p>
             <ul class="product-specs">
               <li><i class="bi bi-check2"></i> Sub-millisecond local logic engine</li>
               <li><i class="bi bi-check2"></i> Thread, Zigbee 3.0 &amp; Matter</li>
@@ -861,15 +910,14 @@
           </div>
         </div>
 
-        <!-- 11. Smart Node Application - Gateway Node Pro -->
-        <div class="product-card reveal" data-category="nodeapp" data-price="9999" data-name="Gateway Node Pro Smart Node Application">
+        <div class="product-card reveal" data-category="energy" data-price="9999" data-name="Gateway Node Pro Energy Management">
           <div class="product-card-img-wrap">
             <img src="../assets/images/products/nexora-smart-hub-x1.jpg" alt="Nexora Gateway Node Pro" loading="lazy">
-            <span class="badge badge-primary">Smart Node Application</span>
+            <span class="badge badge-primary">Energy Management</span>
           </div>
           <div class="product-card-body">
             <h3>Nexora Gateway Node Pro</h3>
-            <p class="product-desc">High-throughput edge mesh gateway coordinating over 150 sensors, switches, and valves with real-time health telemetry.</p>
+            <p class="product-desc">High-throughput edge mesh gateway consolidating metering, sensors and device telemetry across 150+ nodes for live consumption insight.</p>
             <ul class="product-specs">
               <li><i class="bi bi-check2"></i> Connects 150+ mesh nodes</li>
               <li><i class="bi bi-check2"></i> Dual-band Wi-Fi &amp; Ethernet</li>
@@ -883,17 +931,16 @@
           </div>
         </div>
 
-        <!-- 12. Smart Sensors - Sense Pro -->
-        <div class="product-card reveal" data-category="sensors" data-price="3299" data-name="Sense Pro Smart Sensors">
+        <div class="product-card reveal" data-category="security" data-price="3299" data-name="Sense Pro Smart Sensors Security">
           <div class="product-card-img-wrap">
             <img src="../assets/images/products/nexora-sense-pro-sensor.jpg" alt="Nexora Sense Pro Sensor" loading="lazy">
-            <span class="badge badge-primary">Smart Sensors</span>
+            <span class="badge badge-primary">Security</span>
           </div>
           <div class="product-card-body">
             <h3>Nexora Sense Pro</h3>
-            <p class="product-desc">6-in-1 precision environmental sensor tracking temperature, humidity, light lux, vibration, and room motion.</p>
+            <p class="product-desc">Six-in-one security and presence sensor feeding motion, contact, vibration, temperature, humidity and light telemetry.</p>
             <ul class="product-specs">
-              <li><i class="bi bi-check2"></i> 6-in-1 multi-sensor telemetry</li>
+              <li><i class="bi bi-check2"></i> Motion + contact tamper alerts</li>
               <li><i class="bi bi-check2"></i> 2-year battery lifespan</li>
               <li><i class="bi bi-check2"></i> Instant trigger notifications</li>
             </ul>
@@ -905,18 +952,17 @@
           </div>
         </div>
 
-        <!-- 13. Curtains - Motorized Curtains -->
-        <div class="product-card reveal" data-category="curtains" data-price="9499" data-name="Curtain Motor Motorized Curtains">
+        <div class="product-card reveal" data-category="climate" data-price="9499" data-name="Curtain Motor Motorized Curtains Climate">
           <div class="product-card-img-wrap">
             <img src="../assets/images/features/smart-curtains.jpg" alt="Nexora Whisper Curtain Motor" loading="lazy">
-            <span class="badge badge-primary">Motorized Curtains</span>
+            <span class="badge badge-primary">Climate / HVAC</span>
           </div>
           <div class="product-card-body">
             <h3>Nexora Curtain Motor</h3>
-            <p class="product-desc">Whisper-quiet motorized drapery track system with programmable open percentage and sunlight-adaptive scheduling.</p>
+            <p class="product-desc">Smart motorized drapery that trims solar gain, stabilizes room temperature and adjusts shade levels by sunrise schedule.</p>
             <ul class="product-specs">
               <li><i class="bi bi-check2"></i> Ultra-quiet &lt;26dB motor</li>
-              <li><i class="bi bi-check2"></i> Manual pull-to-start action</li>
+              <li><i class="bi bi-check2"></i> Sun-tracking shade schedules</li>
               <li><i class="bi bi-check2"></i> Rechargeable battery or DC power</li>
             </ul>
             <div class="product-price">&#8377;9,499</div>
@@ -927,11 +973,10 @@
           </div>
         </div>
 
-        <!-- 14. Energy - Energy Monitoring -->
-        <div class="product-card reveal" data-category="energy" data-price="5999" data-name="Energy Meter Energy Monitoring">
+        <div class="product-card reveal" data-category="energy" data-price="5999" data-name="Energy Meter Energy Management">
           <div class="product-card-img-wrap">
             <img src="../assets/images/features/energy-management.jpg" alt="Nexora Energy Meter" loading="lazy">
-            <span class="badge badge-primary">Energy Monitoring</span>
+            <span class="badge badge-primary">Energy Management</span>
           </div>
           <div class="product-card-body">
             <h3>Nexora Energy Meter</h3>
@@ -959,7 +1004,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta-section">
     <div class="container">
       <h2>Can't Find What You're Looking For?</h2>
@@ -971,7 +1015,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -998,22 +1041,22 @@
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
+            <li><a href="../home2.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="../home2.html">Home 2</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Solutions</h4>
+          <h4>Services</h4>
           <ul class="footer-links">
-<li><a href="solutions.html#s-lighting">Smart Lighting</a></li>
-            <li><a href="solutions.html#s-security">Security Systems</a></li>
-            <li><a href="solutions.html#s-climate">Climate Control</a></li>
-            <li><a href="solutions.html#s-entertainment">Entertainment</a></li>
-            <li><a href="solutions.html#s-energy">Energy Management</a></li>
+<li><a href="services.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="services.html#s-security">Security Systems</a></li>
+            <li><a href="services.html#s-climate">Climate Control</a></li>
+            <li><a href="services.html#s-entertainment">Entertainment</a></li>
+            <li><a href="services.html#s-energy">Energy Management</a></li>
           </ul>
         </div>
 
@@ -1049,7 +1092,6 @@
     </div>
   </footer>
 
-  <!-- Chatbot -->
   <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat assistant">
     <i class="bi bi-robot"></i>
   </button>
@@ -1076,16 +1118,13 @@
     </div>
   </div>
 
-  <!-- Back to Top -->
   <button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
-  <!-- Scripts -->
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/animations.js"></script>
   <script src="../assets/js/main.js"></script>
 
-  <!-- Page Scripts -->
   <script>
     const categoryFilter = document.getElementById('categoryFilter');
     const productSearch = document.getElementById('productSearch');

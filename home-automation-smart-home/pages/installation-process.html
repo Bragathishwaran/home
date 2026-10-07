@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <meta name="author" content="Nexora Home">
     <meta name="robots" content="index, follow">
     <title>Installation Process | Nexora Home</title>
-  <!-- Favicon -->
+  
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
@@ -46,9 +46,8 @@
         }
     </style>
 </head>
-<body>
+<body class="content-layout-page">
 
-    <!-- Navbar -->
         <nav class="navbar" id="navbar">
         <div class="container">
             <a href="../index.html" class="navbar-brand">
@@ -75,7 +74,7 @@
           </div>
 </div>
                         <a href="about.html">About</a>
-                        <a href="solutions.html">Solutions</a>
+                        <a href="services.html">Services</a>
                 <a href="products.html">Products</a>
                 <a href="pricing.html">Pricing</a>
                 <a href="installation-process.html" class="active">Installation</a>
@@ -101,7 +100,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <a href="../index.html" class="mobile-menu-home" onclick="toggleMobileHome(event)">Home <i class="bi bi-chevron-down"></i></a>
       <div class="mobile-menu-sub">
@@ -109,7 +107,7 @@
         <a href="../home2.html">Home 2</a>
 </div>
             <a href="about.html">About</a>
-            <a href="solutions.html">Solutions</a>
+            <a href="services.html">Services</a>
             <a href="products.html">Products</a>
             <a href="pricing.html">Pricing</a>
             <a href="installation-process.html" class="active">Installation</a>
@@ -117,6 +115,10 @@
 <a href="contact.html">Contact</a>
             <a href="gallery.html">Gallery</a>
             <a href="blog.html">Blog</a>
+            <div class="mobile-menu-dir dir-toggle" role="group" aria-label="Text direction">
+              <button type="button" class="dir-btn" data-dir="ltr" aria-label="Left to right">LTR</button>
+              <button type="button" class="dir-btn" data-dir="rtl" aria-label="Right to left">RTL</button>
+            </div>
             <div class="mobile-menu-actions">
                 <a href="dashboard/index.html" class="btn btn-outline">Dashboard</a>
 <a href="login.html" class="btn btn-outline">Login</a>
@@ -124,7 +126,6 @@
         </div>
     </nav>
 
-    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
 <h1 class="reveal">From Concept to Connected Living</h1>
@@ -132,7 +133,6 @@
         </div>
     </section>
 
-    <!-- Installation Process Timeline -->
     <section class="section">
         <div class="container">
             <div class="section-label"><i class="bi bi-stars"></i> Our Process</div>
@@ -140,10 +140,10 @@
             <p class="section-subtitle">Every Nexora Home installation follows a proven, transparent process designed to minimize disruption and maximize the value of your investment.</p>
             <div class="process-timeline stagger-children">
 
-                <!-- Step 1 -->
                 <div class="process-step reveal">
                     <div class="step-number">01</div>
                     <div class="step-content">
+                        <img class="step-media" src="../assets/images/rooms/living-room-1.jpg" alt="Initial smart home consultation with a Nexora designer" loading="lazy">
                         <div class="step-icon"><i class="bi bi-chat-dots"></i></div>
                         <h3>Consultation</h3>
                         <p>We discuss your needs, lifestyle and budget to understand how you want to live, work, and relax at home.</p>
@@ -151,10 +151,10 @@
                     </div>
                 </div>
 
-                <!-- Step 2 -->
                 <div class="process-step reveal">
                     <div class="step-number">02</div>
                     <div class="step-content">
+                        <img class="step-media" src="../assets/images/rooms/home-office-1.jpg" alt="Technician assessing home infrastructure and network readiness" loading="lazy">
                         <div class="step-icon"><i class="bi bi-clipboard-data"></i></div>
                         <h3>Site Assessment</h3>
                         <p>Our experts visit and evaluate your home's infrastructure, network, wiring, and structural readiness for automation.</p>
@@ -162,10 +162,10 @@
                     </div>
                 </div>
 
-                <!-- Step 3 -->
                 <div class="process-step reveal">
                     <div class="step-number">03</div>
                     <div class="step-content">
+                        <img class="step-media" src="../assets/images/rooms/entire-home-2.jpg" alt="Custom smart home design and scene planning" loading="lazy">
                         <div class="step-icon"><i class="bi bi-pencil"></i></div>
                         <h3>Smart Home Design</h3>
                         <p>Custom automation plan with device placement, scene design, and control layouts tailored to every room in your home.</p>
@@ -173,10 +173,10 @@
                     </div>
                 </div>
 
-                <!-- Step 4 -->
                 <div class="process-step reveal">
                     <div class="step-number">04</div>
                     <div class="step-content">
+                        <img class="step-media" src="../assets/images/products/nexora-smart-hub-x1.jpg" alt="Curated selection of compatible Nexora smart devices" loading="lazy">
                         <div class="step-icon"><i class="bi bi-box-seam"></i></div>
                         <h3>Product Selection</h3>
                         <p>Curated selection of compatible smart devices chosen for reliability, security, and seamless integration with your design.</p>
@@ -184,10 +184,10 @@
                     </div>
                 </div>
 
-                <!-- Step 5 -->
                 <div class="process-step reveal">
                     <div class="step-number">05</div>
                     <div class="step-content">
+                        <img class="step-media" src="../assets/images/features/smart-curtains.jpg" alt="Certified technicians installing automated smart curtains" loading="lazy">
                         <div class="step-icon"><i class="bi bi-tools"></i></div>
                         <h3>Professional Installation</h3>
                         <p>Certified technicians install and configure everything with minimal disruption, following strict quality and safety standards.</p>
@@ -195,10 +195,10 @@
                     </div>
                 </div>
 
-                <!-- Step 6 -->
                 <div class="process-step reveal">
                     <div class="step-number">06</div>
                     <div class="step-content">
+                        <img class="step-media" src="../assets/images/rooms/home-theatre-1.jpg" alt="Final testing and handover walkthrough of the smart home" loading="lazy">
                         <div class="step-icon"><i class="bi bi-clipboard-check"></i></div>
                         <h3>Testing &amp; Handover</h3>
                         <p>Thorough testing, training and documentation so you can confidently control every corner of your new smart home.</p>
@@ -210,44 +210,102 @@
         </div>
     </section>
 
-    <!-- What Makes Us Different -->
-    <section class="section">
+    <section class="section" id="installation-why">
         <div class="container">
             <div class="section-label"><i class="bi bi-gem"></i> Why Nexora</div>
             <h2 class="section-title">What Makes Our Installation Different</h2>
             <p class="section-subtitle">We sweat the details others overlook, so your smart home performs beautifully from day one and keeps getting better.</p>
             <div class="features-grid stagger-children">
 
-                <div class="feature-card card-hover-glow reveal">
-                    <div class="feature-icon"><i class="bi bi-award"></i></div>
-                    <h3>Certified Technicians</h3>
-                    <p>Every installer is factory-trained and certified on the systems we deploy, so you always get expert workmanship backed by a quality guarantee.</p>
+                <div class="feature-card feature-visual-card card-hover-glow reveal">
+                    <div class="feature-media">
+                        <img src="../assets/images/products/nexora-smart-hub-x1-2.jpg" alt="Factory-trained certified Nexora installation engineers" loading="lazy">
+                        <span class="feature-badge"><i class="bi bi-award"></i> Guaranteed</span>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i class="bi bi-award"></i></div>
+                            <h3>Certified Technicians</h3>
+                        </div>
+                        <p>Every installer is factory-trained and certified on the systems we deploy, so you always get expert workmanship backed by a quality guarantee.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card card-hover-glow reveal">
-                    <div class="feature-icon"><i class="bi bi-plug"></i></div>
-                    <h3>Clean, Hidden Wiring</h3>
-                    <p>We conceal cabling, integrate neatly with existing architecture, and leave your home spotless after every visit.</p>
+                <div class="feature-card feature-visual-card card-hover-glow reveal">
+                    <div class="feature-media">
+                        <img src="../assets/images/features/energy-management.jpg" alt="Clean concealed cabling and panel integration" loading="lazy">
+                        <span class="feature-badge"><i class="bi bi-plug"></i> Neat Finish</span>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i class="bi bi-plug"></i></div>
+                            <h3>Clean, Hidden Wiring</h3>
+                        </div>
+                        <p>We conceal cabling, integrate neatly with existing architecture, and leave your home spotless after every visit.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card card-hover-glow reveal">
-                    <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
-                    <h3>Security-First Setup</h3>
-                    <p>Devices are configured on a segregated, encrypted network with strict access controls and regular firmware hardening.</p>
+                <div class="feature-card feature-visual-card card-hover-glow reveal">
+                    <div class="feature-media">
+                        <img src="../assets/images/rooms/security-1.jpg" alt="Security-first encrypted smart home network setup" loading="lazy">
+                        <span class="feature-badge"><i class="bi bi-shield-check"></i> Encrypted</span>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                            <h3>Security-First Setup</h3>
+                        </div>
+                        <p>Devices are configured on a segregated, encrypted network with strict access controls and regular firmware hardening.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card card-hover-glow reveal">
-                    <div class="feature-icon"><i class="bi bi-headset"></i></div>
-                    <h3>Lifetime Aftercare</h3>
-                    <p>Complimentary remote support, warranty coverage, and proactive monitoring keep your system running smoothly for years.</p>
+                <div class="feature-card feature-visual-card card-hover-glow reveal">
+                    <div class="feature-media">
+                        <img src="../assets/images/rooms/living-room-2.jpg" alt="Lifetime aftercare and proactive monitoring support" loading="lazy">
+                        <span class="feature-badge"><i class="bi bi-headset"></i> 24/7</span>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i class="bi bi-headset"></i></div>
+                            <h3>Lifetime Aftercare</h3>
+                        </div>
+                        <p>Complimentary remote support, warranty coverage, and proactive monitoring keep your system running smoothly for years.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card feature-visual-card card-hover-glow reveal">
+                    <div class="feature-media">
+                        <img src="../assets/images/rooms/entire-home-1.jpg" alt="Smart home devices carefully calibrated for each room" loading="lazy">
+                        <span class="feature-badge"><i class="bi bi-sliders"></i> Tailored</span>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i class="bi bi-sliders"></i></div>
+                            <h3>Personalized Calibration</h3>
+                        </div>
+                        <p>We tune automations, sensors, and room settings around your space and daily routines, then walk you through every control.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card feature-visual-card card-hover-glow reveal">
+                    <div class="feature-media">
+                        <img src="../assets/images/rooms/home-office-1.jpg" alt="Nexora team testing the installed smart home system" loading="lazy">
+                        <span class="feature-badge"><i class="bi bi-check2-circle"></i> Tested</span>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i class="bi bi-check2-circle"></i></div>
+                            <h3>Thorough Quality Checks</h3>
+                        </div>
+                        <p>Before handover, we test every device, scene, and connection so your system is ready to use from day one.</p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section">
+    <section class="section" id="installation-faq">
         <div class="container">
             <div class="section-label"><i class="bi bi-question-circle"></i> FAQ</div>
             <h2 class="section-title">Installation Process Questions</h2>
@@ -312,7 +370,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="section text-center cta-section">
         <div class="container">
             <div class="reveal">
@@ -326,7 +383,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -353,22 +409,22 @@
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
+            <li><a href="../home2.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="../home2.html">Home 2</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Solutions</h4>
+          <h4>Services</h4>
           <ul class="footer-links">
-<li><a href="solutions.html#s-lighting">Smart Lighting</a></li>
-            <li><a href="solutions.html#s-security">Security Systems</a></li>
-            <li><a href="solutions.html#s-climate">Climate Control</a></li>
-            <li><a href="solutions.html#s-entertainment">Entertainment</a></li>
-            <li><a href="solutions.html#s-energy">Energy Management</a></li>
+<li><a href="services.html#s-lighting">Smart Lighting</a></li>
+            <li><a href="services.html#s-security">Security Systems</a></li>
+            <li><a href="services.html#s-climate">Climate Control</a></li>
+            <li><a href="services.html#s-entertainment">Entertainment</a></li>
+            <li><a href="services.html#s-energy">Energy Management</a></li>
           </ul>
         </div>
 
@@ -404,12 +460,10 @@
     </div>
   </footer>
 
-    <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="bi bi-arrow-up"></i>
     </button>
 
-    <!-- Chatbot -->
     <div class="chatbot" id="chatbot">
         <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
             <i class="bi bi-chat-dots-fill"></i>
@@ -429,13 +483,11 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="../assets/js/theme.js"></script>
     <script src="../assets/js/navbar.js"></script>
     <script src="../assets/js/animations.js"></script>
     <script src="../assets/js/main.js"></script>
 
-    <!-- FAQ Toggle -->
     <script>
         (function () {
             document.querySelectorAll('.faq-question').forEach(function (question) {
@@ -456,7 +508,6 @@
         })();
     </script>
 
-    <!-- Chatbot Script -->
     <script>
         (function () {
             const toggle = document.getElementById('chatbotToggle');
