@@ -704,15 +704,6 @@ gap: 6px;
 display: none;
 }
 }
-@media (max-width: 1349px) and (min-width: 1200px) {
-.footer-grid {
-grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 0.8fr)) minmax(200px, 1.35fr);
-gap: 24px;
-}
-.footer-brand {
-grid-column: auto;
-}
-}
 @media (max-width: 1199px) and (min-width: 768px) {
 .footer-grid {
 grid-template-columns: repeat(3, minmax(0, 1fr));

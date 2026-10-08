@@ -165,7 +165,10 @@ function initDirToggle() {
   });
 
   function applyDir(dir) {
+    if (dir !== 'rtl' && dir !== 'ltr') return;
     html.setAttribute('dir', dir);
+    html.classList.toggle('is-rtl', dir === 'rtl');
+    html.classList.toggle('is-ltr', dir === 'ltr');
     groups.forEach(group => {
       group.querySelectorAll('.dir-btn').forEach(btn => {
         const active = btn.dataset.dir === dir;

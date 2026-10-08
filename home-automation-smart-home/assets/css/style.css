@@ -1346,6 +1346,8 @@ border: 1px solid var(--border-color);
 border-radius: var(--border-radius-xl);
 overflow: hidden;
 aspect-ratio: 16/10;
+width: 100%;
+min-width: 0;
 }
 .room-visual {
 width: 100%;
@@ -2000,6 +2002,7 @@ gap: 14px;
 .testimonial-avatar {
 width: 48px;
 height: 48px;
+position: relative;
 border-radius: 50%;
 background: var(--gradient-primary);
 display: flex;
@@ -2018,6 +2021,13 @@ object-fit: cover;
 object-position: center 20%;
 border-radius: 50%;
 display: block;
+}
+.testimonial-avatar-fallback {
+position: absolute;
+inset: 0;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .testimonial-info h5 {
 font-size: 0.95rem;
@@ -2095,6 +2105,9 @@ background: var(--gradient-primary);
 -webkit-text-fill-color: transparent;
 background-clip: text;
 margin-bottom: 8px;
+}
+.stat-number[data-suffix] {
+white-space: nowrap;
 }
 .stat-label {
 font-size: 0.9rem;

@@ -127,12 +127,12 @@ function animateCounter(el, target, duration = 2000) {
     const progress = Math.min(elapsed / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
     const current = Math.floor(start + (target - start) * eased);
-    el.textContent = current.toLocaleString();
+    el.textContent = `${current.toLocaleString()}${el.dataset.suffix || ''}`;
 
     if (progress < 1) {
       requestAnimationFrame(update);
     } else {
-      el.textContent = target.toLocaleString();
+      el.textContent = `${target.toLocaleString()}${el.dataset.suffix || ''}`;
     }
   }
 
@@ -158,6 +158,12 @@ function initCounters() {
 
 /* Run counter init when page loads */
 document.addEventListener('DOMContentLoaded', initCounters);
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.testimonial-avatar img').forEach((img) => {
+    img.addEventListener('error', () => img.remove(), { once: true });
+  });
+});
 
 /* --- Smooth Scroll for Anchor Links --- */
 document.addEventListener('click', (e) => {

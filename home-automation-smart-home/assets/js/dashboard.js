@@ -5,9 +5,50 @@
 document.addEventListener('DOMContentLoaded', () => {
   initDashboardNav();
   initDeviceToggles();
-  initSettingsToggles();
   initNotificationDropdown();
+  initDirToggle();
 });
+
+/* --- Text Direction (LTR / RTL) --- */
+function setDirection(dir) {
+  if (dir !== 'ltr' && dir !== 'rtl') return null;
+  const html = document.documentElement;
+  html.setAttribute('dir', dir);
+  html.classList.toggle('is-rtl', dir === 'rtl');
+  html.classList.toggle('is-ltr', dir === 'ltr');
+  document.querySelectorAll('.dir-toggle .dir-btn').forEach(btn => {
+    const active = btn.dataset.dir === dir;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  try { localStorage.setItem('nexora:dir', dir); } catch (e) {}
+  return dir;
+}
+
+function setLTR() {
+  return setDirection('ltr');
+}
+
+function setRTL() {
+  return setDirection('rtl');
+}
+
+function initDirToggle() {
+  const saved = (() => {
+    try { return localStorage.getItem('nexora:dir'); } catch (e) { return null; }
+  })();
+  setDirection(saved === 'rtl' ? 'rtl' : 'ltr');
+
+  document.querySelectorAll('.dir-toggle').forEach(group => {
+    if (group.dataset.dirBound === '1') return;
+    group.dataset.dirBound = '1';
+    group.addEventListener('click', (e) => {
+      const btn = e.target.closest('.dir-btn');
+      if (!btn) return;
+      setDirection(btn.dataset.dir);
+    });
+  });
+}
 
 /* --- Dashboard Navigation --- */
 function initDashboardNav() {
@@ -45,23 +86,97 @@ function initDeviceToggles() {
   });
 }
 
-/* --- Settings Toggles --- */
-function initSettingsToggles() {
-  document.querySelectorAll('.settings-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active');
-    });
-  });
-}
-
 /* --- Notification Dropdown --- */
 function initNotificationDropdown() {
-  const btn = document.querySelector('.notification-btn');
+  const btn = document.querySelector('.notification-bell');
   if (!btn) return;
+  const anchor = btn.closest('.dashboard-header-right') || btn.parentElement;
+  if (!anchor) return;
+  if (anchor.querySelector('.notification-panel')) return;
 
-  btn.addEventListener('click', () => {
-    showToast('Notifications', 'You have 3 new notifications.', 'info');
+  const panel = document.createElement('div');
+  panel.className = 'notification-panel';
+  panel.setAttribute('role', 'region');
+  panel.setAttribute('aria-label', 'Notifications');
+  panel.innerHTML = `
+    <div class="notification-panel-header">
+      <h4>Notifications</h4>
+      <button type="button" class="notification-mark-read">Mark all as read</button>
+    </div>
+    <div class="notification-list">
+      <a class="notification-item unread" href="devices.html">
+        <span class="notif-icon notif-alert"><i class="bi bi-shield-exclamation"></i></span>
+        <span class="notif-body">
+          <h5>Security Alert</h5>
+          <p>Front Door lock was opened while you were away.</p>
+          <time>12 min ago</time>
+        </span>
+      </a>
+      <a class="notification-item unread" href="service-requests.html">
+        <span class="notif-icon notif-service"><i class="bi bi-tools"></i></span>
+        <span class="notif-body">
+          <h5>Service Update</h5>
+          <p>Technician assigned to request #SR-1042 &mdash; arrives Oct 11.</p>
+          <time>1 hour ago</time>
+        </span>
+      </a>
+      <a class="notification-item unread" href="invoices.html">
+        <span class="notif-icon notif-invoice"><i class="bi bi-receipt"></i></span>
+        <span class="notif-body">
+          <h5>Payment Due</h5>
+          <p>Invoice INV-2026-005 is due in 3 days.</p>
+          <time>5 hours ago</time>
+        </span>
+      </a>
+      <a class="notification-item" href="installation-tracking.html">
+        <span class="notif-icon notif-install"><i class="bi bi-diagram-3"></i></span>
+        <span class="notif-body">
+          <h5>Installation Update</h5>
+          <p>Phase 3 (Scene Calibration) has been scheduled for Oct 14.</p>
+          <time>2 days ago</time>
+        </span>
+      </a>
+    </div>
+    <div class="notification-panel-footer">
+      <a href="service-tickets.html">View all activity <i class="bi bi-arrow-right-short"></i></a>
+    </div>`;
+  anchor.appendChild(panel);
+
+  const badge = btn.querySelector('.notification-badge');
+  btn.setAttribute('aria-haspopup', 'true');
+  btn.setAttribute('aria-expanded', 'false');
+
+  const close = () => {
+    panel.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  };
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
   });
+
+  panel.addEventListener('click', (e) => e.stopPropagation());
+
+  document.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+
+  panel.querySelectorAll('.notification-item').forEach(item => {
+    item.addEventListener('click', () => item.classList.remove('unread'));
+  });
+
+  const markRead = panel.querySelector('.notification-mark-read');
+  if (markRead) {
+    markRead.addEventListener('click', () => {
+      panel.querySelectorAll('.notification-item.unread').forEach(item => item.classList.remove('unread'));
+      if (badge) badge.style.display = 'none';
+      markRead.textContent = 'All caught up';
+      markRead.disabled = true;
+    });
+  }
 }
 
 /* --- Demo Chart (Dashboard Home) --- */
