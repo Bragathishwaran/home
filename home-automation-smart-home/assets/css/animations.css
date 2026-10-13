@@ -184,4 +184,9 @@ transform: none;
 .floating-card {
 animation: none;
 }
+.about-hero-bg,
+.blog-featured-story img {
+transform: none !important;
+will-change: auto;
+}
 }
