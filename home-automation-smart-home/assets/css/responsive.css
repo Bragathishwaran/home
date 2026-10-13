@@ -505,6 +505,10 @@ font-size: 1.8rem;
 .page-hero {
 padding: 120px 0 48px;
 }
+.content-layout-page .blog-hero {
+min-height: 240px;
+padding: 104px 0 40px;
+}
 .page-hero h1 {
 font-size: 1.6rem;
 }

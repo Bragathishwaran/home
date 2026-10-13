@@ -72,11 +72,44 @@
     .team-card .team-role { color: var(--electric-cyan); font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; }
     .team-card p { font-size: 0.85rem; margin-bottom: 0; }
     .about-installation-image { object-position: center 52%; }
+    .about-hero {
+      padding: clamp(124px, 12vw, 154px) 0 clamp(56px, 7vw, 80px);
+    }
+    .about-hero-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: clamp(32px, 5vw, 64px);
+      align-items: center;
+    }
+    .about-hero-content {
+      min-width: 0;
+      text-align: left;
+    }
+    .about-hero-content .section-label {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .about-hero-content > p {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .about-hero-highlights { justify-content: flex-start; }
     .about-hero-media { min-width: 0; }
     .about-hero-image-wrapper img {
-      height: clamp(280px, 35vw, 440px);
+      height: clamp(300px, 34vw, 440px);
       object-fit: cover;
       object-position: center;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .about-hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr); gap: 32px; }
+    }
+    @media (max-width: 991px) {
+      .about-hero { padding: 128px 0 56px; }
+      .about-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+      .about-hero-content { text-align: center; max-width: 720px; margin: 0 auto; }
+      .about-hero-content .section-label,
+      .about-hero-content > p { margin-left: auto; margin-right: auto; }
+      .about-hero-highlights { justify-content: center; }
+      .about-hero-media { width: 100%; max-width: 720px; margin: 0 auto; }
     }
     .about-deliverables {
       display: grid;
@@ -101,7 +134,16 @@
     }
     @media (max-width: 575px) { .about-deliverables { grid-template-columns: 1fr; } }
     @media (max-width: 767px) {
-      .about-hero-image-wrapper img { height: clamp(240px, 72vw, 360px); }
+      .about-hero { padding: 112px 0 44px; }
+      .about-hero-grid { gap: 26px; }
+      .about-hero-image-wrapper img { height: clamp(220px, 68vw, 340px); }
+      .about-hero-highlights { gap: 10px; }
+      .hero-highlight-item { padding: 9px 13px; font-size: 0.84rem; }
+    }
+    @media (max-width: 420px) {
+      .about-hero-image-wrapper img { height: 220px; }
+      .about-hero-highlights { align-items: stretch; flex-direction: column; }
+      .about-hero-highlights .hero-highlight-item { justify-content: center; }
     }
     @media (max-width: 991px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 575px) { .team-grid { grid-template-columns: 1fr; } }
@@ -505,11 +547,15 @@
             <span class="brand-name">NEXORA</span>
           </a>
           <p>Intelligence for Every Space. Designing, installing and supporting intelligent home automation systems since 2021.</p>
-          <div class="footer-social">
-            <a href="https://www.facebook.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://x.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.instagram.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <div class="footer-social-section">
+            <h4 class="footer-social-heading">Connect with us</h4>
+            <div class="footer-social" aria-label="Nexora social profiles">
+              <a href="https://www.facebook.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://x.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://www.instagram.com/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/nexorahome" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.youtube.com/results?search_query=Nexora+Home" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+            </div>
           </div>
         </div>
 

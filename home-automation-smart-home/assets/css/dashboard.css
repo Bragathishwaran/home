@@ -105,6 +105,156 @@ font-weight: 600;
 color: var(--text-muted);
 max-width: 90px;
 }
+
+/* Keep the overview cards spaced as one responsive group. */
+.dashboard-content > .dash-grid {
+gap: 24px;
+align-items: stretch;
+}
+.dashboard-content > .dash-grid + .dash-grid--bottom {
+margin-top: 24px;
+}
+.dashboard-content > .dash-grid > .dash-panel,
+.dashboard-content > .dash-grid--bottom > .dash-panel {
+min-width: 0;
+}
+@media (max-width: 600px) {
+  .dashboard-content > .dash-grid {
+    gap: 18px;
+  }
+  .dashboard-content > .dash-grid + .dash-grid--bottom {
+    margin-top: 18px;
+  }
+}
+
+/* Keep installation details readable at phone widths. */
+.installation-details-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+gap: 16px;
+}
+.installation-details-grid > div,
+.assigned-technician-info {
+min-width: 0;
+}
+.installation-details-grid p {
+overflow-wrap: anywhere;
+}
+.installation-summary-card {
+padding: 28px;
+min-width: 0;
+}
+.installation-summary-header {
+margin-bottom: 20px;
+}
+.installation-summary-header .badge {
+flex-shrink: 0;
+}
+.installation-request-id {
+white-space: nowrap;
+font-size: clamp(0.72rem, 3.4vw, 0.9rem);
+}
+.assigned-technician {
+display: grid;
+grid-template-columns: 72px minmax(0, 1fr) auto;
+grid-template-areas: "avatar info contact";
+align-items: center;
+gap: 20px;
+}
+.technician-avatar {
+grid-area: avatar;
+width: 72px;
+height: 72px;
+border-radius: 50%;
+background: var(--gradient-primary);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.technician-avatar i {
+font-size: 1.8rem;
+color: var(--deep-midnight);
+}
+.assigned-technician-info { grid-area: info; }
+.technician-rating {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 4px 6px;
+}
+.technician-stars {
+color: #f59e0b;
+font-size: 0.85rem;
+white-space: nowrap;
+}
+.technician-contact {
+grid-area: contact;
+white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .dashboard-content {
+    padding: 20px 16px;
+  }
+  .installation-details-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 12px;
+  }
+  .installation-details-grid > div:last-child {
+    grid-column: auto;
+  }
+  .installation-summary-card {
+    padding: 20px 18px;
+  }
+  .installation-summary-header {
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .installation-summary-header h3 {
+    min-width: 0;
+    font-size: 1rem;
+  }
+  .installation-summary-header .badge {
+    font-size: 0.68rem;
+    padding: 5px 8px;
+  }
+  .assigned-technician {
+    grid-template-columns: 56px minmax(0, 1fr);
+    grid-template-areas: "avatar info" ". contact";
+    gap: 12px;
+  }
+  .technician-avatar {
+    width: 56px;
+    height: 56px;
+  }
+  .technician-avatar i {
+    font-size: 1.5rem;
+  }
+  .technician-phone {
+    white-space: nowrap;
+    font-size: 0.78rem !important;
+  }
+  .technician-contact {
+    justify-self: start;
+    margin: 0;
+  }
+  .installation-timeline {
+    overflow-x: auto;
+    padding: 20px 0;
+    scrollbar-width: thin;
+  }
+  .timeline-track {
+    min-width: 680px;
+  }
+}
+@media (max-width: 360px) {
+  .dashboard-content { padding: 16px 12px; }
+  .assigned-technician { grid-template-columns: 48px minmax(0, 1fr); gap: 10px; }
+  .technician-avatar { width: 48px; height: 48px; }
+  .technician-avatar i { font-size: 1.3rem; }
+  .technician-phone { font-size: 0.74rem !important; }
+  .technician-stars { font-size: 0.75rem; }
+}
 .timeline-node.completed .timeline-label,
 .timeline-node.active .timeline-label {
 color: var(--text-primary);
